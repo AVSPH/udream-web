@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils"; // Assuming you have a `cn` utility from shadcn
+import { motion, type Variants } from "motion/react";
+import { cn } from "@/lib/utils";
 
 // Props interface for the component
 interface AnimatedMarqueeHeroProps {
@@ -14,12 +14,12 @@ interface AnimatedMarqueeHeroProps {
   className?: string;
 }
 
-// Reusable Button component styled like in the image
+// Reusable Button component styled with branding colors
 const ActionButton = ({ children }: { children: React.ReactNode }) => (
   <motion.button
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
-    className="mt-8 px-8 py-3 rounded-full bg-red-500 text-white font-semibold shadow-lg transition-colors hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75"
+    className="mt-8 px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold shadow-lg transition-colors hover:bg-secondary hover:text-secondary-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-opacity-75"
   >
     {children}
   </motion.button>
@@ -35,7 +35,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   className,
 }) => {
   // Animation variants for the text content
-  const FADE_IN_ANIMATION_VARIANTS = {
+  const FADE_IN_ANIMATION_VARIANTS: Variants = {
     hidden: { opacity: 0, y: 10 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 20 } },
   };
@@ -56,7 +56,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           initial="hidden"
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
-          className="mb-4 inline-block rounded-full border border-border bg-card/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur-sm"
+          className="mb-4 inline-block rounded-full border border-border bg-card/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur-sm font-body"
         >
           {tagline}
         </motion.div>
@@ -73,7 +73,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               },
             },
           }}
-          className="text-5xl md:text-7xl font-bold tracking-tighter text-foreground"
+          className="text-5xl md:text-7xl font-display tracking-tighter text-foreground"
         >
           {typeof title === 'string' ? (
             title.split(" ").map((word, i) => (
@@ -96,7 +96,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
           transition={{ delay: 0.5 }}
-          className="mt-6 max-w-xl text-lg text-muted-foreground"
+          className="mt-6 max-w-xl text-lg text-muted-foreground font-body"
         >
           {description}
         </motion.p>
@@ -118,11 +118,11 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           className="flex gap-4"
           animate={{
             x: ["-100%", "0%"],
-            transition: {
-              ease: "linear",
-              duration: 40,
-              repeat: Infinity,
-            },
+          }}
+          transition={{
+            ease: "linear",
+            duration: 40,
+            repeat: Infinity,
           }}
         >
           {duplicatedImages.map((src, index) => (
@@ -136,7 +136,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               <img
                 src={src}
                 alt={`Showcase image ${index + 1}`}
-                className="w-full h-full object-cover rounded-2xl shadow-md"
+                className="w-full h-full object-cover rounded-2xl shadow-md border border-border/50"
               />
             </div>
           ))}
