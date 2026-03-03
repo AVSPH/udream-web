@@ -78,8 +78,6 @@ export default function InteractiveMap({ places }: InteractiveMapProps) {
         }
       ).addTo(map);
 
-      // Custom zoom control (top-right)
-      L.control.zoom({ position: "topright" }).addTo(map);
 
       // Custom icon using SVG
       const customIcon = L.divIcon({

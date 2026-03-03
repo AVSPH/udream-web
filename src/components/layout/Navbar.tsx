@@ -5,13 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe, Map as MapIcon, BookOpen, User, Home } from "lucide-react";
+import { Menu, X, Globe, Map as MapIcon, BookOpen, User, Home, Backpack } from "lucide-react";
 
 const navItems = [
     { name: "Home", href: "/", icon: <Home size={18} /> },
     { name: "Destinations", href: "/destinations", icon: <Globe size={18} /> },
     { name: "Blog", href: "/blog", icon: <BookOpen size={18} /> },
     { name: "Map", href: "/map", icon: <MapIcon size={18} /> },
+    { name: "Resources", href: "/resources", icon: <Backpack size={18} /> },
     { name: "About", href: "/about", icon: <User size={18} /> },
 ];
 
