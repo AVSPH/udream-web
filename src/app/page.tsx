@@ -2,7 +2,6 @@ import AnimatedHeroDemo from "@/components/hero-section";
 import { FeaturedDestinations } from "@/components/home/featured-destinations";
 import { LatestAdventures } from "@/components/home/latest-adventures";
 import { SocialWall } from "@/components/home/social-wall";
-import { Newsletter } from "@/components/home/newsletter";
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       <FeaturedDestinations />
       <LatestAdventures />
       <SocialWall />
-      <Newsletter />
     </main>
   );
 }

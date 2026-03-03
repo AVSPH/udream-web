@@ -2,36 +2,36 @@ import { AnimatedMarqueeHero } from "@/components/ui/hero";
 
 // A list of sample image URLs for the demo
 const DEMO_IMAGES = [
-  "https://images.unsplash.com/photo-1756312148347-611b60723c7a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzN3x8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1757865579201-693dd2080c73?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2MXx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1756786605218-28f7dd95a493?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMzh8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1757519740947-eef07a74c4ab?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNDh8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1757263005786-43d955f07fb1?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNzB8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1757207445614-d1e12b8f753e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxODZ8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1757269746970-dc477517268f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMjN8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1755119902709-a53513bcbedc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNDF8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1756312148347-611b60723c7a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzN3x8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1757865579201-693dd2080c73?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2MXx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1756786605218-28f7dd95a493?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMzh8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1757519740947-eef07a74c4ab?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNDh8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1757263005786-43d955f07fb1?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNzB8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1757207445614-d1e12b8f753e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxODZ8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1757269746970-dc477517268f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMjN8fHxlbnwwfHx8fHw%3D",
-  "https://images.unsplash.com/photo-1755119902709-a53513bcbedc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNDF8fHxlbnwwfHx8fHw%3D",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525949/DJI_20260225172008_0239_D_ntijjg.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525949/DJI_20260225174328_0280_D_a1vido.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525949/DJI_20260117142145_0933_D_zoitgg.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525947/DJI_20251123161916_0052_D_eumaah.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525947/DJI_20251123161916_0052_D_eumaah.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525947/DJI_20251202155020_0026_D_tpqtqv.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525946/DJI_20251215123848_0853_D_q0gdfe.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525946/IMG20241004171430_xx2oax.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525945/DJI_20251126105729_0011_D_qkam8j.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525945/IMG20241002175722_lkl1wy.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525945/DJI_20251219095809_0157_D_imkrjp.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525943/IMG20241004174133_w2vhcl.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525943/DJI_20251126135705_0057_D_kzzvbf.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525943/DJI_20251127112323_0172_D_ocpb0i.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525943/IMG20241005131651_absmbk.jpg",
+  "https://res.cloudinary.com/drpxke63n/image/upload/v1772525942/DJI_20251220161336_0217_D_c4wzqy.jpg",
 ];
 
 const AnimatedHeroDemo = () => {
   return (
     <AnimatedMarqueeHero
-      tagline="Join over 100,000 happy creators"
+      tagline="Explore the Unexplored with Udream"
       title={
         <>
-          Engage Audiences
+          Adventure Awaits
           <br />
-          with Stunning Videos
+          at Every Horizon
         </>
       }
-      description="Boost Your Brand with High-Impact Short Videos from our expert content creators. Our team is ready to propel your business forward."
+      description="Join us as we traverse the globe, sharing hidden gems, vibrant cultures, and the raw beauty of our planet. Your journey into the extraordinary starts here."
       ctaText="View Footprints"
       images={DEMO_IMAGES}
     />
