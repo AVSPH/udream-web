@@ -46,7 +46,7 @@ const BlogCard = ({ blog, index }: { blog: typeof LATEST_BLOGS[0]; index: number
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group flex flex-col bg-card rounded-2xl overflow-hidden border shadow-sm hover:shadow-md transition-shadow"
+            className="group flex flex-col bg-background/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-background/10 shadow-sm hover:shadow-md transition-shadow"
         >
             <Link href={blog.slug} className="relative aspect-[16/10] overflow-hidden">
                 <Image
@@ -56,13 +56,13 @@ const BlogCard = ({ blog, index }: { blog: typeof LATEST_BLOGS[0]; index: number
                     height={400}
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium">
+                <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-foreground">
                     {blog.category}
                 </div>
             </Link>
 
             <div className="flex flex-col flex-1 p-6">
-                <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
+                <div className="flex items-center gap-4 text-xs text-background/50 mb-3">
                     <div className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
                         <span>{blog.date}</span>
@@ -74,9 +74,9 @@ const BlogCard = ({ blog, index }: { blog: typeof LATEST_BLOGS[0]; index: number
                 </div>
 
                 <Link href={blog.slug} className="group-hover:text-primary transition-colors">
-                    <h3 className="text-xl font-bold mb-2 line-clamp-2">{blog.title}</h3>
+                    <h3 className="text-xl font-geist mb-2 line-clamp-2 text-white drop-shadow-sm tracking-tight">{blog.title}</h3>
                 </Link>
-                <p className="text-muted-foreground text-sm line-clamp-3 mb-6 flex-1">
+                <p className="text-background/60 text-sm line-clamp-3 mb-6 flex-1">
                     {blog.excerpt}
                 </p>
 
@@ -94,14 +94,14 @@ const BlogCard = ({ blog, index }: { blog: typeof LATEST_BLOGS[0]; index: number
 
 export function LatestAdventures() {
     return (
-        <section className="py-24 px-4 bg-muted/30">
+        <section className="py-24 px-4 bg-foreground">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16 max-w-2xl mx-auto">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold tracking-tight mb-4"
+                        className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-background"
                     >
                         Latest <span className="text-primary">Adventures</span>
                     </motion.h2>
@@ -110,7 +110,7 @@ export function LatestAdventures() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-lg text-muted-foreground"
+                        className="text-lg text-background/60"
                     >
                         Dive into our travel journals, guides, and tips from recent trips around the world.
                     </motion.p>

@@ -75,7 +75,7 @@ export function TravelToolsSection() {
                             <div className="text-3xl">{tool.icon}</div>
                             <div>
                                 <div className="flex items-center gap-2">
-                                    <h3 className="font-bold text-foreground group-hover:text-primary transition-colors">
+                                    <h3 className="text-foreground group-hover:text-primary transition-colors">
                                         {tool.name}
                                     </h3>
                                     <ExternalLink className="w-3.5 h-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />

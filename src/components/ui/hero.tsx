@@ -3,6 +3,7 @@
 import React from "react";
 import { motion, type Variants } from "motion/react";
 import { cn } from "@/lib/utils";
+import { StripedPattern } from "@/components/magicui/striped-pattern";
 
 // Props interface for the component
 interface AnimatedMarqueeHeroProps {
@@ -46,10 +47,11 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   return (
     <section
       className={cn(
-        "relative w-full h-screen overflow-hidden bg-background flex flex-col items-center justify-center text-center px-4",
+        "relative w-full h-screen overflow-hidden bg-transparent flex flex-col items-center justify-center text-center px-4",
         className
       )}
     >
+
       <div className="z-10 flex flex-col items-center">
         {/* Tagline */}
         <motion.div

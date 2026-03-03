@@ -51,7 +51,7 @@ const SOCIAL_POSTS = [
 
 export function SocialWall() {
     return (
-        <section className="py-24 px-4 bg-background">
+        <section className="py-24 px-4 bg-transparent">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <motion.div
@@ -84,7 +84,7 @@ export function SocialWall() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="relative group rounded-2xl overflow-hidden bg-muted break-inside-avoid"
+                            className="relative group rounded-2xl overflow-hidden break-inside-avoid"
                         >
                             <Image
                                 src={post.url}

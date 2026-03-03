@@ -18,7 +18,7 @@ const FeaturedDestinationCard = ({ place, index }: { place: VisitedPlace; index:
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-      className="group relative overflow-hidden rounded-2xl cursor-pointer"
+      className="bg-transparent group relative overflow-hidden rounded-2xl cursor-pointer"
     >
       <Link href={place.blogLink}>
         <div className="aspect-[4/5] w-full overflow-hidden">
@@ -31,8 +31,6 @@ const FeaturedDestinationCard = ({ place, index }: { place: VisitedPlace; index:
           />
         </div>
         
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300" />
         
         {/* Content */}
         <div className="absolute bottom-0 left-0 p-6 w-full transform transition-transform duration-300 translate-y-2 group-hover:translate-y-0">
@@ -56,7 +54,7 @@ export function FeaturedDestinations() {
   const featured = visitedPlaces.filter((p) => featuredIds.includes(p.id));
 
   return (
-    <section className="py-24 px-4 bg-background">
+    <section className="py-24 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">

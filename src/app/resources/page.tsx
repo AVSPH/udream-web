@@ -23,7 +23,7 @@ export default function ResourcesPage() {
                         <span className="text-primary">Not Harder</span>
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                        Everything I use to plan, budget, and navigate my adventures — plus real cost breakdowns from every destination I&apos;ve visited.
+                        Everything I use to plan, budget, and navigate my adventures, plus real cost breakdowns from every destination I&apos;ve visited.
                     </p>
                 </div>
             </div>

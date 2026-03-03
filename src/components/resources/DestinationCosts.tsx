@@ -44,7 +44,7 @@ function CostCard({ dest }: { dest: DestinationCost }) {
                         <DollarSign className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                        <h3 className="font-bold text-foreground">{dest.name}</h3>
+                        <h3 className=" text-foreground">{dest.name}</h3>
                         <p className="text-sm text-muted-foreground">{dest.country} · {dest.currency}</p>
                     </div>
                 </div>
@@ -186,7 +186,7 @@ export function DestinationCostsSection() {
                     placeholder="Search destination or country..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-full sm:w-80 h-10 px-4 rounded-full border border-border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 mb-6"
+                    className="w-full sm:w-80 h-10 px-4 rounded-full border border-border bg-card text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 mb-6"
                 />
 
                 <div className="space-y-3">
