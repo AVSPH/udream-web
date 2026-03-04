@@ -1,6 +1,7 @@
 import AnimatedHeroDemo from "@/components/hero-section";
 import { FeaturedDestinations } from "@/components/home/featured-destinations";
 import { LatestAdventures } from "@/components/home/latest-adventures";
+import { ResourcesSection } from "@/components/home/resources-section";
 import { SocialWall } from "@/components/home/social-wall";
 import { StripedPattern } from "@/components/magicui/striped-pattern";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <AnimatedHeroDemo />
       <FeaturedDestinations />
       <LatestAdventures />
+      <ResourcesSection />
       <SocialWall />
     </main>
   );
