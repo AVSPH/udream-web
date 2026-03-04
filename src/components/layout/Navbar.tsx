@@ -58,12 +58,12 @@ export default function Navbar() {
 
     return (
         <nav
-            className="fixed top-0 left-0 right-0 z-[5000] border-b border-border/40 transition-all duration-300 bg-background/95 backdrop-blur-lg  py-4"
+            className="fixed top-0 left-0 right-0 z-[5000] border-b border-border/40 transition-all duration-300 bg-background/95 backdrop-blur-lg py-2"
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="group flex items-center gap-2 relative z-10">
-                    <div className="relative w-24 h-10 md:w-32 md:h-12 lg:h-14 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                    <div className="relative w-20 h-8 md:w-28 md:h-10 lg:h-10 overflow-hidden transition-transform duration-300 group-hover:scale-105">
                         <Image
                             src="/assets/logo.png"
                             alt="Udream Logo"
