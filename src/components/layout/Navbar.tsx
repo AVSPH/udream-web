@@ -34,7 +34,8 @@ const navItems: NavItem[] = [
             { name: "Travel Guides", href: "/resources/guide", icon: <Globe size={18} />, description: "Detailed itineraries" },
             { name: "Visa Guide", href: "/resources/visa-guide", icon: <FileText size={18} />, description: "Entry requirements" },
             { name: "Destination Costs", href: "/resources/destination-costs", icon: <CheckSquare size={18} />, description: "Real budget breakdowns" },
-            { name: "Travel Tools", href: "/resources/travel-tools", icon: <Plane size={18} />, description: "Gear & planning apps" }
+            { name: "Travel Tools", href: "/resources/travel-tools", icon: <Plane size={18} />, description: "Gear & planning apps" },
+            { name: "Itinerary Planner", href: "/resources/itinerary-planner", icon: <MapIcon size={18} />, description: "Drag & drop builder" }
         ]
     },
     { name: "About", href: "/about", icon: <User size={18} /> },

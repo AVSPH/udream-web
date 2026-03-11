@@ -11,7 +11,7 @@ export interface VisitedPlace {
 }
 
 export const visitedPlaces: VisitedPlace[] = [
-  // --- Asia (17) ---
+  // --- Asia ---
   {
     id: 1,
     name: "Kuala Lumpur",
@@ -199,8 +199,52 @@ export const visitedPlaces: VisitedPlace[] = [
     blogLink: "/blog/turkey",
     description: "A transcontinental bridge between Europe and Asia.",
   },
+  {
+    id: 29,
+    name: "Taichung",
+    country: "Taiwan",
+    continent: "Asia",
+    dateVisited: "2023",
+    coordinates: [24.1477, 120.6736],
+    thumbnail: "https://images.unsplash.com/photo-1596483484501-8314ba63510e?q=80&w=2000&auto=format&fit=crop",
+    blogLink: "/blog/taichung",
+    description: "A relaxed and creative city known for colorful art villages and scenic wetlands.",
+  },
+  {
+    id: 30,
+    name: "Kota Kinabalu",
+    country: "Malaysia",
+    continent: "Asia",
+    dateVisited: "2023",
+    coordinates: [5.9804, 116.0735],
+    thumbnail: "https://images.unsplash.com/photo-1543888514-94f4a3861218?q=80&w=2000&auto=format&fit=crop",
+    blogLink: "/blog/kota-kinabalu",
+    description: "Perfect for beach lovers and nature enthusiasts with island hopping and beautiful sunsets.",
+  },
+  {
+    id: 31,
+    name: "Phuket",
+    country: "Thailand",
+    continent: "Asia",
+    dateVisited: "2023",
+    coordinates: [7.8804, 98.3923],
+    thumbnail: "https://images.unsplash.com/photo-1589394815804-964ce0fa58d4?q=80&w=2000&auto=format&fit=crop",
+    blogLink: "/blog/phuket",
+    description: "Thailand's largest island, known for stunning beaches and vibrant nightlife.",
+  },
+  {
+    id: 32,
+    name: "Phnom Penh",
+    country: "Cambodia",
+    continent: "Asia",
+    dateVisited: "2023",
+    coordinates: [11.5564, 104.9282],
+    thumbnail: "https://images.unsplash.com/photo-1533050487297-09b450131914?q=80&w=2000&auto=format&fit=crop",
+    blogLink: "/blog/phnom-penh",
+    description: "The bustling capital of Cambodia sitting at the junction of the Mekong and Tonlé Sap rivers.",
+  },
 
-  // --- Europe (11) ---
+  // --- Europe ---
   {
     id: 18,
     name: "Athens",
