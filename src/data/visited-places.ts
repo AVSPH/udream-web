@@ -19,7 +19,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [3.139, 101.6869],
-    thumbnail: "https://images.unsplash.com/photo-1596422846543-75c6fc18a593?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467512/DSCF2955_c7pd8a.jpg",
     blogLink: "/blog/malaysia",
     description: "The iconic Petronas Towers and vibrant street food culture.",
   },
@@ -30,9 +31,11 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [1.3521, 103.8198],
-    thumbnail: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467835/DSCF3052_q3xt3i.jpg",
     blogLink: "/blog/singapore",
-    description: "A garden city with futuristic architecture and Hawker centers.",
+    description:
+      "A garden city with futuristic architecture and Hawker centers.",
   },
   {
     id: 3,
@@ -41,7 +44,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [4.8903, 114.9401],
-    thumbnail: "https://images.unsplash.com/photo-1503254332200-a5170d473456?w=400&q=80",
+    thumbnail:
+      "https://images.unsplash.com/photo-1503254332200-a5170d473456?w=400&q=80",
     blogLink: "/blog/brunei",
     description: "Golden-domed mosques and the water village of Kampong Ayer.",
   },
@@ -52,7 +56,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [13.7563, 100.5018],
-    thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579367?w=400&q=80",
+    thumbnail:
+      "https://images.unsplash.com/photo-1508009603885-50cf7c579367?w=400&q=80",
     blogLink: "/blog/thailand",
     description: "Ornate shrines and a bustling street life.",
   },
@@ -63,7 +68,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [13.3671, 103.8448],
-    thumbnail: "https://images.unsplash.com/photo-1500049222538-2ef428420ef2?w=400&q=80",
+    thumbnail:
+      "https://images.unsplash.com/photo-1500049222538-2ef428420ef2?w=400&q=80",
     blogLink: "/blog/cambodia",
     description: "Gateway to the majestic Angkor Wat temple complex.",
   },
@@ -74,7 +80,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [20.9101, 107.1839],
-    thumbnail: "https://images.unsplash.com/photo-1528127269322-539801943592?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468512/IMG_20230917_195820_ma5aqt.jpg",
     blogLink: "/blog/vietnam",
     description: "Emerald waters and thousands of towering limestone islands.",
   },
@@ -85,7 +92,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2022",
     coordinates: [-8.3405, 115.092],
-    thumbnail: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=80",
+    thumbnail:
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=80",
     blogLink: "/blog/indonesia",
     description: "Lush rice terraces, Hindu temples, and world-class surf.",
   },
@@ -96,7 +104,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [25.033, 121.5654],
-    thumbnail: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468158/IMG20230604155339_l0hjv0.jpg",
     blogLink: "/blog/taiwan",
     description: "The Taiwan 101 skyscraper and bustling night markets.",
   },
@@ -107,7 +116,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [35.6762, 139.6503],
-    thumbnail: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=80",
+    thumbnail:
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=80",
     blogLink: "/blog/japan",
     description: "A neon-lit metropolis where tradition meets future.",
   },
@@ -118,7 +128,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [22.276, 114.15],
-    thumbnail: "https://images.unsplash.com/photo-1506351466238-eb6267fe0238?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467482/IMG20241005110952_dbcsui.jpg",
     blogLink: "/blog/hong-kong",
     description: "Skyline views and a unique blend of East and West.",
   },
@@ -129,7 +140,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [22.1977, 113.5439],
-    thumbnail: "https://images.unsplash.com/photo-1589139209772-23c2a632b781?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467476/IMG20241002175756_dlr0xk.jpg",
     blogLink: "/blog/macau",
     description: "Portuguese colonial legacy and world-class entertainment.",
   },
@@ -140,9 +152,11 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [43.222, 76.8512],
-    thumbnail: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466190/DJI_20251105154859_0012_D_nvumg4.jpg",
     blogLink: "/blog/kazakhstan",
-    description: "The Trans-Ili Alatau mountains and modern Central Asian life.",
+    description:
+      "The Trans-Ili Alatau mountains and modern Central Asian life.",
   },
   {
     id: 13,
@@ -151,7 +165,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [39.627, 66.9749],
-    thumbnail: "https://images.unsplash.com/photo-1528644489117-69dc67015065?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468419/DJI_20251115160517_0039_D_sslu2a.jpg",
     blogLink: "/blog/uzbekistan",
     description: "Silk Road history, blue tiles, and Registan Square.",
   },
@@ -162,7 +177,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [38.5358, 68.7791],
-    thumbnail: "https://images.unsplash.com/photo-1554556485-7f1503380231?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468288/DJI_20251119172020_0066_D_smnftk.jpg",
     blogLink: "/blog/tajikistan",
     description: "The rugged Pamir Mountains and Persian heritage.",
   },
@@ -173,7 +189,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [41.7151, 44.8271],
-    thumbnail: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467221/DJI_20251123162100_0054_D_eyeyhl.jpg",
     blogLink: "/blog/georgia",
     description: "Sulfur baths, dramatic cliffs, and legendary hospitality.",
   },
@@ -184,7 +201,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [40.1792, 44.4991],
-    thumbnail: "https://images.unsplash.com/photo-1549429188-34f71a7428f5?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466350/DJI_20251207134656_0148_D_dycf1a.jpg",
     blogLink: "/blog/armenia",
     description: "Mount Ararat views and some of the world's oldest churches.",
   },
@@ -195,7 +213,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [41.0082, 28.9784],
-    thumbnail: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468350/DJI_20251211125617_0207_D_iu11yf.jpg",
     blogLink: "/blog/turkey",
     description: "A transcontinental bridge between Europe and Asia.",
   },
@@ -206,9 +225,11 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [24.1477, 120.6736],
-    thumbnail: "https://images.unsplash.com/photo-1596483484501-8314ba63510e?q=80&w=2000&auto=format&fit=crop",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468142/IMG20230606181001_co1vxt.jpg",
     blogLink: "/blog/taichung",
-    description: "A relaxed and creative city known for colorful art villages and scenic wetlands.",
+    description:
+      "A relaxed and creative city known for colorful art villages and scenic wetlands.",
   },
   {
     id: 30,
@@ -217,9 +238,11 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [5.9804, 116.0735],
-    thumbnail: "https://images.unsplash.com/photo-1543888514-94f4a3861218?q=80&w=2000&auto=format&fit=crop",
+    thumbnail:
+      "https://images.unsplash.com/photo-1543888514-94f4a3861218?q=80&w=2000&auto=format&fit=crop",
     blogLink: "/blog/kota-kinabalu",
-    description: "Perfect for beach lovers and nature enthusiasts with island hopping and beautiful sunsets.",
+    description:
+      "Perfect for beach lovers and nature enthusiasts with island hopping and beautiful sunsets.",
   },
   {
     id: 31,
@@ -228,9 +251,11 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [7.8804, 98.3923],
-    thumbnail: "https://images.unsplash.com/photo-1589394815804-964ce0fa58d4?q=80&w=2000&auto=format&fit=crop",
+    thumbnail:
+      "https://images.unsplash.com/photo-1589394815804-964ce0fa58d4?q=80&w=2000&auto=format&fit=crop",
     blogLink: "/blog/phuket",
-    description: "Thailand's largest island, known for stunning beaches and vibrant nightlife.",
+    description:
+      "Thailand's largest island, known for stunning beaches and vibrant nightlife.",
   },
   {
     id: 32,
@@ -239,9 +264,11 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Asia",
     dateVisited: "2023",
     coordinates: [11.5564, 104.9282],
-    thumbnail: "https://images.unsplash.com/photo-1533050487297-09b450131914?q=80&w=2000&auto=format&fit=crop",
+    thumbnail:
+      "https://images.unsplash.com/photo-1533050487297-09b450131914?q=80&w=2000&auto=format&fit=crop",
     blogLink: "/blog/phnom-penh",
-    description: "The bustling capital of Cambodia sitting at the junction of the Mekong and Tonlé Sap rivers.",
+    description:
+      "The bustling capital of Cambodia sitting at the junction of the Mekong and Tonlé Sap rivers.",
   },
 
   // --- Europe ---
@@ -252,7 +279,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [37.9838, 23.7275],
-    thumbnail: "https://images.unsplash.com/photo-1503152394-c571994fd383?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467246/DJI_20251215093850_0830_D_kchavg.jpg",
     blogLink: "/blog/greece",
     description: "The Acropolis and the cradle of Western civilization.",
   },
@@ -263,7 +291,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [41.9028, 12.4964],
-    thumbnail: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467666/DJI_20251216131631_0895_D_rmw9sc.jpg",
     blogLink: "/blog/italy",
     description: "The Colosseum, fountains, and ancient history at every turn.",
   },
@@ -274,7 +303,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [41.3851, 2.1734],
-    thumbnail: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467962/DJI_20251224152553_0477_D_ayzbrq.jpg",
     blogLink: "/blog/spain",
     description: "Gaudí architecture and the vibrant Sagrada Família.",
   },
@@ -285,7 +315,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [41.9029, 12.4534],
-    thumbnail: "https://images.unsplash.com/photo-1541088923301-443b7e61e089?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467672/DJI_20251216133307_0915_D_dsurxx.jpg",
     blogLink: "/blog/vatican",
     description: "The spiritual heart of the Catholic world.",
   },
@@ -296,7 +327,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [48.2082, 16.3738],
-    thumbnail: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466648/DJI_20251217130735_0014_D_fgoulr.jpg",
     blogLink: "/blog/austria",
     description: "Imperial palaces, classical music, and coffee house culture.",
   },
@@ -307,7 +339,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [47.0502, 8.3093],
-    thumbnail: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468091/DJI_20251222145209_0434_D_gkcxa3.jpg",
     blogLink: "/blog/switzerland",
     description: "Alpine peaks and the crystal-clear Lake Lucerne.",
   },
@@ -318,7 +351,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [50.8503, 4.3517],
-    thumbnail: "https://images.unsplash.com/photo-1491557345352-5929e343d89d?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466913/DJI_20251220161134_0215_D_kl2uik.jpg",
     blogLink: "/blog/belgium",
     description: "Medieval Grand Place and world-famous waffles.",
   },
@@ -329,7 +363,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [41.3275, 19.8187],
-    thumbnail: "https://images.unsplash.com/photo-1563823521360-318e47f2d01e?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466821/DJI_20260225172008_0239_D_cqajah.jpg",
     blogLink: "/blog/albania",
     description: "Colorful Ottoman-era architecture and wild coastlines.",
   },
@@ -340,7 +375,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [42.4247, 18.7712],
-    thumbnail: "https://images.unsplash.com/photo-1533031046755-9002598380eb?w=400&q=80",
+    thumbnail:
+      "https://images.unsplash.com/photo-1533031046755-9002598380eb?w=400&q=80",
     blogLink: "/blog/montenegro",
     description: "A dramatic bay with medieval old towns.",
   },
@@ -351,7 +387,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [43.8563, 18.4131],
-    thumbnail: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=400&q=80",
+    thumbnail:
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466834/DJI_20251229143150_0691_D_jhe4ct.jpg",
     blogLink: "/blog/bosnia",
     description: "Where East meets West in the heart of the Balkans.",
   },
@@ -362,7 +399,8 @@ export const visitedPlaces: VisitedPlace[] = [
     continent: "Europe",
     dateVisited: "2022",
     coordinates: [44.7866, 20.4489],
-    thumbnail: "https://images.unsplash.com/photo-1552227465-38cc5ce44955?w=400&q=80",
+    thumbnail:
+      "https://images.unsplash.com/photo-1552227465-38cc5ce44955?w=400&q=80",
     blogLink: "/blog/serbia",
     description: "The confluence of the Sava and Danube rivers.",
   },

@@ -1,9 +1,8 @@
-
 "use client";
 
 import { VisitedPlace, visitedPlaces } from "@/data/visited-places";
 import { motion, useInView } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
@@ -12,36 +11,63 @@ const FeaturedDestinationCard = ({ place, index }: { place: VisitedPlace; index:
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
+  // Odd-index cards shift down for a staggered look
+  const offsetClass = index % 2 === 1 ? "lg:translate-y-10" : "";
+
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-      className="bg-transparent group relative overflow-hidden rounded-2xl cursor-pointer"
+      initial={{ opacity: 0, y: 60 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+      transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
+      whileHover={{ y: index % 2 === 1 ? 34 : -8 }}
+      className={`group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-500 ${offsetClass}`}
     >
-      <Link href={place.blogLink}>
-        <div className="aspect-[4/5] w-full overflow-hidden">
+      <Link href={place.blogLink} className="block">
+        {/* Image */}
+        <div className="aspect-[3/4] w-full overflow-hidden">
           <Image
             src={place.thumbnail}
             alt={place.name}
             width={400}
-            height={500}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+            height={533}
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         </div>
-        
-        
-        {/* Content */}
-        <div className="absolute bottom-0 left-0 p-6 w-full transform transition-transform duration-300 translate-y-2 group-hover:translate-y-0">
-          <div className="flex items-center gap-2 text-white/80 mb-2">
-            <MapPin className="w-4 h-4" />
-            <span className="text-sm font-medium">{place.country}</span>
-          </div>
-          <h3 className="text-2xl font-bold text-white mb-2">{place.name}</h3>
-          <p className="text-white/70 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+        {/* Top: country badge + index number */}
+        <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/30 backdrop-blur-md text-white text-xs font-medium border border-white/15">
+            <MapPin className="w-3 h-3" />
+            {place.country}
+          </span>
+          <span className="w-8 h-8 rounded-full bg-black/30 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/60 text-xs font-medium">
+            0{index + 1}
+          </span>
+        </div>
+
+        {/* Bottom content */}
+        <div className="absolute bottom-0 left-0 right-0 p-5">
+          <p className="text-white/45 text-[11px] tracking-[0.2em] uppercase font-medium mb-1.5">
+            {place.dateVisited}
+          </p>
+          <h3 className="text-xl font-bold text-white leading-snug mb-3">
+            {place.name}
+          </h3>
+
+          {/* Description — slides up on hover */}
+          <p className="text-white/60 text-sm leading-relaxed line-clamp-2 mb-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
             {place.description}
           </p>
+
+          {/* Explore link */}
+          <div className="flex items-center gap-1.5 text-white/70 group-hover:text-white transition-colors duration-300">
+            <span className="text-sm font-medium">Explore</span>
+            <ArrowUpRight className="w-4 h-4 -translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300" />
+          </div>
         </div>
       </Link>
     </motion.div>
@@ -49,31 +75,35 @@ const FeaturedDestinationCard = ({ place, index }: { place: VisitedPlace; index:
 };
 
 export function FeaturedDestinations() {
-  // Let's pick some visually distinct featured places
-  const featuredIds = [7, 6, 23, 27]; // Bali, Ha Long Bay, Lucerne, Sarajevo
+  const featuredIds = [2, 6, 23, 27];
   const featured = visitedPlaces.filter((p) => featuredIds.includes(p.id));
 
   return (
     <section className="py-24 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-              Featured <span style={{ fontFamily: "var(--font-script)" }} className="text-primary italic">Destinations</span>
+              Featured{" "}
+              <span style={{ fontFamily: "var(--font-script)" }} className="text-primary italic">
+                Destinations
+              </span>
             </h2>
             <p className="text-lg text-muted-foreground">
               A curated selection of our most memorable journeys across the globe. From serene landscapes to bustling cities.
             </p>
           </div>
-          <Link 
-            href="/destinations" 
-            className="text-primary hover:text-primary/80 font-medium underline underline-offset-4 transition-colors"
+          <Link
+            href="/destinations"
+            className="group inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors"
           >
             Explore all destinations
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Cards — extra bottom padding to accommodate the stagger offset */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-12">
           {featured.map((place, index) => (
             <FeaturedDestinationCard key={place.id} place={place} index={index} />
           ))}
