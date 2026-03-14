@@ -162,3 +162,7 @@
     @apply tracking-tight font-semibold;
   }
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

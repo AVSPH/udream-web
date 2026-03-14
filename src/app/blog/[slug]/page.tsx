@@ -5,7 +5,8 @@ import { notFound } from "next/navigation";
 import { visitedPlaces } from "@/data/visited-places";
 import { visitedPlaces as allPlaces } from "@/data/visited-places";
 import { getBlogBySlug } from "@/hooks/useblogs";
-import { MapPin, Calendar, ArrowLeft, Globe, ExternalLink, Tag } from "lucide-react";
+import { MapPin, Calendar, Globe, ExternalLink, Tag } from "lucide-react";
+import { ParallaxHero } from "@/components/blog/ParallaxHero";
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -80,28 +81,9 @@ export default async function BlogPostPage({ params }: Props) {
         return (
             <article className="min-h-screen bg-white">
                 {/* Hero Image */}
-                <div className="relative h-[55vh] min-h-[380px] w-full overflow-hidden">
-                    {apiBlog.featuredImage ? (
-                        <Image
-                            src={apiBlog.featuredImage}
-                            alt={apiBlog.title}
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                    ) : (
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white" />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
-
-                    <Link
-                        href="/blog"
-                        className="absolute top-24 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-sm text-white text-sm font-medium hover:bg-black/50 transition-colors"
-                    >
-                        <ArrowLeft className="w-4 h-4" />
-                        All Posts
-                    </Link>
-                </div>
+                {apiBlog.featuredImage && (
+                    <ParallaxHero src={apiBlog.featuredImage} alt={apiBlog.title} />
+                )}
 
                 {/* Content */}
                 <div className="max-w-3xl mx-auto px-4 -mt-24 relative z-10 pb-20">
@@ -311,24 +293,7 @@ export default async function BlogPostPage({ params }: Props) {
     return (
         <article className="min-h-screen bg-white">
             {/* Hero Image */}
-            <div className="relative h-[55vh] min-h-[380px] w-full overflow-hidden">
-                <Image
-                    src={place.thumbnail}
-                    alt={place.name}
-                    fill
-                    className="object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
-
-                <Link
-                    href="/blog"
-                    className="absolute top-24 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-sm text-white text-sm font-medium hover:bg-black/50 transition-colors"
-                >
-                    <ArrowLeft className="w-4 h-4" />
-                    All Posts
-                </Link>
-            </div>
+            <ParallaxHero src={place.thumbnail} alt={place.name} />
 
             {/* Content */}
             <div className="max-w-3xl mx-auto px-4 -mt-24 relative z-10 pb-20">
