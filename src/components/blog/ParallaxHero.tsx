@@ -11,7 +11,7 @@ interface ParallaxHeroProps {
 
 export function ParallaxHero({ src, alt }: ParallaxHeroProps) {
     return (
-        <div className="sticky top-0 h-screen w-full overflow-hidden z-0">
+        <div className="relative h-[65vh] min-h-[420px] w-full overflow-hidden">
             <Image
                 src={src}
                 alt={alt}
@@ -19,9 +19,8 @@ export function ParallaxHero({ src, alt }: ParallaxHeroProps) {
                 className="object-cover"
                 priority
             />
-
-            {/* Top gradient for back-button legibility */}
-            <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/40 to-transparent" />
+            {/* Gradient — top for back button, bottom to bleed into content */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
 
             <Link
                 href="/blog"

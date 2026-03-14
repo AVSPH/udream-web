@@ -14,7 +14,7 @@ const BlogCard = ({ blog, index }: { blog: PublicBlog; index: number }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group flex flex-col bg-background/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-background/10 shadow-sm hover:shadow-md transition-shadow"
+            className="group flex flex-col bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
         >
             <Link href={`/blog/${blog.slug}`} className="relative aspect-[16/10] overflow-hidden">
                 {blog.featuredImage ? (
@@ -30,40 +30,41 @@ const BlogCard = ({ blog, index }: { blog: PublicBlog; index: number }) => {
                         <BookOpen className="w-12 h-12 text-primary/30" />
                     </div>
                 )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 {blog.category && (
-                    <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-foreground">
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white text-[11px] font-semibold uppercase tracking-wider border border-white/15">
                         {blog.category}
-                    </div>
+                    </span>
                 )}
             </Link>
 
-            <div className="flex flex-col flex-1 p-6">
-                <div className="flex items-center gap-4 text-xs text-background/50 mb-3">
-                    <div className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" />
-                        <span>
-                            {new Date(blog.createdAt).toLocaleDateString("en-US", {
-                                month: "short",
-                                day: "numeric",
-                                year: "numeric",
-                            })}
-                        </span>
-                    </div>
+            <div className="flex flex-col flex-1 p-5 gap-3">
+                <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <Calendar className="w-3.5 h-3.5" />
+                    <span>
+                        {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                        })}
+                    </span>
                 </div>
 
-                <Link href={`/blog/${blog.slug}`} className="group-hover:text-primary transition-colors">
-                    <h3 className="text-xl font-geist mb-2 line-clamp-2 text-white drop-shadow-sm tracking-tight">
+                <Link href={`/blog/${blog.slug}`}>
+                    <h3 className="font-bold text-base leading-snug line-clamp-2 text-foreground group-hover:text-primary transition-colors">
                         {blog.title}
                     </h3>
                 </Link>
 
-                <Link
-                    href={`/blog/${blog.slug}`}
-                    className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors mt-auto"
-                >
-                    Read article
-                    <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                </Link>
+                <div className="mt-auto flex items-center justify-between pt-3 border-t border-border/60">
+                    <Link
+                        href={`/blog/${blog.slug}`}
+                        className="inline-flex items-center gap-1 text-xs text-primary font-semibold hover:text-primary/80 transition-colors"
+                    >
+                        Read article
+                        <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                    </Link>
+                </div>
             </div>
         </motion.article>
     );
@@ -92,7 +93,7 @@ export function LatestAdventures() {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        getPublicBlogs({ limit: 3, businessId: process.env.NEXT_PUBLIC_BUSINESS_ID })
+        getPublicBlogs({ limit: 3 })
           .then((res) => setBlogs(res.data))
           .catch(() => setError(true))
           .finally(() => setLoading(false));

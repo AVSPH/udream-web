@@ -85,9 +85,8 @@ export default async function BlogPostPage({ params }: Props) {
                     <ParallaxHero src={apiBlog.featuredImage} alt={apiBlog.title} />
                 )}
 
-                {/* Content — slides over the sticky hero */}
-                <div className="relative z-10 bg-white">
-                <div className="max-w-3xl mx-auto px-4 pb-20 pt-12">
+                <div className="bg-white">
+                <div className="max-w-3xl mx-auto px-4 pb-20 pt-10">
                     {/* Meta */}
                     <div className="flex flex-wrap items-center gap-3 mb-6">
                         {apiBlog.category && (
@@ -297,9 +296,8 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Hero Image */}
             <ParallaxHero src={place.thumbnail} alt={place.name} />
 
-            {/* Content — slides over the sticky hero */}
-            <div className="relative z-10 bg-white">
-            <div className="max-w-3xl mx-auto px-4 pb-20 pt-12">
+            <div className="bg-white">
+            <div className="max-w-3xl mx-auto px-4 pb-20 pt-10">
                 {/* Meta */}
                 <div className="flex flex-wrap items-center gap-3 mb-6">
                     <span className="px-3 py-1 rounded-full bg-primary text-white text-xs font-semibold uppercase tracking-wider">
