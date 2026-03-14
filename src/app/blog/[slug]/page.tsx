@@ -85,8 +85,9 @@ export default async function BlogPostPage({ params }: Props) {
                     <ParallaxHero src={apiBlog.featuredImage} alt={apiBlog.title} />
                 )}
 
-                {/* Content */}
-                <div className="max-w-3xl mx-auto px-4 -mt-24 relative z-10 pb-20">
+                {/* Content — slides over the sticky hero */}
+                <div className="relative z-10 bg-white">
+                <div className="max-w-3xl mx-auto px-4 pb-20 pt-12">
                     {/* Meta */}
                     <div className="flex flex-wrap items-center gap-3 mb-6">
                         {apiBlog.category && (
@@ -276,6 +277,7 @@ export default async function BlogPostPage({ params }: Props) {
                         </Link>
                     </div>
                 </div>
+                </div>
             </article>
         );
     }
@@ -295,8 +297,9 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Hero Image */}
             <ParallaxHero src={place.thumbnail} alt={place.name} />
 
-            {/* Content */}
-            <div className="max-w-3xl mx-auto px-4 -mt-24 relative z-10 pb-20">
+            {/* Content — slides over the sticky hero */}
+            <div className="relative z-10 bg-white">
+            <div className="max-w-3xl mx-auto px-4 pb-20 pt-12">
                 {/* Meta */}
                 <div className="flex flex-wrap items-center gap-3 mb-6">
                     <span className="px-3 py-1 rounded-full bg-primary text-white text-xs font-semibold uppercase tracking-wider">
@@ -379,6 +382,7 @@ export default async function BlogPostPage({ params }: Props) {
                         </div>
                     </div>
                 )}
+            </div>
             </div>
         </article>
     );
