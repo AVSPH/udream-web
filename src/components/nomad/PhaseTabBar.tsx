@@ -19,7 +19,7 @@ interface PhaseTabBarProps {
 
 export default function PhaseTabBar({ phases, activePhase, onSwitch, checkedTasks }: PhaseTabBarProps) {
   return (
-    <div className="sticky top-16 z-[100] bg-background border-b border-border shadow-sm">
+    <div className="lg:hidden sticky top-16 z-[100] bg-background border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 flex overflow-x-auto scrollbar-none">
         {phases.map((phase) => {
           const Icon = ICON_MAP[phase.iconName] ?? Compass;

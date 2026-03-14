@@ -12,8 +12,9 @@ export default function PlaybookGate({ onUnlock }: PlaybookGateProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
@@ -21,7 +22,40 @@ export default function PlaybookGate({ onUnlock }: PlaybookGateProps) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.trim())) { setError('Please enter a valid email address.'); return; }
 
-    onUnlock(name.trim(), email.trim());
+    setLoading(true);
+
+    const trimmedName = name.trim();
+    const parts = trimmedName.split(' ');
+    const firstName = parts[0];
+    const lastName = parts.slice(1).join(' ') || '';
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email: email.trim(),
+          tags: ['Nomad Playbook'],
+        }),
+      });
+
+      const data = await res.json();
+
+      // Duplicate = already registered, still grant access
+      if (!res.ok && data.error !== 'duplicate') {
+        setError('Something went wrong. Please try again.');
+        setLoading(false);
+        return;
+      }
+    } catch {
+      setError('Something went wrong. Please try again.');
+      setLoading(false);
+      return;
+    }
+
+    onUnlock(trimmedName, email.trim());
   };
 
   return (
@@ -93,10 +127,23 @@ export default function PlaybookGate({ onUnlock }: PlaybookGateProps) {
 
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 py-3 bg-primary text-white font-semibold text-sm rounded-xl hover:bg-primary/90 transition-colors mt-2"
+              disabled={loading}
+              className="w-full flex items-center justify-center gap-2 py-3 bg-primary text-white font-semibold text-sm rounded-xl hover:bg-primary/90 transition-colors mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Unlock the Playbook
-              <ArrowRight className="w-4 h-4" />
+              {loading ? (
+                <>
+                  <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                  </svg>
+                  Unlocking…
+                </>
+              ) : (
+                <>
+                  Unlock the Playbook
+                  <ArrowRight className="w-4 h-4" />
+                </>
+              )}
             </button>
           </form>
 

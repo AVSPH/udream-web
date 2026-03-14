@@ -105,6 +105,20 @@ export default function PhasePanel({
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">{phase.description}</p>
 
+          {/* Section pills — quick jump */}
+          <div className="flex flex-wrap gap-1.5 mt-4">
+            {phase.sections.map((s) => (
+              <a
+                key={s.id}
+                href={`#section-${s.id}`}
+                className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-muted text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted/80 transition-colors"
+              >
+                {getIcon(s.icon, 'w-3 h-3')}
+                {s.title}
+              </a>
+            ))}
+          </div>
+
           {/* Progress bar */}
           <div className="flex items-center gap-3 mt-4">
             <div className="flex-1 max-w-xs h-1.5 bg-muted rounded-full overflow-hidden">
@@ -125,7 +139,7 @@ export default function PhasePanel({
       {/* Sections */}
       <div className="space-y-6">
         {phase.sections.map((section) => (
-          <div key={section.id} className="bg-card rounded-2xl border border-border p-5">
+          <div key={section.id} id={`section-${section.id}`} className="bg-card rounded-2xl border border-border p-5 scroll-mt-24">
             {/* Section header */}
             <div className="flex items-center gap-2 pb-3 mb-4 border-b border-border">
               <span className="text-primary">{getIcon(section.icon, 'w-4 h-4')}</span>

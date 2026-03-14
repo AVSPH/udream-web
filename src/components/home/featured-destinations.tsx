@@ -20,8 +20,7 @@ const FeaturedDestinationCard = ({ place, index }: { place: VisitedPlace; index:
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
       transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
-      whileHover={{ y: index % 2 === 1 ? 34 : -8 }}
-      className={`group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-500 ${offsetClass}`}
+className={`group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-500 ${offsetClass}`}
     >
       <Link href={place.blogLink} className="block">
         {/* Image */}
@@ -58,8 +57,8 @@ const FeaturedDestinationCard = ({ place, index }: { place: VisitedPlace; index:
             {place.name}
           </h3>
 
-          {/* Description — slides up on hover */}
-          <p className="text-white/60 text-sm leading-relaxed line-clamp-2 mb-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+          {/* Description */}
+          <p className="text-white/60 text-sm leading-relaxed line-clamp-2 mb-4">
             {place.description}
           </p>
 
@@ -75,7 +74,7 @@ const FeaturedDestinationCard = ({ place, index }: { place: VisitedPlace; index:
 };
 
 export function FeaturedDestinations() {
-  const featuredIds = [2, 6, 23, 27];
+  const featuredIds = [2, 6, 23, 27, 6, 10, 18, ,24, 25];
   const featured = visitedPlaces.filter((p) => featuredIds.includes(p.id));
 
   return (

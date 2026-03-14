@@ -23,22 +23,47 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-    { name: "Home", href: "/", icon: <Home size={18} /> },
-    { name: "Blog", href: "/blog", icon: <BookOpen size={18} /> },
-    { name: "Map", href: "/map", icon: <MapIcon size={18} /> },
-    {
-        name: "Resources",
-        href: "/resources",
-        icon: <Backpack size={18} />,
-        dropdown: [
-            { name: "Travel Guides", href: "/resources/guide", icon: <Globe size={18} />, description: "Detailed itineraries" },
-            { name: "Visa Guide", href: "/resources/visa-guide", icon: <FileText size={18} />, description: "Entry requirements" },
-            { name: "Destination Costs", href: "/resources/destination-costs", icon: <CheckSquare size={18} />, description: "Real budget breakdowns" },
-            { name: "Travel Tools", href: "/resources/travel-tools", icon: <Plane size={18} />, description: "Gear & planning apps" },
-            { name: "Itinerary Planner", href: "/resources/itinerary-planner", icon: <MapIcon size={18} />, description: "Drag & drop builder" }
-        ]
-    },
-    { name: "About", href: "/about", icon: <User size={18} /> },
+  { name: "Home", href: "/", icon: <Home size={18} /> },
+  { name: "Blog", href: "/blog", icon: <BookOpen size={18} /> },
+  { name: "Map", href: "/map", icon: <MapIcon size={18} /> },
+  {
+    name: "Resources",
+    href: "/resources",
+    icon: <Backpack size={18} />,
+    dropdown: [
+      {
+        name: "Travel Guides",
+        href: "/resources/guide",
+        icon: <Globe size={18} />,
+        description: "Detailed itineraries",
+      },
+      {
+        name: "Visa Guide",
+        href: "/resources/visa-guide",
+        icon: <FileText size={18} />,
+        description: "Entry requirements",
+      },
+      {
+        name: "Destination Costs",
+        href: "/resources/destination-costs",
+        icon: <CheckSquare size={18} />,
+        description: "Real budget breakdowns",
+      },
+      {
+        name: "Travel Tools",
+        href: "/resources/travel-tools",
+        icon: <Plane size={18} />,
+        description: "Gear & planning apps",
+      },
+      {
+        name: "Itinerary Planner",
+        href: "/resources/itinerary-planner",
+        icon: <MapIcon size={18} />,
+        description: "Drag & drop builder",
+      },
+    ],
+  },
+  { name: "About", href: "/about", icon: <User size={18} /> },
 ];
 
 export default function Navbar() {
@@ -74,8 +99,8 @@ export default function Navbar() {
                     </div>
                 </Link>
 
-                {/* Desktop Navigation */}
-                <div className="hidden lg:flex items-center gap-2">
+                {/* Desktop Navigation + Guide CTA */}
+                <div className="hidden lg:flex items-center gap-2 ml-auto">
                     {navItems.map((item) => {
                         const isActive = pathname === item.href || (item.dropdown && item.dropdown.some(d => pathname === d.href));
                         const hasDropdown = !!item.dropdown;
@@ -132,10 +157,22 @@ export default function Navbar() {
                             </div>
                         );
                     })}
+                    <Link
+                        href="/nomad"
+                        className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors"
+                    >
+                        Free Guide
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
-                <div className="flex items-center gap-4 lg:hidden relative z-10">
+                <div className="flex items-center gap-3 lg:hidden relative z-10">
+                    <Link
+                        href="/nomad"
+                        className="inline-flex items-center px-3 py-1.5 rounded-full bg-primary text-white text-xs font-semibold"
+                    >
+                        Free Guide
+                    </Link>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="p-2 -mr-2 text-foreground hover:bg-muted rounded-full transition-colors flex items-center justify-center h-10 w-10"
@@ -176,7 +213,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-2xl lg:hidden overflow-hidden"
+                        className="absolute top-full left-0 right-0 bg-white backdrop-blur-xl border-b border-border shadow-2xl lg:hidden overflow-hidden"
                     >
                         <div className="flex flex-col p-6 max-h-[80vh] overflow-y-auto gap-2">
                             {navItems.map((item, idx) => {

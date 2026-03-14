@@ -66,51 +66,6 @@ export default function PhaseSidebar({
 
   return (
     <div className="sticky top-24 space-y-5">
-      {/* Phase overview */}
-      <div className="bg-card rounded-2xl border border-border p-5">
-        <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">
-          All Phases
-        </p>
-        <div className="space-y-2">
-          {phases.map((phase) => {
-            const Icon = ICON_MAP[phase.iconName] ?? Compass;
-            const tasks = phase.sections.flatMap((s) => s.tasks);
-            const done = tasks.filter((t) => checkedTasks.has(t.id)).length;
-            const total = tasks.length;
-            const pct = total > 0 ? (done / total) * 100 : 0;
-            const isCurrent = activePhase === phase.id;
-
-            return (
-              <button
-                key={phase.id}
-                onClick={() => onSwitchPhase(phase.id)}
-                className={`w-full flex items-start gap-3 px-3 py-2.5 rounded-xl text-left transition-all duration-200 border
-                  ${isCurrent
-                    ? 'bg-primary/5 border-primary/20 text-primary'
-                    : 'border-transparent hover:bg-muted/50 hover:border-border text-foreground'
-                  }`}
-              >
-                <Icon className="w-4 h-4 mt-0.5 shrink-0" />
-                <div className="flex-1 min-w-0">
-                  <p className="text-xs font-semibold leading-snug truncate">
-                    {phase.title} {phase.titleEmphasis}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-0.5">{done} / {total} {phase.itemLabel ?? 'tasks'}</p>
-                  <div className="mt-1.5 h-1 bg-muted rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${pct}%` }}
-                      transition={{ duration: 0.5, ease: 'easeOut' }}
-                    />
-                  </div>
-                </div>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
       {/* Daily inspiration */}
       <div className="bg-card rounded-2xl border border-border p-5">
         <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">

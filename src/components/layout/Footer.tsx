@@ -45,13 +45,26 @@ export function Footer() {
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setStatus("loading");
-        setTimeout(() => {
-            setStatus("success");
-            setEmail("");
-        }, 1500);
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ firstName: '', lastName: '', email, tags: ['Newsletter'] }),
+            });
+            const data = await res.json();
+            if (!res.ok && data.error !== 'duplicate') {
+                setStatus("idle");
+                return;
+            }
+        } catch {
+            setStatus("idle");
+            return;
+        }
+        setStatus("success");
+        setEmail("");
     };
 
     return (
@@ -106,6 +119,41 @@ export function Footer() {
                         </form>
                     </div>
                 </div> */}
+
+                {/* Newsletter CTA */}
+                <div className="mb-16 pb-16 border-b border-background/10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                    <div>
+                        <h3 className="text-white font-bold text-lg mb-1">Stay in the loop</h3>
+                        <p className="text-background/50 text-sm">Travel tips, guides & hidden gems — straight to your inbox.</p>
+                    </div>
+                    <form onSubmit={handleSubmit} className="flex gap-2 w-full sm:w-auto">
+                        <input
+                            type="email"
+                            required
+                            placeholder="your@email.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            disabled={status !== "idle"}
+                            className="flex-1 sm:w-64 h-10 px-4 rounded-full bg-background/10 border border-background/15 text-background placeholder:text-background/35 text-sm focus:outline-none focus:border-primary/60 transition-colors disabled:opacity-50"
+                        />
+                        <button
+                            type="submit"
+                            disabled={status !== "idle"}
+                            className="h-10 px-5 rounded-full bg-primary text-white text-sm font-semibold flex items-center gap-2 hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
+                        >
+                            {status === "loading" ? (
+                                <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                                </svg>
+                            ) : status === "success" ? (
+                                "Subscribed!"
+                            ) : (
+                                <>Subscribe <Send className="w-3.5 h-3.5" /></>
+                            )}
+                        </button>
+                    </form>
+                </div>
 
                 {/* Main Footer Links */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 ">
