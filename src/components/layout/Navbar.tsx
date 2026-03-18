@@ -69,7 +69,7 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  { name: "About", href: "/about", icon: <User size={18} /> },
+  { name: "Our Story", href: "/our-story", icon: <User size={18} /> },
 ];
 
 export default function Navbar() {
