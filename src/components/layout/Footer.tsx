@@ -6,19 +6,17 @@ const FOOTER_LINKS = [
     {
         title: "Explore",
         links: [
-            { name: "Destinations", href: "/destinations" },
+            { name: "Destinations", href: "/#destinations" },
             { name: "Travel Map", href: "/map" },
-            { name: "Photography", href: "/gallery" },
+            { name: "Vlogs", href: "/#gallery" },
             { name: "Adventure Logs", href: "/blog" },
         ],
     },
     {
         title: "Company",
         links: [
-            { name: "About Us", href: "/about" },
-            { name: "Our Story", href: "/story" },
-            { name: "Contact", href: "/contact" },
-            { name: "Careers", href: "/careers" },
+            { name: "Our Story", href: "/our-story" },
+            { name: "Contact", href: "/#contact" },
         ],
     },
     {
@@ -127,11 +125,6 @@ export function Footer() {
                     <p className="text-background/40 text-sm">
                         © {new Date().getFullYear()} Udream Travels. All rights reserved.
                     </p>
-                    <div className="flex items-center gap-8">
-                        <a href="#" className="text-background/40 hover:text-white text-sm flex items-center gap-1 transition-colors">
-                            Support <ExternalLink className="w-3 h-3" />
-                        </a>
-                    </div>
                 </div>
             </div>
         </footer>

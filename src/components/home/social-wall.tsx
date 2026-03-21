@@ -47,7 +47,7 @@ const SOCIAL_POSTS: SocialPost[] = [
 
 export function SocialWall() {
     return (
-        <section className="py-24 px-4 bg-transparent">
+        <section id="gallery" className="py-24 px-4 bg-transparent">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <motion.div

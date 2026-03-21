@@ -83,7 +83,7 @@ export default function NomadPlaybook() {
   if (!unlocked) return <PlaybookGate onUnlock={handleUnlock} />;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <AIChatbot />
       <NomadHero
         phases={PHASES}

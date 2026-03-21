@@ -34,7 +34,7 @@ export function NewsletterCTA() {
   };
 
   return (
-    <section className="relative bg-foreground overflow-hidden">
+    <section id="contact" className="relative bg-foreground overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-6 py-24">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">

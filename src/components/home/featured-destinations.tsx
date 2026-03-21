@@ -78,7 +78,7 @@ export function FeaturedDestinations() {
   const featured = visitedPlaces.filter((p) => featuredIds.includes(p.id));
 
   return (
-    <section className="py-24 px-4 bg-transparent">
+    <section id="destinations" className="py-24 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
