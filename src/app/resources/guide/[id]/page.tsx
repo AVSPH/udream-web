@@ -1,10 +1,12 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import {
     MapPin, Calendar, Clock, Banknote, Plane, Bus,
     FileText, Hotel, Building2, Crown, Map,
     Utensils, CheckSquare, Wallet, Backpack,
-    AlertTriangle, Camera, Compass, Coffee, Sun, Moon
+    AlertTriangle, Camera, Compass, Coffee, Sun, Moon,
+    ArrowRight, CalendarDays,
 } from 'lucide-react';
 import { travelGuides } from '@/data/guides';
 
@@ -183,6 +185,23 @@ export default async function TravelGuidePage({ params }: { params: Promise<{ id
                                             </div>
                                         )
                                     })}
+                                </div>
+
+                                {/* CTA → Itinerary Planner */}
+                                <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-primary/5 border border-primary/20 px-6 py-5">
+                                    <div className="flex items-start gap-3">
+                                        <CalendarDays className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                        <div>
+                                            <p className="text-sm font-semibold text-foreground">Want to plan your own itinerary?</p>
+                                            <p className="text-xs text-muted-foreground mt-0.5">Use the itinerary planner to build a custom day-by-day trip around your schedule.</p>
+                                        </div>
+                                    </div>
+                                    <Link
+                                        href="/resources/itinerary-planner"
+                                        className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-xl hover:bg-primary/90 transition-colors"
+                                    >
+                                        Plan my trip <ArrowRight className="w-4 h-4" />
+                                    </Link>
                                 </div>
                             </section>
                         )}

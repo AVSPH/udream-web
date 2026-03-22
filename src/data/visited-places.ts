@@ -368,18 +368,18 @@ export const visitedPlaces: VisitedPlace[] = [
     blogLink: "/blog/albania",
     description: "Colorful Ottoman-era architecture and wild coastlines.",
   },
-  {
-    id: 26,
-    name: "Kotor",
-    country: "Montenegro",
-    continent: "Europe",
-    dateVisited: "2022",
-    coordinates: [42.4247, 18.7712],
-    thumbnail:
-      "https://images.unsplash.com/photo-1533031046755-9002598380eb?w=400&q=80",
-    blogLink: "/blog/montenegro",
-    description: "A dramatic bay with medieval old towns.",
-  },
+  // {
+  //   id: 26,
+  //   name: "Kotor",
+  //   country: "Montenegro",
+  //   continent: "Europe",
+  //   dateVisited: "2022",
+  //   coordinates: [42.4247, 18.7712],
+  //   thumbnail:
+  //     "https://images.unsplash.com/photo-1533031046755-9002598380eb?w=400&q=80",
+  //   blogLink: "/blog/montenegro",
+  //   description: "A dramatic bay with medieval old towns.",
+  // },
   {
     id: 27,
     name: "Sarajevo",
