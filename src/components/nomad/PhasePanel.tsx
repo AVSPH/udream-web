@@ -17,6 +17,7 @@ import ExpenseTracker from './ExpenseTracker';
 import IncomeStackBars from './IncomeStackBars';
 import NetworkCards from './NetworkCards';
 import type { Destination, PackingCategory, IncomeStream, NetworkPlatform } from './types';
+import WorksheetDownload, { WORKSHEET_CONFIGS } from './WorksheetDownload';
 
 const ICON_MAP: Record<string, LucideIcon> = {
   Compass, Briefcase, ClipboardList, Backpack, PlaneLanding, Rocket,
@@ -160,6 +161,13 @@ export default function PhasePanel({
                 />
               ))}
             </div>
+
+            {/* Worksheet download — rendered for any section that has a config */}
+            {WORKSHEET_CONFIGS[section.id] && (
+              <div className="mt-4 flex justify-end">
+                <WorksheetDownload config={WORKSHEET_CONFIGS[section.id]} />
+              </div>
+            )}
           </div>
         ))}
 
