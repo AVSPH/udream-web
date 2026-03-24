@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lato, Dancing_Script } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { NewsletterCTA } from "@/components/home/newsletter-cta";
 import { LenisProvider } from "@/components/providers/LenisProvider";
-import {  GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 
 const playfairDisplay = Playfair_Display({
@@ -75,7 +76,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="G-8D3H8C0J53" />
+      <head>
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="f7ac65b4-74cf-4391-b260-db19cd441e77"
+          type="text/javascript"
+          strategy="beforeInteractive"
+          async
+        />
+      </head>
       <body
         className={`${playfairDisplay.variable} ${lato.variable} ${dancingScript.variable} antialiased`}
       >
@@ -86,6 +96,7 @@ export default function RootLayout({
           <Footer />
         </LenisProvider>
       </body>
+      <GoogleAnalytics gaId="G-8D3H8C0J53" />
     </html>
   );
 }
