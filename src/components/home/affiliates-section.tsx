@@ -95,7 +95,7 @@ export function AffiliatesSection() {
   return (
     <section
       id="affiliates"
-      className="pt-24 px-4 bg-white relative overflow-hidden"
+      className="pt-24 pb-5 px-4 bg-white relative overflow-hidden"
     >
       <div className="absolute top-10 left-1/3 w-80 h-80 bg-primary/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-secondary/10 rounded-full blur-3xl -z-10" />
