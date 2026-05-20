@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Menu, X, Globe, Map as MapIcon, BookOpen, User,
-    Home, Backpack, ChevronDown, FileText, CheckSquare, Plane, ClipboardCheck
+    Home, Backpack, ChevronDown, FileText, CheckSquare, Plane, ClipboardCheck,
+    Calendar
 } from "lucide-react";
 
 type NavItem = {
@@ -69,6 +70,7 @@ const navItems: NavItem[] = [
       },
     ],
   },
+  { name: "Consultation", href: "/booking", icon: <Calendar size={18} /> },
   { name: "Our Story", href: "/our-story", icon: <User size={18} /> },
 ];
 
