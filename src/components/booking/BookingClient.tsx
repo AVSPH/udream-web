@@ -15,6 +15,10 @@ type FAQItem = {
 
 const FAQS: FAQItem[] = [
     {
+        question: "How much does the consultation cost and when do I pay?",
+        answer: "The consultation rate is €45 per hour. You do not need to pay anything upfront to reserve your session. A secure payment link will be sent via email after we complete our call."
+    },
+    {
         question: "How does the travel consultation call work?",
         answer: "Once you pick a date and time on the calendar, you'll receive a confirmation email with a Google Meet link. On the call, we will discuss your travel style, destinations, budget, remote work setup, or visas, and build a tailored action plan for you."
     },
@@ -157,20 +161,20 @@ export default function BookingClient() {
                         </div>
                         <h3 className="font-display text-xl font-bold text-foreground flex items-center gap-2">
                             <Clock className="w-5 h-5 text-primary" />
-                            On Our Call:
+                            Session &amp; Pricing
                         </h3>
                         <ul className="space-y-3 text-sm text-foreground">
                             <li className="flex items-start gap-2.5">
                                 <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                                <span><strong>45-Minute Session:</strong> Focused entirely on your unique questions.</span>
+                                <span><strong>€45 Per Hour:</strong> Flat hourly rate, billing processed after the session.</span>
                             </li>
                             <li className="flex items-start gap-2.5">
                                 <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                                <span><strong>Custom Deliverables:</strong> A copy of your notes and direct resources.</span>
+                                <span><strong>Book Now, Pay Later:</strong> No upfront payment or card details required to schedule.</span>
                             </li>
                             <li className="flex items-start gap-2.5">
                                 <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                                <span><strong>Lifetime Access:</strong> Recording available upon request.</span>
+                                <span><strong>Custom Deliverables:</strong> Summary notes, checklist guides, and resources.</span>
                             </li>
                         </ul>
                     </div>

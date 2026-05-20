@@ -70,7 +70,6 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  { name: "Consultation", href: "/booking", icon: <Calendar size={18} /> },
   { name: "Our Story", href: "/our-story", icon: <User size={18} /> },
 ];
 
@@ -166,20 +165,20 @@ export default function Navbar() {
                         );
                     })}
                     <Link
-                        href="/nomad"
+                        href="/booking"
                         className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors"
                     >
-                        Free Guide
+                        Book Call
                     </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <div className="flex items-center gap-3 lg:hidden relative z-10">
                     <Link
-                        href="/nomad"
+                        href="/booking"
                         className="inline-flex items-center px-3 py-1.5 rounded-full bg-primary text-white text-xs font-semibold"
                     >
-                        Free Guide
+                        Book Call
                     </Link>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
