@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
     Menu, X, Globe, Map as MapIcon, BookOpen, User,
     Home, Backpack, ChevronDown, FileText, CheckSquare, Plane, ClipboardCheck,
-    Calendar
+    Calendar, Sparkles
 } from "lucide-react";
 
 type NavItem = {
@@ -25,6 +25,7 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { name: "Home", href: "/", icon: <Home size={18} /> },
+  { name: "Our Story", href: "/our-story", icon: <User size={18} /> },
   { name: "Blog", href: "/blog", icon: <BookOpen size={18} /> },
   { name: "Map", href: "/map", icon: <MapIcon size={18} /> },
   {
@@ -70,7 +71,25 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  { name: "Our Story", href: "/our-story", icon: <User size={18} /> },
+  {
+    name: "Services",
+    href: "/booking",
+    icon: <Sparkles size={18} />,
+    dropdown: [
+      {
+        name: "Travel Consultation",
+        href: "/booking",
+        icon: <Calendar size={18} />,
+        description: "1-on-1 expert consulting",
+      },
+      {
+        name: "Travel Curator",
+        href: "/curator",
+        icon: <Sparkles size={18} />,
+        description: "Custom itinerary planning",
+      },
+    ],
+  },
 ];
 
 export default function Navbar() {
@@ -133,10 +152,10 @@ export default function Navbar() {
                                     )}
                                 </Link>
 
-                                {/* Desktop Dropdown Menu */}
-                                {hasDropdown && (
-                                    <div className="absolute top-[120%] left-1/2 -translate-x-1/2 w-[320px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-full transition-all duration-300 pt-4">
-                                        <div className="bg-white backdrop-blur-xl border border-border overflow-hidden rounded-2xl shadow-xl p-3 grid gap-1">
+                                 {/* Desktop Dropdown Menu */}
+                                 {hasDropdown && (
+                                     <div className="absolute top-[120%] left-1/2 -translate-x-1/2 w-[460px] md:w-[480px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-full transition-all duration-300 pt-4">
+                                         <div className="bg-white backdrop-blur-xl border border-border overflow-hidden rounded-2xl shadow-xl p-4 grid grid-cols-2 gap-2">
                                             {item.dropdown!.map((sub) => (
                                                 <Link
                                                     key={sub.name}
@@ -165,20 +184,20 @@ export default function Navbar() {
                         );
                     })}
                     <Link
-                        href="/booking"
+                        href="/resources/guide"
                         className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors"
                     >
-                        Book Call
+                        Free Guide
                     </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <div className="flex items-center gap-3 lg:hidden relative z-10">
                     <Link
-                        href="/booking"
+                        href="/resources/guide"
                         className="inline-flex items-center px-3 py-1.5 rounded-full bg-primary text-white text-xs font-semibold"
                     >
-                        Book Call
+                        Free Guide
                     </Link>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
