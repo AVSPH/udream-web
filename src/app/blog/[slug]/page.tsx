@@ -102,8 +102,29 @@ export default async function BlogPostPage({ params }: Props) {
 
   // If API blog found, render it
   if (apiBlog) {
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": apiBlog.title,
+      "description": apiBlog.excerpt || apiBlog.title,
+      "author": {
+        "@type": "Person",
+        "name": apiBlog.author?.name || "Meri & Man",
+        "url": "https://udreamtravels.com/our-story"
+      },
+      "datePublished": apiBlog.createdAt || new Date().toISOString(),
+      "dateModified": apiBlog.createdAt || new Date().toISOString(),
+      "image": apiBlog.featuredImage ? (apiBlog.featuredImage.startsWith("http") ? apiBlog.featuredImage : `https://udreamtravels.com${apiBlog.featuredImage}`) : "https://udreamtravels.com/logo.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Udream Travels",
+        "logo": { "@type": "ImageObject", "url": "https://udreamtravels.com/logo.png" }
+      }
+    };
+
     return (
       <article className="min-h-screen bg-white">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {/* Hero Image */}
         {apiBlog.featuredImage && (
           <ParallaxHero src={apiBlog.featuredImage} alt={apiBlog.title} />
@@ -325,8 +346,29 @@ export default async function BlogPostPage({ params }: Props) {
     .slice(0, 3);
 
   if (staticBlog) {
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": staticBlog.title,
+      "description": staticBlog.metaDescription || staticBlog.intro,
+      "author": {
+        "@type": "Person",
+        "name": "Meri & Man",
+        "url": "https://udreamtravels.com/our-story"
+      },
+      "datePublished": new Date().toISOString(),
+      "dateModified": new Date().toISOString(),
+      "image": place.thumbnail ? (place.thumbnail.startsWith("http") ? place.thumbnail : `https://udreamtravels.com${place.thumbnail}`) : "https://udreamtravels.com/logo.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Udream Travels",
+        "logo": { "@type": "ImageObject", "url": "https://udreamtravels.com/logo.png" }
+      }
+    };
+
     return (
       <article className="min-h-screen bg-white">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {/* Hero Image */}
         <ParallaxHero src={place.thumbnail} alt={place.name} />
 
@@ -465,8 +507,29 @@ export default async function BlogPostPage({ params }: Props) {
   // Fall back to generic visited place copy
   const content = generateBlogContent(place);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": place.name,
+    "description": place.description,
+    "author": {
+      "@type": "Person",
+      "name": "Meri & Man",
+      "url": "https://udreamtravels.com/our-story"
+    },
+    "datePublished": new Date().toISOString(),
+    "dateModified": new Date().toISOString(),
+    "image": place.thumbnail ? (place.thumbnail.startsWith("http") ? place.thumbnail : `https://udreamtravels.com${place.thumbnail}`) : "https://udreamtravels.com/logo.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Udream Travels",
+      "logo": { "@type": "ImageObject", "url": "https://udreamtravels.com/logo.png" }
+    }
+  };
+
   return (
     <article className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Hero Image */}
       <ParallaxHero src={place.thumbnail} alt={place.name} />
 
