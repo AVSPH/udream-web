@@ -45,11 +45,11 @@ export function FAQSection({ faqs, title = "Frequently Asked Questions", descrip
       />
       <div className="max-w-3xl mx-auto px-6">
         <div className="mb-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             {title}
           </h2>
           {description && (
-            <p className="text-background/60 text-base md:text-lg">
+            <p className="text-muted-foreground text-base md:text-lg">
               {description}
             </p>
           )}
@@ -61,14 +61,14 @@ export function FAQSection({ faqs, title = "Frequently Asked Questions", descrip
             return (
               <div 
                 key={idx} 
-                className="border border-background/10 rounded-2xl bg-background/5 overflow-hidden backdrop-blur-sm transition-colors hover:bg-background/10"
+                className="border border-border rounded-2xl bg-muted/30 overflow-hidden transition-colors hover:bg-muted/50"
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-lg font-semibold text-white pr-4">
+                  <span className="text-lg font-semibold text-foreground pr-4">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -85,7 +85,7 @@ export function FAQSection({ faqs, title = "Frequently Asked Questions", descrip
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 text-background/70 leading-relaxed">
+                      <div className="px-6 pb-6 text-muted-foreground leading-relaxed">
                         {faq.answer}
                       </div>
                     </motion.div>

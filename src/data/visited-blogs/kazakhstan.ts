@@ -41,6 +41,19 @@ const blog: StaticBlog = {
     "Medeu",
     "Kok Tobe",
   ],
+  quickFactsTable: {
+    country: "Kazakhstan",
+    region: "Central Asia",
+    language: "Local",
+    currency: "Local",
+    bestTimeToVisit: "Spring or Autumn",
+    dailyBudget: { budget: "$50", mid: "$150", luxury: "$300+" },
+    visaStatus: "Check online",
+    gettingAround: "Public transit"
+  },
+  faqs: [
+    { question: "Is Kazakhstan expensive?", answer: "Depends on your travel style, but budget options exist." },
+    { question: "How many days do I need in Kazakhstan?", answer: "Generally 1-2 weeks is recommended to see the highlights." }
+  ]
 };
-
 export default blog;

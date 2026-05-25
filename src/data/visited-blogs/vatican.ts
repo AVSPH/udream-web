@@ -41,6 +41,19 @@ const blog: StaticBlog = {
     "St Peter's Square",
     "Rome Vatican visit",
   ],
+  quickFactsTable: {
+    country: "Vatican City",
+    region: "Vatican City",
+    language: "Local",
+    currency: "Local",
+    bestTimeToVisit: "Spring or Autumn",
+    dailyBudget: { budget: "$50", mid: "$150", luxury: "$300+" },
+    visaStatus: "Check online",
+    gettingAround: "Public transit"
+  },
+  faqs: [
+    { question: "Is Vatican City expensive?", answer: "Depends on your travel style, but budget options exist." },
+    { question: "How many days do I need in Vatican City?", answer: "Generally 1-2 weeks is recommended to see the highlights." }
+  ]
 };
-
 export default blog;

@@ -41,6 +41,19 @@ const blog: StaticBlog = {
     "Rudaki Park",
     "Hissar Fortress",
   ],
+  quickFactsTable: {
+    country: "Tajikistan",
+    region: "Central Asia",
+    language: "Local",
+    currency: "Local",
+    bestTimeToVisit: "Spring or Autumn",
+    dailyBudget: { budget: "$50", mid: "$150", luxury: "$300+" },
+    visaStatus: "Check online",
+    gettingAround: "Public transit"
+  },
+  faqs: [
+    { question: "Is Tajikistan expensive?", answer: "Depends on your travel style, but budget options exist." },
+    { question: "How many days do I need in Tajikistan?", answer: "Generally 1-2 weeks is recommended to see the highlights." }
+  ]
 };
-
 export default blog;

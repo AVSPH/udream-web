@@ -1,3 +1,5 @@
+import { QuickFactsData } from "@/components/blog/quick-facts";
+
 export interface StaticBlogQuickFact {
   label: string;
   value: string;
@@ -18,4 +20,5 @@ export interface StaticBlog {
   sections: StaticBlogSection[];
   keywords: string[];
   faqs?: { question: string; answer: string }[];
+  quickFactsTable?: QuickFactsData;
 }

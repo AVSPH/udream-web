@@ -41,6 +41,19 @@ const blog: StaticBlog = {
     "Taipei night markets",
     "Taiwan travel",
   ],
+  quickFactsTable: {
+    country: "Taiwan",
+    region: "Northern Taiwan",
+    language: "Local",
+    currency: "Local",
+    bestTimeToVisit: "Spring or Autumn",
+    dailyBudget: { budget: "$50", mid: "$150", luxury: "$300+" },
+    visaStatus: "Check online",
+    gettingAround: "Public transit"
+  },
+  faqs: [
+    { question: "Is Taiwan expensive?", answer: "Depends on your travel style, but budget options exist." },
+    { question: "How many days do I need in Taiwan?", answer: "Generally 1-2 weeks is recommended to see the highlights." }
+  ]
 };
-
 export default blog;

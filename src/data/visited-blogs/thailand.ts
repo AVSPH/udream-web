@@ -41,6 +41,19 @@ const blog: StaticBlog = {
     "Wat Arun",
     "Bangkok street food",
   ],
+  quickFactsTable: {
+    country: "Thailand",
+    region: "Southeast Asia",
+    language: "Local",
+    currency: "Local",
+    bestTimeToVisit: "Spring or Autumn",
+    dailyBudget: { budget: "$50", mid: "$150", luxury: "$300+" },
+    visaStatus: "Check online",
+    gettingAround: "Public transit"
+  },
+  faqs: [
+    { question: "Is Thailand expensive?", answer: "Depends on your travel style, but budget options exist." },
+    { question: "How many days do I need in Thailand?", answer: "Generally 1-2 weeks is recommended to see the highlights." }
+  ]
 };
-
 export default blog;

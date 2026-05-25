@@ -44,6 +44,19 @@ const blog: StaticBlog = {
     "Sultan Omar Ali Saifuddien Mosque",
     "things to do in Brunei",
   ],
+  quickFactsTable: {
+    country: "Brunei",
+    region: "Borneo",
+    language: "Local",
+    currency: "Local",
+    bestTimeToVisit: "Spring or Autumn",
+    dailyBudget: { budget: "$50", mid: "$150", luxury: "$300+" },
+    visaStatus: "Check online",
+    gettingAround: "Public transit"
+  },
+  faqs: [
+    { question: "Is Brunei expensive?", answer: "Depends on your travel style, but budget options exist." },
+    { question: "How many days do I need in Brunei?", answer: "Generally 1-2 weeks is recommended to see the highlights." }
+  ]
 };
-
 export default blog;

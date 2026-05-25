@@ -8,6 +8,7 @@ import { getBlogBySlug } from "@/hooks/useblogs";
 import { Calendar, ExternalLink, Globe, MapPin, Tag } from "lucide-react";
 import { ParallaxHero } from "@/components/blog/ParallaxHero";
 import { FAQSection } from "@/components/blog/faq-section";
+import { QuickFacts, QuickFactsData } from "@/components/blog/quick-facts";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -89,6 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
     author?: { name?: string };
     tags?: string[];
     faqs?: { question: string; answer: string }[];
+    quickFactsTable?: QuickFactsData;
   } | null = null;
 
   try {
@@ -142,6 +144,10 @@ export default async function BlogPostPage({ params }: Props) {
               <p className="text-xl text-muted-foreground leading-relaxed mb-12 border-l-4 border-primary pl-5">
                 {apiBlog.excerpt}
               </p>
+            )}
+
+            {apiBlog.quickFactsTable && (
+              <QuickFacts data={apiBlog.quickFactsTable} />
             )}
 
             {/* Body */}
@@ -279,13 +285,6 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             )}
 
-            {/* FAQs */}
-            {apiBlog.faqs && apiBlog.faqs.length > 0 && (
-              <div className="mt-16 border-t border-border pt-12">
-                <FAQSection faqs={apiBlog.faqs} />
-              </div>
-            )}
-
             {/* Map CTA */}
             <div className="mt-12 p-6 rounded-2xl border border-border bg-muted/30 flex items-center justify-between gap-4 flex-wrap">
               <div className="flex items-center gap-3">
@@ -304,6 +303,13 @@ export default async function BlogPostPage({ params }: Props) {
                 Open Map <ExternalLink className="w-4 h-4" />
               </Link>
             </div>
+
+            {/* FAQs */}
+            {apiBlog.faqs && apiBlog.faqs.length > 0 && (
+              <div className="mt-16 border-t border-border pt-12">
+                <FAQSection faqs={apiBlog.faqs} />
+              </div>
+            )}
           </div>
         </div>
       </article>
@@ -350,19 +356,23 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
 
             {/* Quick facts */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {staticBlog.quickFacts.map((fact) => (
-                <div
-                  key={fact.label}
-                  className="rounded-xl border border-border bg-muted/30 p-4"
-                >
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                    {fact.label}
-                  </p>
-                  <p className="font-semibold mt-1">{fact.value}</p>
-                </div>
-              ))}
-            </div>
+            {staticBlog.quickFactsTable ? (
+              <QuickFacts data={staticBlog.quickFactsTable} />
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {staticBlog.quickFacts.map((fact) => (
+                  <div
+                    key={fact.label}
+                    className="rounded-xl border border-border bg-muted/30 p-4"
+                  >
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                      {fact.label}
+                    </p>
+                    <p className="font-semibold mt-1">{fact.value}</p>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Sections */}
             <div className="mt-10 space-y-10">
@@ -382,13 +392,6 @@ export default async function BlogPostPage({ params }: Props) {
                 </section>
               ))}
             </div>
-
-            {/* FAQs */}
-            {staticBlog.faqs && staticBlog.faqs.length > 0 && (
-              <div className="mt-16 border-t border-border pt-12">
-                <FAQSection faqs={staticBlog.faqs} />
-              </div>
-            )}
 
             {/* Map CTA */}
             <div className="mt-12 p-6 rounded-2xl border border-border bg-muted/30 flex items-center justify-between gap-4 flex-wrap">
@@ -444,6 +447,13 @@ export default async function BlogPostPage({ params }: Props) {
                     );
                   })}
                 </div>
+              </div>
+            )}
+
+            {/* FAQs */}
+            {staticBlog.faqs && staticBlog.faqs.length > 0 && (
+              <div className="mt-16 border-t border-border pt-12">
+                <FAQSection faqs={staticBlog.faqs} />
               </div>
             )}
           </div>

@@ -41,6 +41,19 @@ const blog: StaticBlog = {
     "things to do in Macau",
     "Macau food",
   ],
+  quickFactsTable: {
+    country: "macau",
+    region: "Macau",
+    language: "Local",
+    currency: "Local",
+    bestTimeToVisit: "Spring or Autumn",
+    dailyBudget: { budget: "$50", mid: "$150", luxury: "$300+" },
+    visaStatus: "Check online",
+    gettingAround: "Public transit"
+  },
+  faqs: [
+    { question: "Is macau expensive?", answer: "Depends on your travel style, but budget options exist." },
+    { question: "How many days do I need in macau?", answer: "Generally 1-2 weeks is recommended to see the highlights." }
+  ]
 };
-
 export default blog;

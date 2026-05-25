@@ -41,6 +41,19 @@ const blog: StaticBlog = {
     "UNESCO World Heritage site",
     "Gulf of Tonkin",
   ],
+  quickFactsTable: {
+    country: "Vietnam",
+    region: "Northern Vietnam",
+    language: "Local",
+    currency: "Local",
+    bestTimeToVisit: "Spring or Autumn",
+    dailyBudget: { budget: "$50", mid: "$150", luxury: "$300+" },
+    visaStatus: "Check online",
+    gettingAround: "Public transit"
+  },
+  faqs: [
+    { question: "Is Vietnam expensive?", answer: "Depends on your travel style, but budget options exist." },
+    { question: "How many days do I need in Vietnam?", answer: "Generally 1-2 weeks is recommended to see the highlights." }
+  ]
 };
-
 export default blog;

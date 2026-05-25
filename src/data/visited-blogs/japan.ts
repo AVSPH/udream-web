@@ -41,6 +41,23 @@ const blog: StaticBlog = {
     "Asakusa",
     "Tokyo food",
   ],
+  quickFactsTable: {
+    country: "Japan",
+    region: "Kanto",
+    language: "Japanese",
+    currency: "JPY (¥)",
+    bestTimeToVisit: "Mar-May, Oct-Nov",
+    dailyBudget: { budget: "¥8,000", mid: "¥20,000", luxury: "¥50,000+" },
+    visaStatus: "Visa-free (MY), Required (PH)",
+    gettingAround: "Train (JR) & Metro"
+  },
+  faqs: [
+    { question: "Is Tokyo expensive for budget travelers?", answer: "Yes, but you can save by eating at convenience stores (konbini) and using rail passes." },
+    { question: "How many days do I need in Tokyo?", answer: "At least 4-5 days to see the major neighborhoods without rushing." },
+    { question: "What's the best neighborhood to stay in Tokyo?", answer: "Shinjuku or Shibuya for nightlife and transit. Asakusa for a traditional vibe." },
+    { question: "What's the cheapest way to get from Narita Airport to the city?", answer: "The Keisei Access Express or low-cost airport buses." },
+    { question: "Is Tokyo safe for solo travelers?", answer: "Absolutely. It's one of the safest major cities in the world." }
+  ]
 };
 
 export default blog;
