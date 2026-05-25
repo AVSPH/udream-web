@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "About | Udream Travels",
+    title: "Our Story | Udream Travels",
     description: "Our Story - Two persons. One shared dream. No looking back.",
 };
 

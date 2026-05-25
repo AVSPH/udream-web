@@ -95,7 +95,7 @@ export function NewsletterCTA() {
                 ) : (
                   <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                     <p className="text-white font-semibold text-lg mb-1">Get the newsletter</p>
-                    <p className="text-background/45 text-sm mb-6">Join thousands of explorers worldwide.</p>
+                    <p className="text-background/45 text-sm mb-6">Insider travel hacks you won&apos;t find on Google.</p>
 
                     <form onSubmit={handleSubmit} className="space-y-3">
                       <input
