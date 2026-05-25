@@ -7,6 +7,7 @@ import { getStaticBlogBySlug } from "@/data/visited-blogs";
 import { getBlogBySlug } from "@/hooks/useblogs";
 import { Calendar, ExternalLink, Globe, MapPin, Tag } from "lucide-react";
 import { ParallaxHero } from "@/components/blog/ParallaxHero";
+import { FAQSection } from "@/components/blog/faq-section";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -87,6 +88,7 @@ export default async function BlogPostPage({ params }: Props) {
     createdAt?: string;
     author?: { name?: string };
     tags?: string[];
+    faqs?: { question: string; answer: string }[];
   } | null = null;
 
   try {
@@ -277,6 +279,13 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             )}
 
+            {/* FAQs */}
+            {apiBlog.faqs && apiBlog.faqs.length > 0 && (
+              <div className="mt-16 border-t border-border pt-12">
+                <FAQSection faqs={apiBlog.faqs} />
+              </div>
+            )}
+
             {/* Map CTA */}
             <div className="mt-12 p-6 rounded-2xl border border-border bg-muted/30 flex items-center justify-between gap-4 flex-wrap">
               <div className="flex items-center gap-3">
@@ -373,6 +382,13 @@ export default async function BlogPostPage({ params }: Props) {
                 </section>
               ))}
             </div>
+
+            {/* FAQs */}
+            {staticBlog.faqs && staticBlog.faqs.length > 0 && (
+              <div className="mt-16 border-t border-border pt-12">
+                <FAQSection faqs={staticBlog.faqs} />
+              </div>
+            )}
 
             {/* Map CTA */}
             <div className="mt-12 p-6 rounded-2xl border border-border bg-muted/30 flex items-center justify-between gap-4 flex-wrap">

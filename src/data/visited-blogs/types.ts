@@ -17,4 +17,5 @@ export interface StaticBlog {
   quickFacts: StaticBlogQuickFact[];
   sections: StaticBlogSection[];
   keywords: string[];
+  faqs?: { question: string; answer: string }[];
 }
