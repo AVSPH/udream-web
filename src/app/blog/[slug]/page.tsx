@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
       title: `${staticBlog.metaTitle} | Udream`,
-      description: staticBlog.metaDescription,
+      description: place ? `${place.name}, ${place.country} — ${staticBlog.metaDescription} Real costs, tips, and first-hand advice from Meri & Man.` : staticBlog.metaDescription,
       keywords: staticBlog.keywords,
       openGraph: {
         title: `${staticBlog.metaTitle} | Udream`,
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!place) return { title: "Post Not Found | Udream" };
   return {
     title: `${place.name}, ${place.country} | Udream`,
-    description: place.description,
+    description: `${place.name}, ${place.country} — ${place.description} Real costs, tips, and first-hand advice from Meri & Man.`,
   };
 }
 
@@ -156,10 +156,21 @@ export default async function BlogPostPage({ params }: Props) {
               )}
             </div>
 
-            {/* Title */}
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight">
               {apiBlog.title}
             </h1>
+
+            {/* Byline */}
+            <div className="flex items-center gap-3 mb-8 pb-6 border-b border-border/50">
+              <div className="flex-1">
+                <div className="text-sm font-medium text-foreground">
+                  By <Link href="/our-story" className="text-primary hover:underline transition-colors">{apiBlog.author?.name || "Meri & Man"}</Link>
+                </div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  Updated {apiBlog.createdAt ? new Date(apiBlog.createdAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) : new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+                </div>
+              </div>
+            </div>
 
             {apiBlog.excerpt && (
               <p className="text-xl text-muted-foreground leading-relaxed mb-12 border-l-4 border-primary pl-5">
@@ -389,10 +400,21 @@ export default async function BlogPostPage({ params }: Props) {
               </span>
             </div>
 
-            {/* Title */}
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight">
               {staticBlog.title}
             </h1>
+
+            {/* Byline */}
+            <div className="flex items-center gap-3 mb-8 pb-6 border-b border-border/50">
+              <div className="flex-1">
+                <div className="text-sm font-medium text-foreground">
+                  By <Link href="/our-story" className="text-primary hover:underline transition-colors">Meri & Man</Link>
+                </div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  Updated {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+                </div>
+              </div>
+            </div>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8 border-l-4 border-primary pl-5">
               {staticBlog.intro}
             </p>
@@ -550,10 +572,21 @@ export default async function BlogPostPage({ params }: Props) {
             </span>
           </div>
 
-          {/* Title */}
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight">
             {place.name}
           </h1>
+
+          {/* Byline */}
+          <div className="flex items-center gap-3 mb-8 pb-6 border-b border-border/50">
+            <div className="flex-1">
+              <div className="text-sm font-medium text-foreground">
+                By <Link href="/our-story" className="text-primary hover:underline transition-colors">Meri & Man</Link>
+              </div>
+              <div className="text-xs text-muted-foreground mt-1">
+                Updated {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+              </div>
+            </div>
+          </div>
           <p className="text-xl text-muted-foreground leading-relaxed mb-12 border-l-4 border-primary pl-5">
             {place.description}
           </p>

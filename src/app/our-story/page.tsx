@@ -10,7 +10,7 @@ import {
 
 export const metadata: Metadata = {
     title: "Our Story | Udream Travels",
-    description: "Our Story - Two persons. One shared dream. No looking back.",
+    description: "Meet Meri & Man, a Filipino couple who built a remote business and now travel the world full-time.",
 };
 
 const SOCIAL_LINKS = [
@@ -29,9 +29,9 @@ const SOCIAL_LINKS = [
     },
     {
         name: "Instagram",
-        handle: "@udream_travel",
+        handle: "@udreamtravels.official",
         description: "Daily travel photos, reels, and behind-the-scenes Stories.",
-        href: "https://instagram.com/udream_travel",
+        href: "https://instagram.com/udreamtravels.official",
         icon: (
             <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
@@ -226,8 +226,11 @@ export default function AboutPage() {
                     <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 text-foreground">The Journey</h2>
                     <div className="w-16 h-1 bg-primary/20 mx-auto rounded-full mb-8" />
                     <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                        <p className="font-semibold text-foreground bg-primary/5 p-4 rounded-xl border border-primary/10 mb-6">
+                            Credentials: Meri and Man have visited 31 countries across 2 continents since 2022.
+                        </p>
                         <p>
-                            We are Meri and Man, a couple from the Philippines who were already living the online life but knew deep down it could be so much more.
+                            We are Meri [Last Name] and Man [Last Name], a couple from the Philippines who were already living the online life but knew deep down it could be so much more.
                         </p>
                         <p>
                             We built a freelancing business together, unlocked location freedom, and the rest, as they say, is history.
@@ -309,7 +312,7 @@ export default function AboutPage() {
                             We made ours, and we haven&apos;t looked back.&quot;
                         </p>
                         <div className="mt-8 flex flex-col items-center">
-                            <span className="font-script text-4xl text-muted-foreground mb-1">Meri &amp; Man</span>
+                            <span className="font-script text-4xl text-muted-foreground mb-1">Meri [Last Name] &amp; Man [Last Name]</span>
                             <div className="w-12 h-px bg-border" />
                         </div>
                     </div>

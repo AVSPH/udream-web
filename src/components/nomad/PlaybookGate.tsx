@@ -70,10 +70,10 @@ export default function PlaybookGate({ onUnlock }: PlaybookGateProps) {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="relative z-10 w-full max-w-md"
+        className="relative z-10 w-full max-w-3xl my-12"
       >
         {/* Card */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12">
           {/* Icon */}
           <div className="flex items-center justify-center w-14 h-14 bg-primary/15 border border-primary/20 rounded-2xl mb-6 mx-auto">
             <Compass className="w-7 h-7 text-primary" />
@@ -92,8 +92,26 @@ export default function PlaybookGate({ onUnlock }: PlaybookGateProps) {
             </p>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
+          {/* SEO Content */}
+          <div className="prose prose-invert prose-sm md:prose-base max-w-none mb-10 text-[#EBE6D9]/80 space-y-4">
+            <p>
+              If you've been searching for a real, no-nonsense <strong>digital nomad guide</strong>, you're in the right place. When we first started looking into <strong>how to become a digital nomad Philippines</strong>, almost all the advice we found was aimed at people with powerful passports and massive savings. We quickly realized we had to figure it out ourselves.
+            </p>
+            <p>
+              We built this playbook to share exactly how we transitioned from standard 9-to-5 jobs to working from anywhere. It's written specifically for Filipinos and anyone else dealing with the realities of weak passports, budget constraints, and finding reliable internet. We know what it's like to feel stuck in a commute, dreaming of working from a cafe in Bali or a quiet beach town, but having no idea where to actually start.
+            </p>
+            <p>
+              Inside, we walk you through the entire process from start to finish. We break everything down into six manageable phases. First, we tackle the mindset shift you need and how to build a solid financial runway so you aren't stressing about money on day one. Then we get into the practical stuff: finding remote income streams that actually pay well, sorting out your logistics like visas and banking, and figuring out exactly what gear you need to pack without overdoing it. Finally, we cover how to confidently launch your new life and survive those crucial first few weeks on the road.
+            </p>
+            <p>
+              By the time you finish this playbook, you won't just be daydreaming anymore. You'll have a clear financial plan, reliable remote work, and a step-by-step checklist to make this lifestyle sustainable. Drop your details below to unlock the full guide and let's get you on the road.
+            </p>
+          </div>
+
+          <div className="max-w-md mx-auto bg-black/20 p-6 rounded-xl border border-white/5">
+            <h4 className="text-white font-semibold mb-4 text-center">Ready to start? Unlock the playbook below.</h4>
+            {/* Form */}
+            <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-xs font-mono text-white/40 uppercase tracking-widest mb-1.5">
                 Your Name
@@ -146,6 +164,7 @@ export default function PlaybookGate({ onUnlock }: PlaybookGateProps) {
               )}
             </button>
           </form>
+          </div>
 
           {/* Privacy note */}
           <p className="flex items-center justify-center gap-1.5 mt-5 text-[10px] text-white/25">
