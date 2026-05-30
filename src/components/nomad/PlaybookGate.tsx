@@ -59,120 +59,102 @@ export default function PlaybookGate({ onUnlock }: PlaybookGateProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#2E261E] flex items-center justify-center px-4 pt-16">
-      {/* Background gradients */}
+    <div className="min-h-screen bg-background text-foreground flex items-center justify-center py-16 px-6 md:px-12">
+      {/* Gradients */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute right-0 top-1/4 w-[40%] h-[50%] rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute left-0 bottom-1/4 w-[30%] h-[40%] rounded-full bg-secondary/8 blur-3xl" />
+        <div className="absolute top-0 right-1/4 w-[40%] h-[40%] bg-primary/10 blur-[120px] rounded-full" />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="relative z-10 w-full max-w-3xl my-12"
-      >
-        {/* Card */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12">
-          {/* Icon */}
-          <div className="flex items-center justify-center w-14 h-14 bg-primary/15 border border-primary/20 rounded-2xl mb-6 mx-auto">
-            <Compass className="w-7 h-7 text-primary" />
+      <div className="relative z-10 w-full max-w-6xl flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        
+        {/* Left Column: Value Prop */}
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-mono text-primary uppercase tracking-widest mb-8">
+            <Compass className="w-3.5 h-3.5" />
+            UDream Nomad Playbook
           </div>
+          
+          <h1 className="font-display text-foreground text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] mb-6">
+            6 Phases to <br/><em className="text-primary not-italic">Freedom</em>
+          </h1>
+          
+          <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+            Unlock 96 tasks, interactive tools, and everything you need to transition from a 9-to-5 to a sustainable digital nomad lifestyle.
+          </p>
 
-          {/* Heading */}
-          <div className="text-center mb-8">
-            <p className="text-xs font-mono text-primary uppercase tracking-widest mb-2">
-              UDream Nomad Playbook
-            </p>
-            <h1 className="font-display text-[#EBE6D9] text-3xl font-bold leading-tight mb-3">
-              6 Phases to <em className="text-primary not-italic">Freedom</em>
-            </h1>
-            <p className="text-[#EBE6D9]/55 text-sm leading-relaxed">
-              Enter your details to unlock the full playbook — 96 tasks, interactive tools, and everything you need to become a digital nomad.
-            </p>
-          </div>
-
-          {/* SEO Content */}
-          <div className="prose prose-invert prose-sm md:prose-base max-w-none mb-10 text-[#EBE6D9]/80 space-y-4">
-            <p>
-              If you've been searching for a real, no-nonsense <strong>digital nomad guide</strong>, you're in the right place. When we first started looking into <strong>how to become a digital nomad Philippines</strong>, almost all the advice we found was aimed at people with powerful passports and massive savings. We quickly realized we had to figure it out ourselves.
-            </p>
-            <p>
-              We built this playbook to share exactly how we transitioned from standard 9-to-5 jobs to working from anywhere. It's written specifically for Filipinos and anyone else dealing with the realities of weak passports, budget constraints, and finding reliable internet. We know what it's like to feel stuck in a commute, dreaming of working from a cafe in Bali or a quiet beach town, but having no idea where to actually start.
-            </p>
-            <p>
-              Inside, we walk you through the entire process from start to finish. We break everything down into six manageable phases. First, we tackle the mindset shift you need and how to build a solid financial runway so you aren't stressing about money on day one. Then we get into the practical stuff: finding remote income streams that actually pay well, sorting out your logistics like visas and banking, and figuring out exactly what gear you need to pack without overdoing it. Finally, we cover how to confidently launch your new life and survive those crucial first few weeks on the road.
-            </p>
-            <p>
-              By the time you finish this playbook, you won't just be daydreaming anymore. You'll have a clear financial plan, reliable remote work, and a step-by-step checklist to make this lifestyle sustainable. Drop your details below to unlock the full guide and let's get you on the road.
-            </p>
-          </div>
-
-          <div className="max-w-md mx-auto bg-black/20 p-6 rounded-xl border border-white/5">
-            <h4 className="text-white font-semibold mb-4 text-center">Ready to start? Unlock the playbook below.</h4>
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="block text-xs font-mono text-white/40 uppercase tracking-widest mb-1.5">
-                Your Name
-              </label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="e.g. Alex Johnson"
-                autoFocus
-                className="w-full px-4 py-3 bg-white/7 border border-white/10 rounded-xl text-[#EBE6D9] placeholder-white/25 text-sm outline-none focus:border-primary transition-colors"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-mono text-white/40 uppercase tracking-widest mb-1.5">
-                Email Address
-              </label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                className="w-full px-4 py-3 bg-white/7 border border-white/10 rounded-xl text-[#EBE6D9] placeholder-white/25 text-sm outline-none focus:border-primary transition-colors"
-              />
-            </div>
-
-            {error && (
-              <p className="text-xs text-red-400">{error}</p>
-            )}
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full flex items-center justify-center gap-2 py-3 bg-primary text-white font-semibold text-sm rounded-xl hover:bg-primary/90 transition-colors mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
-            >
-              {loading ? (
-                <>
-                  <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
-                  </svg>
-                  Unlocking…
-                </>
-              ) : (
-                <>
-                  Unlock the Playbook
-                  <ArrowRight className="w-4 h-4" />
-                </>
-              )}
-            </button>
-          </form>
-          </div>
-
-          {/* Privacy note */}
-          <p className="flex items-center justify-center gap-1.5 mt-5 text-[10px] text-white/25">
-            <Lock className="w-3 h-3" />
-            We respect your privacy. No spam, ever.
+          <p className="text-muted-foreground text-[15px] leading-relaxed font-light">
+            If you've been searching for a real, no-nonsense <strong className="font-medium text-foreground">digital nomad guide</strong>, you're in the right place. We built this playbook to share exactly how we transitioned from standard 9-to-5 jobs to working from anywhere. Written specifically for Filipinos and anyone else dealing with weak passports, budget constraints, and finding reliable internet, this guide breaks down <strong className="font-medium text-foreground">how to become a digital nomad Philippines</strong> into six manageable phases. From mindset shifts and financial runway to visas, gear, and surviving those crucial first weeks, you'll have a clear plan, reliable remote work, and a step-by-step checklist to make this lifestyle sustainable.
           </p>
         </div>
-      </motion.div>
+
+        {/* Right Column: Form */}
+        <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full max-w-md bg-card border border-border rounded-3xl p-8 lg:p-10 shadow-xl">
+            <h3 className="text-2xl font-display font-bold text-card-foreground mb-2">Access the Playbook</h3>
+            <p className="text-sm text-muted-foreground mb-8 leading-relaxed">Drop your details below to unlock the full guide and let's get you on the road.</p>
+            
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-xs font-mono text-muted-foreground uppercase tracking-widest mb-1.5">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="e.g. Alex Johnson"
+                  autoFocus
+                  className="w-full px-4 py-3 bg-background border border-input rounded-xl text-foreground placeholder:text-muted-foreground/50 text-sm outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-mono text-muted-foreground uppercase tracking-widest mb-1.5">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
+                  className="w-full px-4 py-3 bg-background border border-input rounded-xl text-foreground placeholder:text-muted-foreground/50 text-sm outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                />
+              </div>
+
+              {error && (
+                <p className="text-xs text-destructive">{error}</p>
+              )}
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full flex items-center justify-center gap-2 py-3.5 bg-primary text-primary-foreground font-semibold text-sm rounded-xl hover:bg-primary/90 transition-colors mt-4 disabled:opacity-60 disabled:cursor-not-allowed shadow-md shadow-primary/20"
+              >
+                {loading ? (
+                  <>
+                    <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                    </svg>
+                    Unlocking…
+                  </>
+                ) : (
+                  <>
+                    Unlock the Playbook
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                )}
+              </button>
+            </form>
+            
+            <p className="flex items-center gap-2 mt-6 text-[10px] text-muted-foreground justify-center">
+              <Lock className="w-3 h-3" />
+              We respect your privacy. No spam, ever.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }
