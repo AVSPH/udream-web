@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Search, MapPin, Calendar, Clock, ArrowRight, Compass } from "lucide-react";
 import { travelGuides } from "@/data/guides";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export default function GuideListingPage() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -23,6 +24,11 @@ export default function GuideListingPage() {
 
     return (
         <main className="min-h-screen bg-white text-foreground pb-20">
+            <BreadcrumbSchema items={[
+                { name: "Home", item: "https://udreamtravels.com" },
+                { name: "Resources", item: "https://udreamtravels.com/resources" },
+                { name: "Travel Guides", item: "https://udreamtravels.com/resources/guide" }
+            ]} />
             {/* Header Section */}
             <section className="relative pt-32 pb-20 px-6 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-30">

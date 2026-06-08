@@ -7,6 +7,7 @@ import {
     CheckCircle2, Info, ShieldCheck, TrendingUp, Clock, Wallet
 } from "lucide-react";
 import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 const universalTips = [
     {
@@ -205,6 +206,11 @@ const cheatSheet = [
 export default function VisaGuidePage() {
     return (
         <div className="min-h-screen bg-white pb-24">
+            <BreadcrumbSchema items={[
+                { name: "Home", item: "https://udreamtravels.com" },
+                { name: "Resources", item: "https://udreamtravels.com/resources" },
+                { name: "Visa Guides", item: "https://udreamtravels.com/resources/visa-guide" }
+            ]} />
 
             {/* ── Hero ─────────────────────────────────────────────────────── */}
             <div className="relative pt-32 pb-16 px-4 overflow-hidden border-b border-border/40">

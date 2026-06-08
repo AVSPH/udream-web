@@ -9,6 +9,7 @@ import { Calendar, ExternalLink, Globe, MapPin, Tag } from "lucide-react";
 import { ParallaxHero } from "@/components/blog/ParallaxHero";
 import { FAQSection } from "@/components/blog/faq-section";
 import { QuickFacts, QuickFactsData } from "@/components/blog/quick-facts";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -125,6 +126,11 @@ export default async function BlogPostPage({ params }: Props) {
     return (
       <article className="min-h-screen bg-white">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <BreadcrumbSchema items={[
+          { name: "Home", item: "https://udreamtravels.com" },
+          { name: "Blog", item: "https://udreamtravels.com/blog" },
+          { name: apiBlog.title, item: `https://udreamtravels.com/blog/${slug}` }
+        ]} />
         {/* Hero Image */}
         {apiBlog.featuredImage && (
           <ParallaxHero src={apiBlog.featuredImage} alt={apiBlog.title} />
@@ -380,6 +386,11 @@ export default async function BlogPostPage({ params }: Props) {
     return (
       <article className="min-h-screen bg-white">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <BreadcrumbSchema items={[
+          { name: "Home", item: "https://udreamtravels.com" },
+          { name: "Blog", item: "https://udreamtravels.com/blog" },
+          { name: staticBlog.title, item: `https://udreamtravels.com/blog/${slug}` }
+        ]} />
         {/* Hero Image */}
         <ParallaxHero src={place.thumbnail} alt={place.name} />
 
@@ -552,6 +563,11 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <article className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://udreamtravels.com" },
+        { name: "Blog", item: "https://udreamtravels.com/blog" },
+        { name: place.name, item: `https://udreamtravels.com/blog/${slug}` }
+      ]} />
       {/* Hero Image */}
       <ParallaxHero src={place.thumbnail} alt={place.name} />
 

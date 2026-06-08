@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MapPin, ArrowRight } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
     title: "Travel Resources | Udream",
@@ -11,6 +12,10 @@ export const metadata: Metadata = {
 export default function ResourcesPage() {
     return (
         <div className="min-h-screen bg-white">
+            <BreadcrumbSchema items={[
+                { name: "Home", item: "https://udreamtravels.com" },
+                { name: "Resources", item: "https://udreamtravels.com/resources" }
+            ]} />
             {/* Hero Header */}
             <div className="relative pt-32 pb-16 px-4 text-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />

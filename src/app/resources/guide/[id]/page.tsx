@@ -9,6 +9,7 @@ import {
     ArrowRight, CalendarDays,
 } from 'lucide-react';
 import { travelGuides } from '@/data/guides';
+import { BreadcrumbSchema } from '@/components/seo/breadcrumb-schema';
 
 export async function generateStaticParams() {
     return travelGuides.map((guide) => ({
@@ -28,6 +29,12 @@ export default async function TravelGuidePage({ params }: { params: Promise<{ id
 
     return (
         <div className="min-h-screen bg-white pb-24 font-sans selection:bg-rose-200">
+            <BreadcrumbSchema items={[
+                { name: "Home", item: "https://udreamtravels.com" },
+                { name: "Resources", item: "https://udreamtravels.com/resources" },
+                { name: "Travel Guides", item: "https://udreamtravels.com/resources/guide" },
+                { name: guide.destinationName, item: `https://udreamtravels.com/resources/guide/${id}` }
+            ]} />
             {/* 📸 Hero Header */}
             <div className="relative h-[65vh] min-h-[500px] w-full bg-neutral-900 overflow-hidden">
                 <div
