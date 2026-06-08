@@ -125,6 +125,33 @@ const CTA_LINKS = [
 export default function AboutPage() {
     const stats = getStats();
 
+    const jsonLd = [
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Meri [Last Name]",
+            "nationality": "Filipino",
+            "url": "https://udreamtravels.com/our-story",
+            "sameAs": [
+                "https://instagram.com/udreamtravels.official",
+                "https://tiktok.com/@meriandayman",
+                "https://youtube.com/@udreamtravels"
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Man [Last Name]",
+            "nationality": "Filipino",
+            "url": "https://udreamtravels.com/our-story",
+            "sameAs": [
+                "https://instagram.com/udreamtravels.official",
+                "https://tiktok.com/@meriandayman",
+                "https://youtube.com/@udreamtravels"
+            ]
+        }
+    ];
+
     const timelineData = JOURNEY_STEPS.map((step) => ({
         title: step.title,
         content: (
@@ -141,6 +168,7 @@ export default function AboutPage() {
 
     return (
         <div className="min-h-screen bg-white selection:bg-primary/20 overflow-x-hidden">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
             {/* ── Hero / The Story Begins ─────────────────────────────────── */}
             <section className="relative pt-20 pb-8 px-4 overflow-hidden">
