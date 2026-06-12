@@ -1,5 +1,6 @@
 import NomadPlaybook from '@/components/nomad/NomadPlaybook';
 import type { Metadata } from 'next';
+import { PHASES } from '@/components/nomad/data';
 
 export const metadata: Metadata = {
   title: "The Digital Nomad Playbook | 6 Phases to Freedom | Udream",
@@ -7,5 +8,25 @@ export const metadata: Metadata = {
 };
 
 export default function NomadPlaybookPage() {
-  return <NomadPlaybook />;
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to become a digital nomad",
+    "description": metadata.description,
+    "step": PHASES.map(phase => ({
+      "@type": "HowToStep",
+      "name": `${phase.title} ${phase.titleEmphasis}`,
+      "text": phase.description
+    }))
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <NomadPlaybook />
+    </>
+  );
 }

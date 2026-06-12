@@ -10,6 +10,7 @@ import { ParallaxHero } from "@/components/blog/ParallaxHero";
 import { FAQSection } from "@/components/blog/faq-section";
 import { QuickFacts, QuickFactsData } from "@/components/blog/quick-facts";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { CostCallout } from "@/components/blog/cost-callout";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -342,6 +343,12 @@ export default async function BlogPostPage({ params }: Props) {
               </Link>
             </div>
 
+            {/* Cost Callout */}
+            {(() => {
+              const currentPlace = allPlaces.find((p) => p.blogLink === `/blog/${slug}`);
+              return currentPlace ? <CostCallout countryName={currentPlace.country} /> : null;
+            })()}
+
             {/* FAQs */}
             {apiBlog.faqs && apiBlog.faqs.length > 0 && (
               <div className="mt-16 border-t border-border pt-12">
@@ -525,6 +532,9 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             )}
 
+            {/* Cost Callout */}
+            <CostCallout countryName={place.country} />
+
             {/* FAQs */}
             {staticBlog.faqs && staticBlog.faqs.length > 0 && (
               <div className="mt-16 border-t border-border pt-12">
@@ -675,6 +685,9 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             </div>
           )}
+
+          {/* Cost Callout */}
+          <CostCallout countryName={place.country} />
         </div>
       </div>
     </article>
