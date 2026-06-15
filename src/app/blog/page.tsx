@@ -7,6 +7,7 @@ import { visitedPlaces } from "@/data/visited-places";
 import { MapPin, Calendar, ArrowUpRight, BookOpen, Loader2, Globe } from "lucide-react";
 import { getPublicBlogs, type PublicBlog } from "@/hooks/useblogs";
 import { VisitedPlace } from "@/data/visited-places";
+import { customStaticBlogs, type StaticBlogCard } from "@/data/static-blogs-list";
 
 const continentOrder = ["Asia", "Europe", "Americas", "Africa", "Oceania"] as const;
 
@@ -49,6 +50,56 @@ function BlogCard({ blog }: { blog: PublicBlog }) {
                     <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                         <Calendar className="w-3.5 h-3.5" />
                         {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                        })}
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-xs text-primary font-semibold">
+                        Read
+                        <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                    </span>
+                </div>
+            </div>
+        </Link>
+    );
+}
+
+// ── Shared static blog card ──────────────────────────────────────────────────
+function CustomStaticBlogCard({ blog }: { blog: StaticBlogCard }) {
+    return (
+        <Link
+            href={blog.href}
+            className="group flex flex-col bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+        >
+            <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                {blog.thumbnail ? (
+                    <Image
+                        src={blog.thumbnail}
+                        alt={blog.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <BookOpen className="w-10 h-10 text-muted-foreground/30" />
+                    </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                {blog.category && (
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white text-[11px] font-semibold uppercase tracking-wider border border-white/15">
+                        {blog.category}
+                    </span>
+                )}
+            </div>
+            <div className="flex flex-col flex-1 p-5 gap-3">
+                <h3 className="font-bold text-base leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                    {blog.title}
+                </h3>
+                <div className="mt-auto flex items-center justify-between pt-3 border-t border-border/60">
+                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {new Date(blog.date).toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "short",
                             day: "numeric",
@@ -202,6 +253,18 @@ export default function BlogPage() {
                         </div>
                     )}
                 </section>
+
+                {/* ── Featured Guides (Static) ── */}
+                {customStaticBlogs.length > 0 && (
+                    <section className="space-y-8">
+                        <SectionHeader icon={BookOpen} title="Featured Guides" sub="Handcrafted travel guides and resources" />
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                            {customStaticBlogs.map((blog) => (
+                                <CustomStaticBlogCard key={blog.id} blog={blog} />
+                            ))}
+                        </div>
+                    </section>
+                )}
 
                 {/* ── Destinations by Continent ── */}
                 <section className="space-y-16">
