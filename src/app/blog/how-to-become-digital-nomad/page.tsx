@@ -23,7 +23,7 @@ export default function HowToBecomeDigitalNomadPage() {
     },
     datePublished: new Date().toISOString(),
     dateModified: new Date().toISOString(),
-    image: "https://udreamtravels.com/assets/blog/how-to-become-digital-nomad/DJI_20251022120056_0045_D.JPG",
+    image: "https://udreamtravels.com/assets/blog/how-to-become-digital-nomad/DJI_20260117115313_0852_D.JPG",
     publisher: {
       "@type": "Organization",
       name: "Udream Travels",
@@ -42,7 +42,7 @@ export default function HowToBecomeDigitalNomadPage() {
         ]}
       />
       <ParallaxHero
-        src="/assets/blog/how-to-become-digital-nomad/DJI_20251022120056_0045_D.JPG"
+        src="/assets/blog/how-to-become-digital-nomad/DJI_20260117115313_0852_D.JPG"
         alt="How to Become a Digital Nomad as a Filipino"
       />
 
@@ -109,7 +109,7 @@ export default function HowToBecomeDigitalNomadPage() {
             <p><strong>Family pressure is not a small thing.</strong> In Western nomad content, "family resistance" is treated as a minor inconvenience that dissolves once you show your parents your laptop lifestyle. In Filipino culture, the weight of family expectations, especially if you're the breadwinner or approaching the age where you're "supposed" to be settling down, is genuinely heavy. We're not going to minimize that. What we will say is that the families who come around fastest are the ones who see consistent income and a child who is clearly okay. Results matter more than arguments.</p>
 
             <div className="relative w-full h-[400px] my-8 rounded-xl overflow-hidden">
-                <Image src="/assets/blog/how-to-become-digital-nomad/DJI_20260117115313_0852_D.JPG" alt="Nomad life" fill className="object-cover" />
+                <Image src="/assets/blog/how-to-become-digital-nomad/DJI_20251022120056_0045_D.JPG" alt="Nomad life" fill className="object-cover" />
             </div>
 
             <hr />

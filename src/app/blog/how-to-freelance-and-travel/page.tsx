@@ -24,7 +24,7 @@ export default function HowToFreelanceAndTravelPage() {
     },
     datePublished: new Date().toISOString(),
     dateModified: new Date().toISOString(),
-    image: "https://udreamtravels.com/assets/blog/travel-and-freelance/DJI_20251215124451_0861_D.JPG",
+    image: "https://udreamtravels.com/assets/blog/travel-and-freelance/DJI_20251226185748_0589_D.JPG",
     publisher: {
       "@type": "Organization",
       name: "Udream Travels",
@@ -43,7 +43,7 @@ export default function HowToFreelanceAndTravelPage() {
         ]}
       />
       <ParallaxHero
-        src="/assets/blog/travel-and-freelance/DJI_20251215124451_0861_D.JPG"
+        src="/assets/blog/travel-and-freelance/DJI_20251226185748_0589_D.JPG"
         alt="How to Freelance and Travel"
       />
 
@@ -249,7 +249,7 @@ export default function HowToFreelanceAndTravelPage() {
             </blockquote>
 
             <div className="relative w-full h-[400px] my-8 rounded-xl overflow-hidden">
-                <Image src="/assets/blog/travel-and-freelance/DJI_20251226185748_0589_D.JPG" alt="Digital Nomad Lifestyle" fill className="object-cover" />
+                <Image src="/assets/blog/travel-and-freelance/DJI_20251215124451_0861_D.JPG" alt="Digital Nomad Lifestyle" fill className="object-cover" />
             </div>
 
             <h2>The Mistakes We Made in Year One</h2>
