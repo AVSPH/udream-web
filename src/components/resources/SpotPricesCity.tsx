@@ -9,6 +9,7 @@ import {
   Landmark,
   Leaf,
   Lightbulb,
+  MapPin,
   Palette,
   ShoppingBag,
   Sparkles,
@@ -17,11 +18,13 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import type {
-  CitySpotPricing,
-  SpotCategory,
-  SpotImage,
-  TouristSpot,
+import {
+  cityMapsUrl,
+  spotMapsUrl,
+  type CitySpotPricing,
+  type SpotCategory,
+  type SpotImage,
+  type TouristSpot,
 } from "@/data/attraction-prices";
 
 const CATEGORY_META: Record<
@@ -75,7 +78,15 @@ function ImageCredit({ image }: { image: SpotImage }) {
   );
 }
 
-function SpotCard({ spot, index }: { spot: TouristSpot; index: number }) {
+function SpotCard({
+  spot,
+  city,
+  index,
+}: {
+  spot: TouristSpot;
+  city: CitySpotPricing;
+  index: number;
+}) {
   const cat = CATEGORY_META[spot.category];
   return (
     <motion.article
@@ -141,9 +152,20 @@ function SpotCard({ spot, index }: { spot: TouristSpot; index: number }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-          <Clock className="w-3.5 h-3.5" />
-          {spot.duration}
+        <div className="flex items-center justify-between gap-3">
+          <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+            <Clock className="w-3.5 h-3.5" />
+            {spot.duration}
+          </span>
+          <a
+            href={spotMapsUrl(spot, city)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold hover:bg-primary hover:text-white transition-colors"
+          >
+            <MapPin className="w-3 h-3" />
+            Google Maps
+          </a>
         </div>
 
         <p className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed mt-auto pt-2 border-t border-border/60">
@@ -207,6 +229,15 @@ export function SpotPricesCity({ city }: { city: CitySpotPricing }) {
                 <span className="px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
                   {city.currencyNote}
                 </span>
+                <a
+                  href={cityMapsUrl(city)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white text-xs font-medium hover:bg-white/30 transition-colors"
+                >
+                  <MapPin className="w-3.5 h-3.5" />
+                  Open in Google Maps
+                </a>
               </div>
             </motion.div>
           </div>
@@ -238,7 +269,7 @@ export function SpotPricesCity({ city }: { city: CitySpotPricing }) {
         {/* ── Spot cards ───────────────────────────────────────────── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {city.spots.map((spot, i) => (
-            <SpotCard key={spot.name} spot={spot} index={i} />
+            <SpotCard key={spot.name} spot={spot} city={city} index={i} />
           ))}
         </div>
 
@@ -261,7 +292,7 @@ export function SpotPricesCity({ city }: { city: CitySpotPricing }) {
               >
                 Wikimedia Commons
               </a>{" "}
-              — tap the credit on any photo for its author and license.
+              ~ tap the credit on any photo for its author and license.
             </p>
           </div>
         </div>

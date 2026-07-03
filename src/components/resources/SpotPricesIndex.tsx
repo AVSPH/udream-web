@@ -34,7 +34,7 @@ export function SpotPricesIndex() {
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
               Entry fees for the must-see sights in the cities we&apos;ve
-              visited — so you know exactly how much to bring before you go.
+              visited ~ so you know exactly how much to bring before you go.
               Real prices, in local currency and US dollars.
             </p>
           </motion.div>
@@ -130,7 +130,7 @@ export function SpotPricesIndex() {
             </p>
             <p className="text-sm text-muted-foreground max-w-xs">
               We&apos;re adding price guides for every city we&apos;ve visited
-              — Istanbul, Tbilisi, Rome, and more coming soon.
+              ~ Barcelona, Vienna, Samarkand, and more coming soon.
             </p>
           </motion.div>
         </div>
