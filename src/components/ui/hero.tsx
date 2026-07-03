@@ -1,30 +1,29 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion, type Variants } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { StripedPattern } from "@/components/magicui/striped-pattern";
 
 // Props interface for the component
+interface HeroStat {
+  value: string;
+  label: string;
+}
+
 interface AnimatedMarqueeHeroProps {
   tagline: string;
   title: React.ReactNode;
   description: string;
   ctaText: string;
+  ctaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
+  stats?: HeroStat[];
   images: string[];
   className?: string;
 }
-
-// Reusable Button component styled with branding colors
-const ActionButton = ({ children }: { children: React.ReactNode }) => (
-  <motion.button
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="mt-8 px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold shadow-lg transition-colors hover:bg-secondary hover:text-secondary-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-opacity-75"
-  >
-    <a href="/map">{children}</a>
-  </motion.button>
-);
 
 // The main hero component
 export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
@@ -32,6 +31,10 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   title,
   description,
   ctaText,
+  ctaHref = "/map",
+  secondaryCtaText,
+  secondaryCtaHref = "/blog",
+  stats,
   images,
   className,
 }) => {
@@ -51,18 +54,32 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   return (
     <section
       className={cn(
-        "relative w-full h-screen overflow-hidden flex flex-col items-center justify-start pt-40 text-center px-4 md:justify-center md:pt-0",
+        "relative w-full h-screen overflow-hidden flex flex-col items-center justify-start pt-36 text-center px-4 md:justify-center md:pt-0",
         className,
       )}
     >
+      {/* Warm ambient glow behind the headline */}
+      <div
+        aria-hidden
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[42rem] h-[42rem] rounded-full bg-primary/10 blur-3xl pointer-events-none"
+      />
+      <div
+        aria-hidden
+        className="absolute top-1/3 right-[12%] w-72 h-72 rounded-full bg-secondary/20 blur-3xl pointer-events-none animate-float-slow"
+      />
+
       <div className="z-10 flex flex-col items-center">
         {/* Tagline */}
         <motion.div
           initial="hidden"
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
-          className="mb-4 inline-block rounded-full border border-border bg-card/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur-sm font-body"
+          className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-card/60 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur-sm font-body shadow-sm"
         >
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+          </span>
           {tagline}
         </motion.div>
 
@@ -104,34 +121,62 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           {description}
         </motion.p>
 
-        {/* Call to Action Button */}
+        {/* Calls to Action */}
         <motion.div
           initial="hidden"
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
           transition={{ delay: 0.6 }}
+          className="mt-8 flex flex-col sm:flex-row items-center gap-3"
         >
-          <ActionButton>{ctaText}</ActionButton>
+          <Link
+            href={ctaHref}
+            className="cta-shine group relative overflow-hidden inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+          >
+            {ctaText}
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+          </Link>
+          {secondaryCtaText && (
+            <Link
+              href={secondaryCtaHref}
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-foreground/15 bg-card/60 backdrop-blur-sm text-foreground font-semibold hover:border-primary/40 hover:text-primary hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+            >
+              {secondaryCtaText}
+            </Link>
+          )}
         </motion.div>
+
+        {/* Stats */}
+        {stats && stats.length > 0 && (
+          <motion.dl
+            initial="hidden"
+            animate="show"
+            variants={FADE_IN_ANIMATION_VARIANTS}
+            transition={{ delay: 0.75 }}
+            className="mt-10 flex items-center justify-center gap-8 sm:gap-12"
+          >
+            {stats.map((stat) => (
+              <div key={stat.label} className="flex flex-col items-center">
+                <dt className="sr-only">{stat.label}</dt>
+                <dd className="font-display text-2xl sm:text-3xl font-bold text-foreground leading-none">
+                  {stat.value}
+                </dd>
+                <span className="mt-1.5 text-[11px] sm:text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </motion.dl>
+        )}
       </div>
 
-      {/* Animated Image Marquee */}
-      <div className="absolute bottom-0 left-0 w-full h-1/3 md:h-2/5 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
-        <motion.div
-          className="flex gap-4"
-          animate={{
-            x: ["-100%", "0%"],
-          }}
-          transition={{
-            ease: "linear",
-            duration: 40,
-            repeat: Infinity,
-          }}
-        >
+      {/* Animated Image Marquee — pauses on hover */}
+      <div className="group/marquee absolute bottom-0 left-0 w-full h-1/3 md:h-2/5 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
+        <div className="animate-marquee flex w-max gap-4 group-hover/marquee:[animation-play-state:paused]">
           {duplicatedImages.map((src, index) => (
             <div
               key={index}
-              className="relative aspect-[3/4] h-64 md:h-80 flex-shrink-0"
+              className="relative aspect-[3/4] h-64 md:h-80 flex-shrink-0 transition-transform duration-500 hover:!rotate-0 hover:scale-[1.04] hover:z-10"
               style={{
                 rotate: `${index % 2 === 0 ? -2 : 5}deg`,
               }}
@@ -139,11 +184,12 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               <img
                 src={src}
                 alt={`Showcase image ${index + 1}`}
-                className="w-full h-full object-cover rounded-2xl shadow-md border border-border/50"
+                loading="lazy"
+                className="w-full h-full object-cover rounded-2xl shadow-md border border-border/50 transition-shadow duration-500 hover:shadow-2xl"
               />
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

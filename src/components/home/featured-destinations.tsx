@@ -74,7 +74,7 @@ className={`group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg 
 };
 
 export function FeaturedDestinations() {
-  const featuredIds = [2, 6, 23, 27, 6, 10, 18, ,24, 25];
+  const featuredIds = [2, 6, 23, 27, 10, 18, 24, 25];
   const featured = visitedPlaces.filter((p) => featuredIds.includes(p.id));
 
   return (

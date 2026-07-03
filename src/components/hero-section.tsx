@@ -1,4 +1,5 @@
 import { AnimatedMarqueeHero } from "@/components/ui/hero";
+import { visitedPlaces } from "@/data/visited-places";
 
 // A list of sample image URLs for the demo
 const DEMO_IMAGES = [
@@ -23,6 +24,9 @@ const DEMO_IMAGES = [
 ];
 
 const AnimatedHeroDemo = () => {
+  const countries = new Set(visitedPlaces.map((p) => p.country)).size;
+  const continents = new Set(visitedPlaces.map((p) => p.continent)).size;
+
   return (
     <AnimatedMarqueeHero
       tagline="Explore the Unexplored with Udream"
@@ -38,6 +42,14 @@ const AnimatedHeroDemo = () => {
       }
       description="Join us as we traverse the globe, sharing hidden gems, vibrant cultures, and the raw beauty of our planet. Your journey into the extraordinary starts here."
       ctaText="View Footprints"
+      ctaHref="/map"
+      secondaryCtaText="Read the Blog"
+      secondaryCtaHref="/blog"
+      stats={[
+        { value: `${countries}+`, label: "Countries" },
+        { value: `${visitedPlaces.length}+`, label: "Destinations" },
+        { value: `${continents}`, label: "Continents" },
+      ]}
       images={DEMO_IMAGES}
     />
   );

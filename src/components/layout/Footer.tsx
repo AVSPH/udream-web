@@ -92,7 +92,9 @@ export function Footer() {
                                 <a
                                     key={social.name}
                                     href={social.href}
-                                    className="w-10 h-10 rounded-full border border-background/10 flex items-center justify-center text-background/60 hover:text-white hover:border-primary hover:bg-primary/20 transition-all"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 rounded-full border border-background/10 flex items-center justify-center text-background/60 hover:text-white hover:border-primary hover:bg-primary/20 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
                                     aria-label={social.name}
                                 >
                                     {social.icon}
@@ -109,8 +111,9 @@ export function Footer() {
                                     <li key={link.name}>
                                         <Link
                                             href={link.href}
-                                            className="text-background/60 hover:text-primary transition-colors text-base"
+                                            className="group inline-flex items-center gap-1 text-background/60 hover:text-white transition-colors text-base"
                                         >
+                                            <span className="w-0 group-hover:w-3 h-px bg-primary transition-all duration-300" />
                                             {link.name}
                                         </Link>
                                     </li>

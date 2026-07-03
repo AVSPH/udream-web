@@ -100,7 +100,7 @@ export function LatestAdventures() {
     }, []);
 
     return (
-      <section className="pt-24 pb-10 px-4 bg-white">
+      <section className="pt-24 pb-10 px-4 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 max-w-2xl mx-auto">
             <motion.h2
@@ -170,9 +170,10 @@ export function LatestAdventures() {
           >
             <Link
               href="/blog"
-              className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+              className="cta-shine group relative overflow-hidden inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
             >
               View all articles
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </motion.div>
         </div>
