@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { travelGuides } from "@/data/guides";
 import { staticBlogs } from "@/data/visited-blogs";
+import { citySpotPricing } from "@/data/attraction-prices";
 
 const baseUrl = "https://www.udreamtravels.com";
 
@@ -76,6 +77,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${baseUrl}/resources/attraction-prices`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${baseUrl}/privacy-policy`,
       lastModified: now,
       changeFrequency: "yearly",
@@ -109,5 +116,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...guideRoutes];
+  const spotPriceRoutes: MetadataRoute.Sitemap = citySpotPricing.map((c) => ({
+    url: `${baseUrl}/resources/attraction-prices/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...guideRoutes, ...spotPriceRoutes];
 }

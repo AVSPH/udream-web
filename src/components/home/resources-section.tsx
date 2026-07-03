@@ -44,7 +44,7 @@ export function ResourcesSection() {
     const isInView = useInView(ref, { once: true, margin: "-50px" });
 
     return (
-        <section className="pt-24 px-4 bg-white relative overflow-hidden">
+        <section className="pt-24 px-4 bg-transparent relative overflow-hidden">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -z-10" />
 
@@ -99,7 +99,7 @@ export function ResourcesSection() {
                         className="md:row-span-2 min-h-[260px] group"
                     >
                         <Link href={resources[0].href} className="block h-full">
-                            <div className="h-full rounded-2xl border border-border bg-card to-secondary/10 overflow-hidden hover:border-primary/40 transition-all duration-300 relative p-8 flex flex-col justify-between">
+                            <div className="h-full rounded-2xl border border-border bg-card to-secondary/10 overflow-hidden hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 relative p-8 flex flex-col justify-between">
                                 <div className="absolute -right-6 -top-6 text-primary/5 pointer-events-none">
                                     <Globe className="w-52 h-52" strokeWidth={1} />
                                 </div>
@@ -132,7 +132,7 @@ export function ResourcesSection() {
                             className="min-h-[200px] group"
                         >
                             <Link href={resource.href} className="block h-full">
-                                <div className="h-full rounded-2xl border border-border bg-card/60 backdrop-blur-sm overflow-hidden hover:bg-card hover:border-primary/30 transition-all duration-300 relative p-6 flex flex-col justify-between">
+                                <div className="h-full rounded-2xl border border-border bg-card/60 backdrop-blur-sm overflow-hidden hover:bg-card hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 relative p-6 flex flex-col justify-between">
                                     <div className="absolute -right-4 -top-4 text-primary/5 pointer-events-none">
                                         <resource.icon className="w-28 h-28" strokeWidth={1} />
                                     </div>

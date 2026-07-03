@@ -35,6 +35,9 @@ export function NewsletterCTA() {
 
   return (
     <section id="contact" className="relative bg-foreground overflow-hidden">
+      {/* Ambient glows */}
+      <div aria-hidden className="absolute -top-32 -left-24 w-96 h-96 rounded-full bg-primary/15 blur-3xl pointer-events-none" />
+      <div aria-hidden className="absolute -bottom-40 right-0 w-[28rem] h-[28rem] rounded-full bg-secondary/10 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-10">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
@@ -78,7 +81,7 @@ export function NewsletterCTA() {
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
             className="relative"
           >
-            <div className="bg-background/5 border border-background/10 rounded-2xl p-8 backdrop-blur-sm">
+            <div className="bg-background/5 border border-background/10 rounded-3xl p-8 backdrop-blur-sm shadow-[0_20px_60px_-20px_rgba(0,0,0,0.4)]">
               <AnimatePresence mode="wait">
                 {status === "success" ? (
                   <motion.div
@@ -105,12 +108,12 @@ export function NewsletterCTA() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         disabled={status === "loading"}
-                        className="w-full h-12 px-5 rounded-xl bg-background/8 border border-background/15 text-background placeholder:text-background/35 text-sm focus:outline-none focus:border-primary/50 transition-colors disabled:opacity-50"
+                        className="w-full h-12 px-5 rounded-xl bg-background/8 border border-background/15 text-background placeholder:text-background/35 text-sm focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/25 transition-all disabled:opacity-50"
                       />
                       <button
                         type="submit"
                         disabled={status === "loading"}
-                        className="w-full h-12 rounded-xl bg-primary text-white text-sm font-semibold inline-flex items-center justify-center gap-2 hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
+                        className="cta-shine relative overflow-hidden w-full h-12 rounded-xl bg-primary text-white text-sm font-semibold inline-flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:bg-primary/90 hover:shadow-primary/30 disabled:opacity-60 disabled:cursor-not-allowed transition-all"
                       >
                         {status === "loading" ? (
                           <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">

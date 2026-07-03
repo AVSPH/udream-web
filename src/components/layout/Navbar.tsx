@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
     Menu, X, Globe, Map as MapIcon, BookOpen, User,
     Home, Backpack, ChevronDown, FileText, CheckSquare, Plane, ClipboardCheck,
-    Calendar, Sparkles
+    Calendar, Sparkles, Ticket
 } from "lucide-react";
 
 type NavItem = {
@@ -50,6 +50,12 @@ const navItems: NavItem[] = [
         href: "/resources/destination-costs",
         icon: <CheckSquare size={18} />,
         description: "Real budget breakdowns",
+      },
+      {
+        name: "Attraction Prices",
+        href: "/resources/attraction-prices",
+        icon: <Ticket size={18} />,
+        description: "Entry fees for top sights",
       },
       {
         name: "Travel Tools",
@@ -95,6 +101,7 @@ const navItems: NavItem[] = [
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
+    const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
 
     // Close mobile menu on route change
@@ -103,6 +110,14 @@ export default function Navbar() {
         setMobileDropdownOpen(null);
     }, [pathname]);
 
+    // Elevate the navbar once the page is scrolled
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 16);
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
     const toggleMobileDropdown = (name: string, e: React.MouseEvent) => {
         e.preventDefault();
         setMobileDropdownOpen(mobileDropdownOpen === name ? null : name);
@@ -110,7 +125,11 @@ export default function Navbar() {
 
     return (
         <nav
-            className="fixed top-0 left-0 right-0 z-[5000] border-b border-border/40 transition-all duration-300 bg-white backdrop-blur-lg py-2"
+            className={`fixed top-0 left-0 right-0 z-[5000] transition-all duration-300 backdrop-blur-lg ${
+                scrolled || isOpen
+                    ? "bg-white/85 border-b border-border/60 shadow-[0_8px_30px_-12px_rgba(46,38,30,0.15)] py-1.5"
+                    : "bg-white/60 border-b border-transparent py-3"
+            }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
@@ -185,7 +204,7 @@ export default function Navbar() {
                     })}
                     <Link
                         href="/nomad"
-                        className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors"
+                        className="cta-shine relative overflow-hidden ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold shadow-md shadow-primary/25 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
                     >
                         Free Guide
                     </Link>

@@ -4,6 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/layout/ScrollProgress";
+import { BackToTop } from "@/components/layout/BackToTop";
 import { NewsletterCTA } from "@/components/home/newsletter-cta";
 import { LenisProvider } from "@/components/providers/LenisProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -94,10 +96,12 @@ export default function RootLayout({
         className={`${playfairDisplay.variable} ${lato.variable} ${dancingScript.variable} antialiased`}
       >
         <LenisProvider>
+          <ScrollProgress />
           <Navbar />
           <main>{children}</main>
           <NewsletterCTA />
           <Footer />
+          <BackToTop />
         </LenisProvider>
       </body>
       <GoogleAnalytics gaId="G-8D3H8C0J53" />

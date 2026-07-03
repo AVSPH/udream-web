@@ -10,7 +10,7 @@ import { StripedPattern } from "@/components/magicui/striped-pattern";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-white overflow-x-hidden">
+    <main className="relative min-h-screen bg-[#FAF8F2] overflow-x-hidden">
       <StripedPattern
         className="text-primary/15 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,white,transparent)] z-0"
         width={16}
