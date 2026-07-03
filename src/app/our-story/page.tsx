@@ -129,7 +129,7 @@ export default function AboutPage() {
         {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Meri [Last Name]",
+            "name": "Meri",
             "nationality": "Filipino",
             "url": "https://udreamtravels.com/our-story",
             "sameAs": [
@@ -141,7 +141,7 @@ export default function AboutPage() {
         {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Man [Last Name]",
+            "name": "Man",
             "nationality": "Filipino",
             "url": "https://udreamtravels.com/our-story",
             "sameAs": [
@@ -258,7 +258,7 @@ export default function AboutPage() {
                             Credentials: Meri and Man have visited 31 countries across 2 continents since 2022.
                         </p>
                         <p>
-                            We are Meri [Last Name] and Man [Last Name], a couple from the Philippines who were already living the online life but knew deep down it could be so much more.
+                            We are Meri and Man, a couple from the Philippines who were already living the online life but knew deep down it could be so much more.
                         </p>
                         <p>
                             We built a freelancing business together, unlocked location freedom, and the rest, as they say, is history.
@@ -340,7 +340,7 @@ export default function AboutPage() {
                             We made ours, and we haven&apos;t looked back.&quot;
                         </p>
                         <div className="mt-8 flex flex-col items-center">
-                            <span className="font-script text-4xl text-muted-foreground mb-1">Meri [Last Name] &amp; Man [Last Name]</span>
+                            <span className="font-script text-4xl text-muted-foreground mb-1">Meri &amp; Man</span>
                             <div className="w-12 h-px bg-border" />
                         </div>
                     </div>

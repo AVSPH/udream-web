@@ -69,6 +69,19 @@ export default function ResourcesPage() {
                     </div>
                 </Link>
 
+                <Link href="/resources/attraction-prices" className="group block">
+                    <div className="relative h-full overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all hover:border-primary/40 hover:shadow-md">
+                        <div className="flex flex-col h-full gap-4 relative z-10">
+                            <h2 className="text-2xl group-hover:text-primary transition-colors">Attraction Prices</h2>
+                            <p className="text-muted-foreground flex-grow">Entry fees for the famous tourist spots in every city we've visited — know how much to bring.</p>
+                            <div className="flex items-center gap-2 text-primary font-medium mt-4">
+                                <span>See Prices</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+
                 <Link href="/resources/travel-tools" className="group block">
                     <div className="relative h-full overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all hover:border-primary/40 hover:shadow-md">
                         <div className="flex flex-col h-full gap-4 relative z-10">

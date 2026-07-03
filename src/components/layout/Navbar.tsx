@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
     Menu, X, Globe, Map as MapIcon, BookOpen, User,
     Home, Backpack, ChevronDown, FileText, CheckSquare, Plane, ClipboardCheck,
-    Calendar, Sparkles
+    Calendar, Sparkles, Ticket
 } from "lucide-react";
 
 type NavItem = {
@@ -50,6 +50,12 @@ const navItems: NavItem[] = [
         href: "/resources/destination-costs",
         icon: <CheckSquare size={18} />,
         description: "Real budget breakdowns",
+      },
+      {
+        name: "Attraction Prices",
+        href: "/resources/attraction-prices",
+        icon: <Ticket size={18} />,
+        description: "Entry fees for top sights",
       },
       {
         name: "Travel Tools",
