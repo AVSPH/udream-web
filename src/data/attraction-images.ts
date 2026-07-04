@@ -4,7 +4,7 @@
 
 import type { SpotImage } from "./attraction-prices";
 
-export const spotImages: Record<string, SpotImage> =  {
+export const spotImages: Record<string, SpotImage> =   {
   "hero:almaty": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg/1280px-Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg",
     "author": "Vmenkov",
@@ -557,5 +557,299 @@ export const spotImages: Record<string, SpotImage> =  {
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parts_of_Old_Tbilisi,_historical_center_of_Tbilisi,_Georgia._View_from_the_Metekhi_church._July_2023.jpg"
+  },
+  "barcelona:Sagrada Família": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sagrada_Familia_March_2015-10a.jpg/1280px-Sagrada_Familia_March_2015-10a.jpg",
+    "author": "Alvesgaspar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sagrada_Familia_March_2015-10a.jpg"
+  },
+  "barcelona:Park Güell": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Terrace_of_Parc_G%C3%BCell%2C_Barcelona%2C_Spain.jpg/1280px-Terrace_of_Parc_G%C3%BCell%2C_Barcelona%2C_Spain.jpg",
+    "author": "Julian Lupyan",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Terrace_of_Parc_G%C3%BCell,_Barcelona,_Spain.jpg"
+  },
+  "barcelona:Casa Batlló": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Exterior_of_Casa_Batl%C3%B3_-_Barcelona_2014.jpg/1280px-Exterior_of_Casa_Batl%C3%B3_-_Barcelona_2014.jpg",
+    "author": "José Luiz",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Exterior_of_Casa_Batl%C3%B3_-_Barcelona_2014.jpg"
+  },
+  "barcelona:La Rambla & La Boqueria": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Barcelona_-_Rambla_dels_Estudis_-_View_NNW.jpg/1280px-Barcelona_-_Rambla_dels_Estudis_-_View_NNW.jpg",
+    "author": "Txllxt TxllxT",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barcelona_-_Rambla_dels_Estudis_-_View_NNW.jpg"
+  },
+  "barcelona:Gothic Quarter (Barri Gòtic)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Barcelona_-_Barri_Gotic._Pla%C3%A7a_d%27Antonio_L%C3%B3pez.jpg/1280px-Barcelona_-_Barri_Gotic._Pla%C3%A7a_d%27Antonio_L%C3%B3pez.jpg",
+    "author": "Fred Romero",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barcelona_-_Barri_Gotic._Pla%C3%A7a_d%27Antonio_L%C3%B3pez.jpg"
+  },
+  "barcelona:Montjuïc & Magic Fountain": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Barcelona_-_Montju%C3%AFc_-_Castell_de_Montju%C3%AFc_1799_by_Juan_Martin_Cerme%C3%B1o_-_Panorama_View_over_Barcelona_from_the_Castle_08.jpg/1280px-Barcelona_-_Montju%C3%AFc_-_Castell_de_Montju%C3%AFc_1799_by_Juan_Martin_Cerme%C3%B1o_-_Panorama_View_over_Barcelona_from_the_Castle_08.jpg",
+    "author": "Txllxt TxllxT",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barcelona_-_Montju%C3%AFc_-_Castell_de_Montju%C3%AFc_1799_by_Juan_Martin_Cerme%C3%B1o_-_Panorama_View_over_Barcelona_from_the_Castle_08.jpg"
+  },
+  "hero:barcelona": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Barcelona%2C_View_from_Bunkers_del_Carmel.jpg/1280px-Barcelona%2C_View_from_Bunkers_del_Carmel.jpg",
+    "author": "Alexey Komarov",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barcelona,_View_from_Bunkers_del_Carmel.jpg"
+  },
+  "vienna:Schönbrunn Palace": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Schoenbrunn_Palace_as_seen_from_Neptune_Fountain%2C_September_2016.jpg/1280px-Schoenbrunn_Palace_as_seen_from_Neptune_Fountain%2C_September_2016.jpg",
+    "author": "Martin Falbisoner",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schoenbrunn_Palace_as_seen_from_Neptune_Fountain,_September_2016.jpg"
+  },
+  "vienna:St. Stephen's Cathedral": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wien_-_Stephansdom_%281%29.JPG/1280px-Wien_-_Stephansdom_%281%29.JPG",
+    "author": "C.Stadler/Bwag",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wien_-_Stephansdom_(1).JPG"
+  },
+  "vienna:Belvedere Palace": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_87-89_HDR.jpg/1280px-Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_87-89_HDR.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Belvedere,_Viena,_Austria,_2020-02-01,_DD_87-89_HDR.jpg"
+  },
+  "vienna:Hofburg & Sisi Museum": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Neue_Burg%2C_Hofburg%2C_Viena%2C_Austria%2C_2020-01-31%2C_DD_143-145_HDR.jpg/1280px-Neue_Burg%2C_Hofburg%2C_Viena%2C_Austria%2C_2020-01-31%2C_DD_143-145_HDR.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neue_Burg,_Hofburg,_Viena,_Austria,_2020-01-31,_DD_143-145_HDR.jpg"
+  },
+  "vienna:Vienna State Opera": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Wiener_Staatsoper_facade.jpg/1280px-Wiener_Staatsoper_facade.jpg",
+    "author": "Jebulon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wiener_Staatsoper_facade.jpg"
+  },
+  "vienna:Prater & Giant Ferris Wheel": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Wien%2C_Prater%2C_Riesenrad_--_2018_--_3161.jpg/1280px-Wien%2C_Prater%2C_Riesenrad_--_2018_--_3161.jpg",
+    "author": "Dietmar Rabich",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wien,_Prater,_Riesenrad_--_2018_--_3161.jpg"
+  },
+  "hero:vienna": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Vienna%2C_Austria_-_Flickr_-_Pierre_Blach%C3%A9.jpg/1280px-Vienna%2C_Austria_-_Flickr_-_Pierre_Blach%C3%A9.jpg",
+    "author": "Pierre Blaché",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vienna,_Austria_-_Flickr_-_Pierre_Blach%C3%A9.jpg"
+  },
+  "samarkand:Registan Square": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Registan_01.jpg/1280px-Registan_01.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Registan_01.jpg"
+  },
+  "samarkand:Shah-i-Zinda": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Shah-i-Zinda_02.jpg/1280px-Shah-i-Zinda_02.jpg",
+    "author": "Bgag",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shah-i-Zinda_02.jpg"
+  },
+  "samarkand:Gur-e-Amir Mausoleum": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gur-e_Amir_01.jpg/1280px-Gur-e_Amir_01.jpg",
+    "author": "Bgag",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gur-e_Amir_01.jpg"
+  },
+  "samarkand:Bibi-Khanym Mosque": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bibi-Khanym_Mosque%2C_Samarkand.jpg/1280px-Bibi-Khanym_Mosque%2C_Samarkand.jpg",
+    "author": "Bgag",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bibi-Khanym_Mosque,_Samarkand.jpg"
+  },
+  "samarkand:Ulugh Beg Observatory": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Ulugh_Beg_Observatory_01.jpg/1280px-Ulugh_Beg_Observatory_01.jpg",
+    "author": "Bgag",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Observatory_01.jpg"
+  },
+  "samarkand:Siob Bazaar": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Siob_Bazaar_%288145400272%29.jpg",
+    "author": "David Stanley",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Siob_Bazaar_(8145400272).jpg"
+  },
+  "hero:samarkand": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Registan_square_at_night_Samarkand.jpg/1280px-Registan_square_at_night_Samarkand.jpg",
+    "author": "Գարվիք",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Registan_square_at_night_Samarkand.jpg"
+  },
+  "siem-reap:Angkor Wat": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/2014-Cambodge_Angkor_Wat_%2821%29.jpg/1280px-2014-Cambodge_Angkor_Wat_%2821%29.jpg",
+    "author": "Pierre André Leclercq",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014-Cambodge_Angkor_Wat_(21).jpg"
+  },
+  "siem-reap:Bayon & Angkor Thom": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/023_Bayon_Tower_Faces.jpg/1280px-023_Bayon_Tower_Faces.jpg",
+    "author": "Anandajoti",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:023_Bayon_Tower_Faces.jpg"
+  },
+  "siem-reap:Ta Prohm": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Angkor_Wat_Ta_Prohm_Temple_doorway_overgrown_with_tree_roots.jpg/1280px-Angkor_Wat_Ta_Prohm_Temple_doorway_overgrown_with_tree_roots.jpg",
+    "author": "GayleKaren",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angkor_Wat_Ta_Prohm_Temple_doorway_overgrown_with_tree_roots.jpg"
+  },
+  "siem-reap:Banteay Srei": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cambodge_Banteay_Srei_Temple_%282%29.jpg/1280px-Cambodge_Banteay_Srei_Temple_%282%29.jpg",
+    "author": "Pierre André Leclercq",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cambodge_Banteay_Srei_Temple_(2).jpg"
+  },
+  "siem-reap:Angkor Thom South Gate": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Angkor_Thom_S%C3%BCdtor_15.jpg/1280px-Angkor_Thom_S%C3%BCdtor_15.jpg",
+    "author": "Olaf Tausch",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angkor_Thom_S%C3%BCdtor_15.jpg"
+  },
+  "siem-reap:Tonlé Sap Floating Village": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/The_floating_village-Tonle_Sap_lake.jpg/1280px-The_floating_village-Tonle_Sap_lake.jpg",
+    "author": "David Sim",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_floating_village-Tonle_Sap_lake.jpg"
+  },
+  "hero:siem-reap": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/49/Vietnam_%26_Cambodia_%283336809955%29.jpg",
+    "author": "Christopher Michel",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vietnam_%26_Cambodia_(3336809955).jpg"
+  },
+  "yerevan:Yerevan Cascade": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Yerevan%2C_Cascade_of_Yerevan%2C_Armenia.jpg/1280px-Yerevan%2C_Cascade_of_Yerevan%2C_Armenia.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yerevan,_Cascade_of_Yerevan,_Armenia.jpg"
+  },
+  "yerevan:Republic Square": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Yerevan%2C_Republic_Square_of_Yerevan%2C_Armenia.jpg/1280px-Yerevan%2C_Republic_Square_of_Yerevan%2C_Armenia.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yerevan,_Republic_Square_of_Yerevan,_Armenia.jpg"
+  },
+  "yerevan:Mother Armenia & Victory Park": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Mother_Armenia_statue_in_Yerevan_P8210360_2350.jpg/1280px-Mother_Armenia_statue_in_Yerevan_P8210360_2350.jpg",
+    "author": "Alexxx1979",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mother_Armenia_statue_in_Yerevan_P8210360_2350.jpg"
+  },
+  "yerevan:Matenadaran": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Yerevan%2C_Matenadaran%2C_Armenia.jpg/1280px-Yerevan%2C_Matenadaran%2C_Armenia.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yerevan,_Matenadaran,_Armenia.jpg"
+  },
+  "yerevan:Vernissage Market": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Vernissage_market%2C_Yerevan.jpg/1280px-Vernissage_market%2C_Yerevan.jpg",
+    "author": "Deb Collins",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vernissage_market,_Yerevan.jpg"
+  },
+  "yerevan:Mount Ararat Viewpoints": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Mount_Ararat_and_the_Yerevan_skyline_in_spring.jpg/1280px-Mount_Ararat_and_the_Yerevan_skyline_in_spring.jpg",
+    "author": "Serouj Ourishian",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Ararat_and_the_Yerevan_skyline_in_spring.jpg"
+  },
+  "hero:yerevan": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Yerevan_panorama_pic.jpg/1280px-Yerevan_panorama_pic.jpg",
+    "author": "SamvelM",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yerevan_panorama_pic.jpg"
+  },
+  "lucerne:Chapel Bridge (Kapellbrücke)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Luzern_Kapellbruecke.jpg/1280px-Luzern_Kapellbruecke.jpg",
+    "author": "Ikiwaner",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Luzern_Kapellbruecke.jpg"
+  },
+  "lucerne:Lion Monument": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/L%C3%B6wendenkmal_-_The_Lion_Monument_%28Lucerne%29_02.jpg/1280px-L%C3%B6wendenkmal_-_The_Lion_Monument_%28Lucerne%29_02.jpg",
+    "author": "Godot13",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:L%C3%B6wendenkmal_-_The_Lion_Monument_(Lucerne)_02.jpg"
+  },
+  "lucerne:Mount Pilatus": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Pilatus-Lake_Luzern-Hertenstein-01ASD.jpg/1280px-Pilatus-Lake_Luzern-Hertenstein-01ASD.jpg",
+    "author": "Asurnipal",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pilatus-Lake_Luzern-Hertenstein-01ASD.jpg"
+  },
+  "lucerne:Mount Rigi": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Rigi_Kulm_Feb_2012_Nebelmeer.jpg/1280px-Rigi_Kulm_Feb_2012_Nebelmeer.jpg",
+    "author": "Gestumblindi",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rigi_Kulm_Feb_2012_Nebelmeer.jpg"
+  },
+  "lucerne:Lake Lucerne Cruise": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Lake_Luzern_-_30.9.2024_%2855158627665%29.jpg/1280px-Lake_Luzern_-_30.9.2024_%2855158627665%29.jpg",
+    "author": "Karlheinz Klingbeil",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Luzern_-_30.9.2024_(55158627665).jpg"
+  },
+  "lucerne:Old Town & Musegg Wall": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Museggmauer-Luzern.jpg/1280px-Museggmauer-Luzern.jpg",
+    "author": "Lucerne-Tourism",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Museggmauer-Luzern.jpg"
+  },
+  "hero:lucerne": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Lucerne_city%2C_lake_and_mountains.jpg/1280px-Lucerne_city%2C_lake_and_mountains.jpg",
+    "author": "Dan Cojocari",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lucerne_city,_lake_and_mountains.jpg"
   }
 };
