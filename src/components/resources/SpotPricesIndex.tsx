@@ -130,7 +130,7 @@ export function SpotPricesIndex() {
             </p>
             <p className="text-sm text-muted-foreground max-w-xs">
               We&apos;re adding price guides for every city we&apos;ve visited
-              ~ Phuket, Sarajevo, Belgrade, and more coming soon.
+              ~ Kota Kinabalu, Taichung, Dushanbe, and the last few coming soon.
             </p>
           </motion.div>
         </div>

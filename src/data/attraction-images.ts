@@ -4,7 +4,7 @@
 
 import type { SpotImage } from "./attraction-prices";
 
-export const spotImages: Record<string, SpotImage> =   {
+export const spotImages: Record<string, SpotImage> =    {
   "hero:almaty": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg/1280px-Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg",
     "author": "Vmenkov",
@@ -851,5 +851,397 @@ export const spotImages: Record<string, SpotImage> =   {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lucerne_city,_lake_and_mountains.jpg"
+  },
+  "hong-kong:Victoria Peak & Peak Tram": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Hong_Kong_Skyline_Restitch_-_Dec_2007.jpg/1280px-Hong_Kong_Skyline_Restitch_-_Dec_2007.jpg",
+    "author": "Diliff",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Skyline_Restitch_-_Dec_2007.jpg"
+  },
+  "hong-kong:Tian Tan Big Buddha": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Tian_Tan_Buddha_by_Beria.jpg/1280px-Tian_Tan_Buddha_by_Beria.jpg",
+    "author": "Béria Lima de Rodríguez",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tian_Tan_Buddha_by_Beria.jpg"
+  },
+  "hong-kong:Star Ferry": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Victoria_Harbour_Hong_Kong_and_Star_Ferry.JPG/1280px-Victoria_Harbour_Hong_Kong_and_Star_Ferry.JPG",
+    "author": "Clark Sui",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Harbour_Hong_Kong_and_Star_Ferry.JPG"
+  },
+  "hong-kong:Wong Tai Sin Temple": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Hong_Kong_China_Wong-Tai-Sin-Temple-01.jpg/1280px-Hong_Kong_China_Wong-Tai-Sin-Temple-01.jpg",
+    "author": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hong_Kong_China_Wong-Tai-Sin-Temple-01.jpg"
+  },
+  "hong-kong:Ngong Ping 360 Cable Car": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Ngong_Ping_360_Cable_Car_Ngong_Ping_Lantau_Island_Hong_Kong_-_panoramio.jpg/1280px-Ngong_Ping_360_Cable_Car_Ngong_Ping_Lantau_Island_Hong_Kong_-_panoramio.jpg",
+    "author": "Hiroki Ogawa",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ngong_Ping_360_Cable_Car_Ngong_Ping_Lantau_Island_Hong_Kong_-_panoramio.jpg"
+  },
+  "hong-kong:Temple Street Night Market": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Mercado_en_Temple_St.%2C_Hong_Kong%2C_2013-08-11%2C_DD_01.JPG/1280px-Mercado_en_Temple_St.%2C_Hong_Kong%2C_2013-08-11%2C_DD_01.JPG",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mercado_en_Temple_St.,_Hong_Kong,_2013-08-11,_DD_01.JPG"
+  },
+  "hero:hong-kong": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Hong_Kong_Harbour_Night_2019-06-11.jpg/1280px-Hong_Kong_Harbour_Night_2019-06-11.jpg",
+    "author": "Benh Lieu Song",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Harbour_Night_2019-06-11.jpg"
+  },
+  "macau:Ruins of St. Paul's": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ruins_of_St_Paul%27s%2C_Macau_%2830843847251%29.jpg/1280px-Ruins_of_St_Paul%27s%2C_Macau_%2830843847251%29.jpg",
+    "author": "Joybot",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ruins_of_St_Paul%27s,_Macau_(30843847251).jpg"
+  },
+  "macau:Senado Square": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Largo_do_Senado%2C_2023_%2802%29.jpg/1280px-Largo_do_Senado%2C_2023_%2802%29.jpg",
+    "author": "Bahnfrend",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Largo_do_Senado,_2023_(02).jpg"
+  },
+  "macau:A-Ma Temple": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/A-Ma_Temple_%28Macau%29_01.JPG/1280px-A-Ma_Temple_%28Macau%29_01.JPG",
+    "author": "Abasaa",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A-Ma_Temple_(Macau)_01.JPG"
+  },
+  "macau:Macau Tower": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Macau_Tower_Center_2009.JPG/1280px-Macau_Tower_Center_2009.JPG",
+    "author": "Destron Commander",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macau_Tower_Center_2009.JPG"
+  },
+  "macau:The Venetian Macao": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Venetian_%2898716%29.jpg/1280px-Venetian_%2898716%29.jpg",
+    "author": "Syced",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Venetian_(98716).jpg"
+  },
+  "macau:Guia Fortress & Lighthouse": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/%27Guia_Lighthouse_and_Chapel%27.jpg/1280px-%27Guia_Lighthouse_and_Chapel%27.jpg",
+    "author": "Rudolph.A.furtado",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%27Guia_Lighthouse_and_Chapel%27.jpg"
+  },
+  "hero:macau": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Macau_skyline_2013_%28panorama%29.JPG/1280px-Macau_skyline_2013_%28panorama%29.JPG",
+    "author": "Mimihitam",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macau_skyline_2013_(panorama).JPG"
+  },
+  "phuket:Big Buddha Phuket": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Big_Buddha_-_Phuket.jpg/1280px-Big_Buddha_-_Phuket.jpg",
+    "author": "Mussi Katz",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Big_Buddha_-_Phuket.jpg"
+  },
+  "phuket:Wat Chalong": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Wat_Chalong_Phuket_%28one_of_the_temples%29.jpg/1280px-Wat_Chalong_Phuket_%28one_of_the_temples%29.jpg",
+    "author": "Deepak-nsk",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wat_Chalong_Phuket_(one_of_the_temples).jpg"
+  },
+  "phuket:Phi Phi Islands & Maya Bay": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Maya_Bay_Thailand_Phi_Phi_Ley.jpg",
+    "author": "Entropy1963",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maya_Bay_Thailand_Phi_Phi_Ley.jpg"
+  },
+  "phuket:Phuket Old Town": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Thalang_Road%2C_Old_Phuket_Town.jpg/1280px-Thalang_Road%2C_Old_Phuket_Town.jpg",
+    "author": "Christophe95",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thalang_Road,_Old_Phuket_Town.jpg"
+  },
+  "phuket:Patong Beach": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Patong_Beach_Phuket_November_2012.jpg/1280px-Patong_Beach_Phuket_November_2012.jpg",
+    "author": "Arnaud-Victor Monteux",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Patong_Beach_Phuket_November_2012.jpg"
+  },
+  "phuket:Phang Nga Bay (James Bond Island)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Ko_Tapu_%28James_Bond%29_Island_in_Phang_Nga_Bay%2C_Thailand.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ko_Tapu_(James_Bond)_Island_in_Phang_Nga_Bay,_Thailand.jpg"
+  },
+  "hero:phuket": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Andaman_Sea_-_panoramio.jpg/1280px-Andaman_Sea_-_panoramio.jpg",
+    "author": "Alexey Komarov",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andaman_Sea_-_panoramio.jpg"
+  },
+  "phnom-penh:Royal Palace": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Royal_Palace%2C_Phnom_Penh_Cambodia_1.jpg/1280px-Royal_Palace%2C_Phnom_Penh_Cambodia_1.jpg",
+    "author": "Hanay",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palace,_Phnom_Penh_Cambodia_1.jpg"
+  },
+  "phnom-penh:Silver Pagoda": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/2016_Phnom_Penh%2C_Pa%C5%82ac_Kr%C3%B3lewski%2C_Srebrna_Pagoda_%2802%29.jpg/1280px-2016_Phnom_Penh%2C_Pa%C5%82ac_Kr%C3%B3lewski%2C_Srebrna_Pagoda_%2802%29.jpg",
+    "author": "Marcin Konsek",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Pa%C5%82ac_Kr%C3%B3lewski,_Srebrna_Pagoda_(02).jpg"
+  },
+  "phnom-penh:Tuol Sleng (S-21)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Tuol-Sleng-2024.JPG/1280px-Tuol-Sleng-2024.JPG",
+    "author": "Happolati",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tuol-Sleng-2024.JPG"
+  },
+  "phnom-penh:Choeung Ek Killing Fields": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Choeung_Ek%2C_Memorial_Stupa_%284406142754%29.jpg/1280px-Choeung_Ek%2C_Memorial_Stupa_%284406142754%29.jpg",
+    "author": "Harald Hoyer",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Choeung_Ek,_Memorial_Stupa_(4406142754).jpg"
+  },
+  "phnom-penh:Wat Phnom": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/2016_Phnom_Penh%2C_Wat_Phnom_%2804%29.jpg/1280px-2016_Phnom_Penh%2C_Wat_Phnom_%2804%29.jpg",
+    "author": "Marcin Konsek",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Wat_Phnom_(04).jpg"
+  },
+  "phnom-penh:Central Market (Phsar Thmey)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/20171125_Central_Market%2C_Phnom_Penh_4368_DxO.jpg/1280px-20171125_Central_Market%2C_Phnom_Penh_4368_DxO.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:20171125_Central_Market,_Phnom_Penh_4368_DxO.jpg"
+  },
+  "hero:phnom-penh": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Skyline_of_Phnom_Penh.jpg/1280px-Skyline_of_Phnom_Penh.jpg",
+    "author": "Mao Piseth",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Skyline_of_Phnom_Penh.jpg"
+  },
+  "brussels:Grand Place": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/1280px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg",
+    "author": "Celuici",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grand-Place,_Brussels_-_panorama,_June_2018.jpg"
+  },
+  "brussels:Atomium": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Atomium%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_148-150_HDR.jpg/1280px-Atomium%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_148-150_HDR.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Atomium,_Bruselas,_B%C3%A9lgica,_2021-12-15,_DD_148-150_HDR.jpg"
+  },
+  "brussels:Manneken Pis": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Manneken_Pis_%28DSCF4463%29.jpg/1280px-Manneken_Pis_%28DSCF4463%29.jpg",
+    "author": "Trougnouf",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manneken_Pis_(DSCF4463).jpg"
+  },
+  "brussels:Royal Palace of Brussels": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Royal_Palace_of_Brussels_%28facade%29.jpg/1280px-Royal_Palace_of_Brussels_%28facade%29.jpg",
+    "author": "Daniel Huet",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palace_of_Brussels_(facade).jpg"
+  },
+  "brussels:Cinquantenaire Park & Arch": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Brussels_Cinquantenaire_R03.jpg/1280px-Brussels_Cinquantenaire_R03.jpg",
+    "author": "Marc Ryckaert",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brussels_Cinquantenaire_R03.jpg"
+  },
+  "brussels:Galeries Royales Saint-Hubert": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Galeries_royales_Saint-Hubert%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-14%2C_DD_04-06_HDR.jpg/1280px-Galeries_royales_Saint-Hubert%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-14%2C_DD_04-06_HDR.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Galeries_royales_Saint-Hubert,_Bruselas,_B%C3%A9lgica,_2021-12-14,_DD_04-06_HDR.jpg"
+  },
+  "hero:brussels": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Grande_Place_De_Bruxelles_%28248627285%29.jpeg/1280px-Grande_Place_De_Bruxelles_%28248627285%29.jpeg",
+    "author": "Petit Bleu Photos",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grande_Place_De_Bruxelles_(248627285).jpeg"
+  },
+  "sarajevo:Baščaršija Old Bazaar": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Sebilj_Fountain_at_Bascarsija_Market_-_panoramio.jpg/1280px-Sebilj_Fountain_at_Bascarsija_Market_-_panoramio.jpg",
+    "author": "lienyuan lee",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sebilj_Fountain_at_Bascarsija_Market_-_panoramio.jpg"
+  },
+  "sarajevo:Latin Bridge": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/The_Latin_Bridge%2C_Sarajevo.jpg/1280px-The_Latin_Bridge%2C_Sarajevo.jpg",
+    "author": "Đana Talić",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Latin_Bridge,_Sarajevo.jpg"
+  },
+  "sarajevo:Gazi Husrev-beg Mosque": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Gazi_Husrev-beg_Mosque_in_Sarajevo.jpg/1280px-Gazi_Husrev-beg_Mosque_in_Sarajevo.jpg",
+    "author": "Adam Harangozó",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gazi_Husrev-beg_Mosque_in_Sarajevo.jpg"
+  },
+  "sarajevo:Sarajevo City Hall (Vijećnica)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Sarajevo_City_Hall_Vijecnica_%2823242695334%29.jpg/1280px-Sarajevo_City_Hall_Vijecnica_%2823242695334%29.jpg",
+    "author": "Alen Djuderija Photography",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_City_Hall_Vijecnica_(23242695334).jpg"
+  },
+  "sarajevo:Tunnel of Hope": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Sarajevo_War_Tunnel_01.jpg/1280px-Sarajevo_War_Tunnel_01.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_War_Tunnel_01.jpg"
+  },
+  "sarajevo:Yellow Fortress (Žuta Tabija)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sarajevo_%E2%80%93_Iftar_at_%C5%BDuta_tabija.jpg/1280px-Sarajevo_%E2%80%93_Iftar_at_%C5%BDuta_tabija.jpg",
+    "author": "Julian Nyča",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_%E2%80%93_Iftar_at_%C5%BDuta_tabija.jpg"
+  },
+  "hero:sarajevo": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sarajevo_Panorama_2022.jpg/1280px-Sarajevo_Panorama_2022.jpg",
+    "author": "Felky",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_Panorama_2022.jpg"
+  },
+  "belgrade:Belgrade Fortress (Kalemegdan)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Belgrade_Fortress_Kalemegdan-9878.NEF.jpg/1280px-Belgrade_Fortress_Kalemegdan-9878.NEF.jpg",
+    "author": "Zcvetkovic",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Belgrade_Fortress_Kalemegdan-9878.NEF.jpg"
+  },
+  "belgrade:Church of Saint Sava": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Church_of_Saint_Sava_%28Belgrade%2C_Serbia%29.jpg/1280px-Church_of_Saint_Sava_%28Belgrade%2C_Serbia%29.jpg",
+    "author": "Petar Milošević",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Saint_Sava_(Belgrade,_Serbia).jpg"
+  },
+  "belgrade:Skadarlija": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Skadarlija%2C_detalj_14.JPG/1280px-Skadarlija%2C_detalj_14.JPG",
+    "author": "Krumb77",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Skadarlija,_detalj_14.JPG"
+  },
+  "belgrade:Republic Square": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Trg_republike_with_National_museum_and_National_theather_in_Belgrade.jpg/1280px-Trg_republike_with_National_museum_and_National_theather_in_Belgrade.jpg",
+    "author": "Imeao",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trg_republike_with_National_museum_and_National_theather_in_Belgrade.jpg"
+  },
+  "belgrade:Knez Mihailova Street": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Knez_Mihailova_Street_%28Belgrade%29.jpg/1280px-Knez_Mihailova_Street_%28Belgrade%29.jpg",
+    "author": "Jaimrsilva",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Knez_Mihailova_Street_(Belgrade).jpg"
+  },
+  "belgrade:Gardoš Tower (Zemun)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/%D0%9A%D1%83%D0%BB%D0%B0_%D0%A1%D0%B8%D0%B1%D0%B8%D1%9A%D0%B0%D0%BD%D0%B8%D0%BD_%D0%88%D0%B0%D0%BD%D0%BA%D0%B0_%28%D0%93%D0%B0%D1%80%D0%B4%D0%BE%D1%88_%D0%9A%D1%83%D0%BB%D0%B0%2C_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%3B_Gardo%C5%A1_Tower_in_Belgrade%29.jpg/1280px-%D0%9A%D1%83%D0%BB%D0%B0_%D0%A1%D0%B8%D0%B1%D0%B8%D1%9A%D0%B0%D0%BD%D0%B8%D0%BD_%D0%88%D0%B0%D0%BD%D0%BA%D0%B0_%28%D0%93%D0%B0%D1%80%D0%B4%D0%BE%D1%88_%D0%9A%D1%83%D0%BB%D0%B0%2C_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%3B_Gardo%C5%A1_Tower_in_Belgrade%29.jpg",
+    "author": "Petar Milošević",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Гардош"
+  },
+  "hero:belgrade": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Belgrade_Fortress_Kalemegdan-9878.NEF.jpg/1280px-Belgrade_Fortress_Kalemegdan-9878.NEF.jpg",
+    "author": "Zcvetkovic",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Belgrade_Fortress_Kalemegdan-9878.NEF.jpg"
+  },
+  "tirana:Skanderbeg Square": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Tirana_-_Skanderbeg_Square_%28Sheshi_Sk%C3%ABnderbej%29_-_by_Pudelek.jpg/1280px-Tirana_-_Skanderbeg_Square_%28Sheshi_Sk%C3%ABnderbej%29_-_by_Pudelek.jpg",
+    "author": "Pudelek",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tirana_-_Skanderbeg_Square_(Sheshi_Sk%C3%ABnderbej)_-_by_Pudelek.jpg"
+  },
+  "tirana:Et'hem Bey Mosque": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ethem_Bey_Mosque%2C_Tirana%2C_Albania.jpg/1280px-Ethem_Bey_Mosque%2C_Tirana%2C_Albania.jpg",
+    "author": "Ravi Dwivedi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ethem_Bey_Mosque,_Tirana,_Albania.jpg"
+  },
+  "tirana:Bunk'Art": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Bunk%27art_Tunnel_-_Mapillary_%28cb9o_yznl64Kd3tv7JVUNA%29.jpg/1280px-Bunk%27art_Tunnel_-_Mapillary_%28cb9o_yznl64Kd3tv7JVUNA%29.jpg",
+    "author": "kobykarin @ Mapillary.com",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bunk%27art_Tunnel_-_Mapillary_(cb9o_yznl64Kd3tv7JVUNA).jpg"
+  },
+  "tirana:Dajti Ekspres Cable Car": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Dajti-Express-04.JPG/1280px-Dajti-Express-04.JPG",
+    "author": "TorbjørnS",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dajti-Express-04.JPG"
+  },
+  "tirana:Pyramid of Tirana": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Pyramid_of_Tirana_October_2023.jpg/1280px-Pyramid_of_Tirana_October_2023.jpg",
+    "author": "BBB2021",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pyramid_of_Tirana_October_2023.jpg"
+  },
+  "tirana:Clock Tower of Tirana": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Clock_Tower_Tirana_2017.jpg/1280px-Clock_Tower_Tirana_2017.jpg",
+    "author": "aXeLuS",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clock_Tower_Tirana_2017.jpg"
+  },
+  "hero:tirana": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Tirana_panorama_%287246584338%29.jpg/1280px-Tirana_panorama_%287246584338%29.jpg",
+    "author": "Thomas Quine",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tirana_panorama_(7246584338).jpg"
   }
 };
