@@ -1149,13 +1149,13 @@ export const citySpotPricing: CitySpotPricing[] = [
         image: img("siem-reap:Banteay Srei"),
       },
       {
-        name: "Phnom Bakheng Sunset",
-        category: "nature",
+        name: "Angkor Thom South Gate",
+        category: "landmark",
         priceLocal: "Included in Angkor pass",
         priceUSD: "Included",
-        duration: "1–2 hours",
-        tip: "A hilltop temple with a distant view of Angkor Wat at sunset. Numbers are capped at the top ~ arrive by 4:30 pm to get in, and bring water for the climb.",
-        image: img("siem-reap:Phnom Bakheng Sunset"),
+        duration: "30–45 min",
+        tip: "The most dramatic entrance to Angkor ~ a causeway of 54 gods and 54 demons hauling a giant serpent, leading to a tower carved with four serene faces. Best light in early morning.",
+        image: img("siem-reap:Angkor Thom South Gate"),
       },
       {
         name: "Tonlé Sap Floating Village",
