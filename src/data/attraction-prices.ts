@@ -32,15 +32,37 @@ export interface TouristSpot {
   image: SpotImage;
 }
 
+export type Region =
+  | "Southeast Asia"
+  | "East Asia"
+  | "Central Asia & the Caucasus"
+  | "Europe";
+
+// The order regions appear in on the index page.
+export const REGION_ORDER: Region[] = [
+  "Southeast Asia",
+  "East Asia",
+  "Central Asia & the Caucasus",
+  "Europe",
+];
+
+export interface Gateway {
+  airport: string; // full airport name
+  code: string; // IATA code, e.g. "ALA"
+  base: string; // where to base yourself + how the spots fan out from it
+}
+
 export interface CitySpotPricing {
   slug: string;
   city: string;
   country: string;
+  region: Region;
   currency: string;
   currencyNote: string; // e.g. "1 USD ≈ 520 KZT"
   intro: string;
   estTotal: string; // headline "budget for everything" figure
   estTotalNote: string;
+  gateway: Gateway;
   heroImage: SpotImage;
   spots: TouristSpot[];
 }
@@ -63,6 +85,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Almaty ─────────────────────────────────────────────────────────────
   {
     slug: "almaty",
+    region: "Central Asia & the Caucasus",
     city: "Almaty",
     country: "Kazakhstan",
     currency: "KZT",
@@ -72,6 +95,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$45–60",
     estTotalNote:
       "covers every paid entry below; add $30–50 per person for a Big Almaty Lake or Charyn Canyon day tour",
+    gateway: {
+      airport: "Almaty International Airport",
+      code: "ALA",
+      base: "Base yourself in central Almaty. Medeu, Shymbulak and Kok Tobe are short taxi rides from downtown; Big Almaty Lake and Charyn Canyon are full-day trips out of the city.",
+    },
     heroImage: img("hero:almaty"),
     spots: [
       {
@@ -154,6 +182,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Kuala Lumpur ───────────────────────────────────────────────────────
   {
     slug: "kuala-lumpur",
+    region: "Southeast Asia",
     city: "Kuala Lumpur",
     country: "Malaysia",
     currency: "MYR",
@@ -163,6 +192,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$30–55",
     estTotalNote:
       "covers every paid entry below ~ the Petronas observation deck is the single biggest ticket",
+    gateway: {
+      airport: "Kuala Lumpur International Airport",
+      code: "KUL",
+      base: "Stay around KL Sentral or Bukit Bintang. The KLIA Ekspres train reaches the centre in 30 min, and everything here is on the LRT/MRT or a cheap Grab ride.",
+    },
     heroImage: img("hero:kuala-lumpur"),
     spots: [
       {
@@ -228,6 +262,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Singapore ──────────────────────────────────────────────────────────
   {
     slug: "singapore",
+    region: "Southeast Asia",
     city: "Singapore",
     country: "Singapore",
     currency: "SGD",
@@ -237,6 +272,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$90–180",
     estTotalNote:
       "depends heavily on your picks ~ Universal Studios alone is $60+, while the light shows are free",
+    gateway: {
+      airport: "Changi Airport",
+      code: "SIN",
+      base: "Base near Marina Bay or Chinatown. Changi to the city is 25 min by MRT, and the whole island is walkable-plus-metro from there.",
+    },
     heroImage: img("hero:singapore"),
     spots: [
       {
@@ -300,6 +340,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Bangkok ────────────────────────────────────────────────────────────
   {
     slug: "bangkok",
+    region: "Southeast Asia",
     city: "Bangkok",
     country: "Thailand",
     currency: "THB",
@@ -309,6 +350,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$35–45",
     estTotalNote:
       "covers all the paid entries below plus a day of river boats ~ street food budget not included",
+    gateway: {
+      airport: "Suvarnabhumi Airport",
+      code: "BKK",
+      base: "Stay near the river (Old City) for the temples or on the BTS line (Sukhumvit) for nightlife. The Airport Rail Link connects Suvarnabhumi to the centre.",
+    },
     heroImage: img("hero:bangkok"),
     spots: [
       {
@@ -373,6 +419,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Tokyo ──────────────────────────────────────────────────────────────
   {
     slug: "tokyo",
+    region: "East Asia",
     city: "Tokyo",
     country: "Japan",
     currency: "JPY",
@@ -382,6 +429,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$40–80",
     estTotalNote:
       "assumes one or two paid decks plus the free classics ~ add ¥2,000–4,000 if you graze through Tsukiji properly",
+    gateway: {
+      airport: "Narita / Haneda Airport",
+      code: "NRT / HND",
+      base: "Base in Shinjuku or around the Yamanote loop. Haneda is closer to the city than Narita; both link in by train, and a Suica card gets you everywhere.",
+    },
     heroImage: img("hero:tokyo"),
     spots: [
       {
@@ -446,6 +498,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Istanbul ───────────────────────────────────────────────────────────
   {
     slug: "istanbul",
+    region: "Europe",
     city: "Istanbul",
     country: "Turkey",
     currency: "TRY",
@@ -455,6 +508,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$120–150",
     estTotalNote:
       "covers the big paid entries (Hagia Sophia, Topkapi, Cistern, Galata) ~ the mosques and bazaars cost nothing",
+    gateway: {
+      airport: "Istanbul Airport",
+      code: "IST",
+      base: "Stay in Sultanahmet (old city, walk to most sights) or Beyoğlu (nightlife). Istanbul Airport connects by the M11 metro and airport buses.",
+    },
     heroImage: img("hero:istanbul"),
     spots: [
       {
@@ -519,6 +577,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Taipei ─────────────────────────────────────────────────────────────
   {
     slug: "taipei",
+    region: "East Asia",
     city: "Taipei",
     country: "Taiwan",
     currency: "TWD",
@@ -528,6 +587,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$30–40",
     estTotalNote:
       "covers Taipei 101, the National Palace Museum, and the gondola ~ everything else on this list is free",
+    gateway: {
+      airport: "Taoyuan International Airport",
+      code: "TPE",
+      base: "Base near Taipei Main Station or Xinyi. The Taoyuan Airport MRT reaches the centre in ~40 min, and the metro covers the rest.",
+    },
     heroImage: img("hero:taipei"),
     spots: [
       {
@@ -593,6 +657,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Bali ───────────────────────────────────────────────────────────────
   {
     slug: "bali",
+    region: "Southeast Asia",
     city: "Bali",
     country: "Indonesia",
     currency: "IDR",
@@ -602,6 +667,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$45–65",
     estTotalNote:
       "covers every entry below including a guided Mount Batur sunrise trek ~ skip the trek and it drops under $25",
+    gateway: {
+      airport: "Ngurah Rai (Denpasar) International Airport",
+      code: "DPS",
+      base: "There's no single hub ~ pick Ubud for culture and rice terraces, or Seminyak/Canggu for beaches. Hire a driver or scooter; the temples are spread across the island.",
+    },
     heroImage: img("hero:bali"),
     spots: [
       {
@@ -664,6 +734,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Rome ───────────────────────────────────────────────────────────────
   {
     slug: "rome",
+    region: "Europe",
     city: "Rome",
     country: "Italy",
     currency: "EUR",
@@ -673,6 +744,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$55–75",
     estTotalNote:
       "covers the Colosseum combo, Vatican Museums, and Pantheon ~ add €10–15 if you climb St. Peter's dome",
+    gateway: {
+      airport: "Rome Fiumicino Airport",
+      code: "FCO",
+      base: "Stay in the centro storico (near the Pantheon) to walk to most sights. The Leonardo Express train links Fiumicino to Termini station in 32 min.",
+    },
     heroImage: img("hero:rome"),
     spots: [
       {
@@ -737,6 +813,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Athens ─────────────────────────────────────────────────────────────
   {
     slug: "athens",
+    region: "Europe",
     city: "Athens",
     country: "Greece",
     currency: "EUR",
@@ -746,6 +823,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$50–70",
     estTotalNote:
       "covers the Acropolis, its museum, and the Ancient Agora ~ the combo ticket is the smart buy if you'll see 3+ sites",
+    gateway: {
+      airport: "Athens International Airport",
+      code: "ATH",
+      base: "Base in Plaka or Monastiraki, right under the Acropolis. The blue-line metro runs straight from the airport to Syntagma/Monastiraki.",
+    },
     heroImage: img("hero:athens"),
     spots: [
       {
@@ -810,6 +892,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Tbilisi ────────────────────────────────────────────────────────────
   {
     slug: "tbilisi",
+    region: "Central Asia & the Caucasus",
     city: "Tbilisi",
     country: "Georgia",
     currency: "GEL",
@@ -819,6 +902,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$15–40",
     estTotalNote:
       "under $15 for every ride and entry below ~ the top end assumes a private sulfur-bath room for two",
+    gateway: {
+      airport: "Tbilisi International Airport",
+      code: "TBS",
+      base: "Stay in the Old Town near Freedom Square ~ almost everything here is a walk or a short ride, and Khor Virap-style day trips leave from the city.",
+    },
     heroImage: img("hero:tbilisi"),
     spots: [
       {
@@ -884,6 +972,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Barcelona ──────────────────────────────────────────────────────────
   {
     slug: "barcelona",
+    region: "Europe",
     city: "Barcelona",
     country: "Spain",
     currency: "EUR",
@@ -893,6 +982,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$85–110",
     estTotalNote:
       "covers Sagrada Família with towers, Park Güell, and Casa Batlló ~ the Ramblas, beach, and Gothic Quarter cost nothing",
+    gateway: {
+      airport: "Barcelona-El Prat Airport",
+      code: "BCN",
+      base: "Base in the Eixample or Gothic Quarter. The Aerobús and R2 train link El Prat to the centre; from there it's all metro and walking.",
+    },
     heroImage: img("hero:barcelona"),
     spots: [
       {
@@ -958,6 +1052,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Vienna ─────────────────────────────────────────────────────────────
   {
     slug: "vienna",
+    region: "Europe",
     city: "Vienna",
     country: "Austria",
     currency: "EUR",
@@ -967,6 +1062,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$95–120",
     estTotalNote:
       "covers Schönbrunn, Belvedere, the Hofburg, and the Ferris wheel ~ the churches, gardens, and squares are free",
+    gateway: {
+      airport: "Vienna International Airport (Schwechat)",
+      code: "VIE",
+      base: "Stay inside the Ringstrasse (Innere Stadt). The City Airport Train (CAT) or S-Bahn reaches the centre, and trams loop the sights.",
+    },
     heroImage: img("hero:vienna"),
     spots: [
       {
@@ -1029,6 +1129,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Samarkand ──────────────────────────────────────────────────────────
   {
     slug: "samarkand",
+    region: "Central Asia & the Caucasus",
     city: "Samarkand",
     country: "Uzbekistan",
     currency: "UZS",
@@ -1038,6 +1139,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$25–35",
     estTotalNote:
       "covers every monument below ~ the Registan is by far the biggest single ticket",
+    gateway: {
+      airport: "Samarkand International Airport",
+      code: "SKD",
+      base: "Base near the Registan. Many travellers fly into Tashkent (TAS) and take the 2-hour high-speed Afrosiyob train instead ~ book it ahead.",
+    },
     heroImage: img("hero:samarkand"),
     spots: [
       {
@@ -1101,6 +1207,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Siem Reap ──────────────────────────────────────────────────────────
   {
     slug: "siem-reap",
+    region: "Southeast Asia",
     city: "Siem Reap",
     country: "Cambodia",
     currency: "USD",
@@ -1110,6 +1217,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$55–75",
     estTotalNote:
       "assumes a 3-day Angkor pass plus tuk-tuk drivers ~ a single-day pass drops it to about $50",
+    gateway: {
+      airport: "Siem Reap-Angkor International Airport",
+      code: "SAI",
+      base: "Stay in Siem Reap town near Pub Street. The temples are 15 min to an hour north ~ hire a tuk-tuk driver for the day (or three).",
+    },
     heroImage: img("hero:siem-reap"),
     spots: [
       {
@@ -1172,6 +1284,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Yerevan ────────────────────────────────────────────────────────────
   {
     slug: "yerevan",
+    region: "Central Asia & the Caucasus",
     city: "Yerevan",
     country: "Armenia",
     currency: "AMD",
@@ -1181,6 +1294,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$10–20",
     estTotalNote:
       "the museums below cost a few dollars each ~ the Cascade, squares, and viewpoints are all free",
+    gateway: {
+      airport: "Zvartnots International Airport",
+      code: "EVN",
+      base: "Base around Republic Square or the Cascade. The centre is compact and walkable; monasteries like Khor Virap and Garni are half-day trips out.",
+    },
     heroImage: img("hero:yerevan"),
     spots: [
       {
@@ -1248,6 +1366,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Lucerne ────────────────────────────────────────────────────────────
   {
     slug: "lucerne",
+    region: "Europe",
     city: "Lucerne",
     country: "Switzerland",
     currency: "CHF",
@@ -1257,6 +1376,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$110–160",
     estTotalNote:
       "assumes one mountain excursion (Pilatus or Rigi) plus a lake cruise ~ the town itself is free to explore",
+    gateway: {
+      airport: "Zurich Airport",
+      code: "ZRH",
+      base: "There's no Lucerne airport ~ fly into Zurich and take the direct train (about 1 hour). Stay in the Old Town; the mountain railways start from the lakefront.",
+    },
     heroImage: img("hero:lucerne"),
     spots: [
       {
@@ -1322,6 +1446,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Hong Kong ──────────────────────────────────────────────────────────
   {
     slug: "hong-kong",
+    region: "East Asia",
     city: "Hong Kong",
     country: "Hong Kong",
     currency: "HKD",
@@ -1331,6 +1456,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$55–75",
     estTotalNote:
       "covers the Peak Tram, Sky Terrace, and the Ngong Ping cable car ~ the ferry, temples, and markets are nearly free",
+    gateway: {
+      airport: "Hong Kong International Airport",
+      code: "HKG",
+      base: "Base in Tsim Sha Tsui or Central. The Airport Express reaches the city in 24 min, and the MTR plus the Star Ferry cover everything else.",
+    },
     heroImage: img("hero:hong-kong"),
     spots: [
       {
@@ -1396,6 +1526,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Macau ──────────────────────────────────────────────────────────────
   {
     slug: "macau",
+    region: "East Asia",
     city: "Macau",
     country: "Macau",
     currency: "MOP",
@@ -1405,6 +1536,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$25–40",
     estTotalNote:
       "the Macau Tower deck is the one paid sight below ~ the ruins, squares, and temples are all free",
+    gateway: {
+      airport: "Macau International Airport",
+      code: "MFM",
+      base: "Many arrive by ferry or the HK-Zhuhai-Macau Bridge from Hong Kong (about 1 hour). Base on the Macau Peninsula near Senado Square; casinos run free shuttle buses.",
+    },
     heroImage: img("hero:macau"),
     spots: [
       {
@@ -1472,6 +1608,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Phuket ─────────────────────────────────────────────────────────────
   {
     slug: "phuket",
+    region: "Southeast Asia",
     city: "Phuket",
     country: "Thailand",
     currency: "THB",
@@ -1481,6 +1618,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$70–110",
     estTotalNote:
       "assumes a Phi Phi and a Phang Nga boat tour ~ skip the tours and Phuket costs almost nothing",
+    gateway: {
+      airport: "Phuket International Airport",
+      code: "HKT",
+      base: "Stay in the Old Town for character or Patong/Kata for the beach. The airport is in the north; island tours leave from the piers, so pick a base near your plans.",
+    },
     heroImage: img("hero:phuket"),
     spots: [
       {
@@ -1547,6 +1689,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Phnom Penh ─────────────────────────────────────────────────────────
   {
     slug: "phnom-penh",
+    region: "Southeast Asia",
     city: "Phnom Penh",
     country: "Cambodia",
     currency: "USD",
@@ -1556,6 +1699,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$25–35",
     estTotalNote:
       "covers every entry below plus tuk-tuks between them ~ the palace is the single biggest ticket",
+    gateway: {
+      airport: "Phnom Penh International Airport",
+      code: "PNH",
+      base: "Base along the riverside (Daun Penh) near the Royal Palace. The city is flat and tuk-tuk-friendly; the Killing Fields are a 30-min ride out.",
+    },
     heroImage: img("hero:phnom-penh"),
     spots: [
       {
@@ -1619,6 +1767,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Brussels ───────────────────────────────────────────────────────────
   {
     slug: "brussels",
+    region: "Europe",
     city: "Brussels",
     country: "Belgium",
     currency: "EUR",
@@ -1628,6 +1777,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$25–40",
     estTotalNote:
       "the Atomium is the main paid sight ~ the Grand Place, arcades, and Manneken Pis are all free",
+    gateway: {
+      airport: "Brussels Airport (Zaventem)",
+      code: "BRU",
+      base: "Stay near the Grand Place ~ the historic core is walkable. Trains link Zaventem to the central stations in about 20 min.",
+    },
     heroImage: img("hero:brussels"),
     spots: [
       {
@@ -1695,6 +1849,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Sarajevo ───────────────────────────────────────────────────────────
   {
     slug: "sarajevo",
+    region: "Europe",
     city: "Sarajevo",
     country: "Bosnia and Herzegovina",
     currency: "BAM",
@@ -1704,6 +1859,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$15–25",
     estTotalNote:
       "the Tunnel of Hope and City Hall are the main paid sights ~ the bazaar and viewpoints are free",
+    gateway: {
+      airport: "Sarajevo International Airport",
+      code: "SJJ",
+      base: "Base in or near Baščaršija, the old bazaar. The centre is compact and walkable; the Tunnel of Hope is out by the airport, so pair them.",
+    },
     heroImage: img("hero:sarajevo"),
     spots: [
       {
@@ -1769,6 +1929,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Belgrade ───────────────────────────────────────────────────────────
   {
     slug: "belgrade",
+    region: "Europe",
     city: "Belgrade",
     country: "Serbia",
     currency: "RSD",
@@ -1778,6 +1939,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$5–15",
     estTotalNote:
       "almost everything below is free ~ a few small museum or tower tickets are all you'll pay",
+    gateway: {
+      airport: "Belgrade Nikola Tesla Airport",
+      code: "BEG",
+      base: "Stay in Stari Grad (old town) near Knez Mihailova. The A1 minibus or bus 72 links the airport; the fortress, cathedral and nightlife are walkable or a short ride.",
+    },
     heroImage: img("hero:belgrade"),
     spots: [
       {
@@ -1845,6 +2011,7 @@ export const citySpotPricing: CitySpotPricing[] = [
   // ── Tirana ─────────────────────────────────────────────────────────────
   {
     slug: "tirana",
+    region: "Europe",
     city: "Tirana",
     country: "Albania",
     currency: "ALL",
@@ -1854,6 +2021,11 @@ export const citySpotPricing: CitySpotPricing[] = [
     estTotal: "$20–30",
     estTotalNote:
       "covers Bunk'Art and the Dajti cable car ~ the square, mosque, and Pyramid are all free",
+    gateway: {
+      airport: "Tirana International Airport (Nënë Tereza)",
+      code: "TIA",
+      base: "Base around Skanderbeg Square ~ the centre is small and walkable. An airport bus runs to the middle of town in about 30 min; Bunk'Art 1 and Dajti are on the edge.",
+    },
     heroImage: img("hero:tirana"),
     spots: [
       {

@@ -11,6 +11,7 @@ import {
   Lightbulb,
   MapPin,
   Palette,
+  Plane,
   ShoppingBag,
   Sparkles,
   Ticket,
@@ -226,6 +227,10 @@ export function SpotPricesCity({ city }: { city: CitySpotPricing }) {
                 <span className="px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
                   {paidSpots} paid · {freeSpots} free
                 </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
+                  <Plane className="w-3.5 h-3.5" />
+                  Fly into {city.gateway.code}
+                </span>
                 <span className="px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
                   {city.currencyNote}
                 </span>
@@ -263,6 +268,35 @@ export function SpotPricesCity({ city }: { city: CitySpotPricing }) {
             <p className="text-xs text-muted-foreground leading-relaxed">
               This {city.estTotalNote}.
             </p>
+          </div>
+        </motion.div>
+
+        {/* ── Getting there ────────────────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 rounded-2xl border border-border bg-card p-5 sm:p-6"
+        >
+          <div className="flex items-start gap-4">
+            <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+              <Plane className="w-5 h-5 text-primary" />
+            </div>
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1.5">
+                <h2 className="font-semibold text-foreground">Getting there</h2>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-bold">
+                  {city.gateway.code}
+                </span>
+              </div>
+              <p className="text-sm text-foreground font-medium mb-1">
+                {city.gateway.airport}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {city.gateway.base}
+              </p>
+            </div>
           </div>
         </motion.div>
 
