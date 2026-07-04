@@ -4,7 +4,7 @@
 
 import type { SpotImage } from "./attraction-prices";
 
-export const spotImages: Record<string, SpotImage> = {
+export const spotImages: Record<string, SpotImage> =  {
   "hero:almaty": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg/1280px-Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg",
     "author": "Vmenkov",
@@ -263,5 +263,299 @@ export const spotImages: Record<string, SpotImage> = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsukiji_Outer_Market_2.jpg"
+  },
+  "istanbul:Hagia Sophia": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hagia_Sophia_Mars_2013.jpg/1280px-Hagia_Sophia_Mars_2013.jpg",
+    "author": "Arild Vågen",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013.jpg"
+  },
+  "istanbul:Topkapi Palace": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Topkap%C4%B1_-_01.jpg/1280px-Topkap%C4%B1_-_01.jpg",
+    "author": "Carlos Delgado",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Topkap%C4%B1_-_01.jpg"
+  },
+  "istanbul:Basilica Cistern": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Istanbul_Basilica_Cistern_2009.JPG/1280px-Istanbul_Basilica_Cistern_2009.JPG",
+    "author": "Bjørn Christian Tørrissen",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Istanbul_Basilica_Cistern_2009.JPG"
+  },
+  "istanbul:Blue Mosque (Sultan Ahmed)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Exterior_of_Sultan_Ahmed_I_Mosque_in_Istanbul%2C_Turkey_002.jpg/1280px-Exterior_of_Sultan_Ahmed_I_Mosque_in_Istanbul%2C_Turkey_002.jpg",
+    "author": "Moonik",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Exterior_of_Sultan_Ahmed_I_Mosque_in_Istanbul,_Turkey_002.jpg"
+  },
+  "istanbul:Galata Tower": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Galata_Tower_January_2015.JPG/1280px-Galata_Tower_January_2015.JPG",
+    "author": "Martin Falbisoner",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Galata_Tower_January_2015.JPG"
+  },
+  "istanbul:Grand Bazaar": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Istanbul_-_Grand_Bazaar_%2855107617958%29.jpg/1280px-Istanbul_-_Grand_Bazaar_%2855107617958%29.jpg",
+    "author": "Jorge Franganillo",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Istanbul_-_Grand_Bazaar_(55107617958).jpg"
+  },
+  "hero:istanbul": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Istanbul_skyline_01.jpg/1280px-Istanbul_skyline_01.jpg",
+    "author": "SegLig",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Istanbul_skyline_01.jpg"
+  },
+  "taipei:Taipei 101 Observatory": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Taipei_Taiwan_Taipei-101-Tower-01.jpg/1280px-Taipei_Taiwan_Taipei-101-Tower-01.jpg",
+    "author": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Taipei-101-Tower-01.jpg"
+  },
+  "taipei:National Palace Museum": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Taipei_Taiwan_National-Palace-Museum-01.jpg/1280px-Taipei_Taiwan_National-Palace-Museum-01.jpg",
+    "author": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_National-Palace-Museum-01.jpg"
+  },
+  "taipei:Chiang Kai-shek Memorial Hall": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Chiang_Kai-shek_memorial_amk.jpg/1280px-Chiang_Kai-shek_memorial_amk.jpg",
+    "author": "AngMoKio",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiang_Kai-shek_memorial_amk.jpg"
+  },
+  "taipei:Longshan Temple": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Longshan_Temple%2C_Taipei_01.jpg/1280px-Longshan_Temple%2C_Taipei_01.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Longshan_Temple,_Taipei_01.jpg"
+  },
+  "taipei:Maokong Gondola": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Taipei_Taiwan_Maokong-Gondola-01.jpg/1280px-Taipei_Taiwan_Maokong-Gondola-01.jpg",
+    "author": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Maokong-Gondola-01.jpg"
+  },
+  "taipei:Elephant Mountain (Xiangshan)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Taipei_night_skyline_from_Elephant_Mountain_May_2025_2.jpg/1280px-Taipei_night_skyline_from_Elephant_Mountain_May_2025_2.jpg",
+    "author": "4300streetcar",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taipei_night_skyline_from_Elephant_Mountain_May_2025_2.jpg"
+  },
+  "hero:taipei": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Taipei_Skyline_Panorama_2020.jpg/1280px-Taipei_Skyline_Panorama_2020.jpg",
+    "author": "毛貓大少爺",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Skyline_Panorama_2020.jpg"
+  },
+  "bali:Uluwatu Temple": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Kuta_Bali_Indonesia_Pura-Luhur-Uluwatu-03.jpg/1280px-Kuta_Bali_Indonesia_Pura-Luhur-Uluwatu-03.jpg",
+    "author": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kuta_Bali_Indonesia_Pura-Luhur-Uluwatu-03.jpg"
+  },
+  "bali:Tanah Lot": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Tanah-Lot_Bali_Indonesia_Pura-Tanah-Lot-01.jpg/1280px-Tanah-Lot_Bali_Indonesia_Pura-Tanah-Lot-01.jpg",
+    "author": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tanah-Lot_Bali_Indonesia_Pura-Tanah-Lot-01.jpg"
+  },
+  "bali:Sacred Monkey Forest (Ubud)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Macaca_fascicularis%2C_Ubud_Monkey_Forest%2C_Bali%2C_20220822_1053_0056.jpg/1280px-Macaca_fascicularis%2C_Ubud_Monkey_Forest%2C_Bali%2C_20220822_1053_0056.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macaca_fascicularis,_Ubud_Monkey_Forest,_Bali,_20220822_1053_0056.jpg"
+  },
+  "bali:Tegallalang Rice Terraces": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Tegallalang_rice_terraces_SF0001.jpg/1280px-Tegallalang_rice_terraces_SF0001.jpg",
+    "author": "Stefan Fussan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tegallalang_rice_terraces_SF0001.jpg"
+  },
+  "bali:Ulun Danu Beratan Temple": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ulun_Danu_Beratan%2C_Bali_%281%29.jpg/1280px-Ulun_Danu_Beratan%2C_Bali_%281%29.jpg",
+    "author": "Alharomain354",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ulun_Danu_Beratan,_Bali_(1).jpg"
+  },
+  "bali:Mount Batur Sunrise Trek": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sunrise_on_Mount_Batur_-_panoramio.jpg/1280px-Sunrise_on_Mount_Batur_-_panoramio.jpg",
+    "author": "Alexey Komarov",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sunrise_on_Mount_Batur_-_panoramio.jpg"
+  },
+  "hero:bali": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/1_bali_jatiluwih_rice_terrace_panorama.jpg/1280px-1_bali_jatiluwih_rice_terrace_panorama.jpg",
+    "author": "chensiyuan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_bali_jatiluwih_rice_terrace_panorama.jpg"
+  },
+  "rome:Colosseum": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Colosseum_of_Rome_and_Roman_forum.jpg/1280px-Colosseum_of_Rome_and_Roman_forum.jpg",
+    "author": "Wilfredor",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colosseum_of_Rome_and_Roman_forum.jpg"
+  },
+  "rome:Vatican Museums & Sistine Chapel": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Spiral_staircase_in_the_Vatican_Museums_from_bottom_02.jpg/1280px-Spiral_staircase_in_the_Vatican_Museums_from_bottom_02.jpg",
+    "author": "Wilfredor",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spiral_staircase_in_the_Vatican_Museums_from_bottom_02.jpg"
+  },
+  "rome:St. Peter's Basilica": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Saint_Peter%27s_Basilica_facade%2C_Rome%2C_Italy.jpg/1280px-Saint_Peter%27s_Basilica_facade%2C_Rome%2C_Italy.jpg",
+    "author": "Jebulon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint_Peter%27s_Basilica_facade,_Rome,_Italy.jpg"
+  },
+  "rome:Pantheon": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Fa%C3%A7ade_of_the_Pantheon%2C_Rome%2C_Italy.jpg/1280px-Fa%C3%A7ade_of_the_Pantheon%2C_Rome%2C_Italy.jpg",
+    "author": "Julian Lupyan",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_of_the_Pantheon,_Rome,_Italy.jpg"
+  },
+  "rome:Trevi Fountain": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Fontaine_Trevi_-_Rome.jpg/1280px-Fontaine_Trevi_-_Rome.jpg",
+    "author": "Wilfredor",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fontaine_Trevi_-_Rome.jpg"
+  },
+  "rome:Roman Forum & Palatine Hill": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Roman_Forum_looking_East_panorama.jpg/1280px-Roman_Forum_looking_East_panorama.jpg",
+    "author": "Nicholas Hartmann",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Roman_Forum_looking_East_panorama.jpg"
+  },
+  "hero:rome": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Rainy_Rome_Panorama%2C_Gianicolo_%E2%80%A2_Janiculum_Hill_%2831912261767%29.jpg/1280px-Rainy_Rome_Panorama%2C_Gianicolo_%E2%80%A2_Janiculum_Hill_%2831912261767%29.jpg",
+    "author": "Sonse",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rainy_Rome_Panorama,_Gianicolo_%E2%80%A2_Janiculum_Hill_(31912261767).jpg"
+  },
+  "athens:Acropolis & Parthenon": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Parthenon_from_west.jpg/1280px-Parthenon_from_west.jpg",
+    "author": "Mountain",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parthenon_from_west.jpg"
+  },
+  "athens:Acropolis Museum": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/New_Acropolis_Museum_building_in_Athens%2C_Greece.jpg/1280px-New_Acropolis_Museum_building_in_Athens%2C_Greece.jpg",
+    "author": "philip.mallis",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:New_Acropolis_Museum_building_in_Athens,_Greece.jpg"
+  },
+  "athens:Ancient Agora": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Temple_of_Hephaestus_from_ancient_agora_Athens.jpg/1280px-Temple_of_Hephaestus_from_ancient_agora_Athens.jpg",
+    "author": "Jebulon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_Hephaestus_from_ancient_agora_Athens.jpg"
+  },
+  "athens:Plaka Old Town": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Restaurants_on_Mnisikleous_Street_in_Athens%2C_20240601_0917_0009.jpg/1280px-Restaurants_on_Mnisikleous_Street_in_Athens%2C_20240601_0917_0009.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Restaurants_on_Mnisikleous_Street_in_Athens,_20240601_0917_0009.jpg"
+  },
+  "athens:Mount Lycabettus": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/View_of_the_Acropolis_of_Athens_from_Mount_Lycabettus_on_11_March_2019.jpg/1280px-View_of_the_Acropolis_of_Athens_from_Mount_Lycabettus_on_11_March_2019.jpg",
+    "author": "George E. Koronaios",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_Acropolis_of_Athens_from_Mount_Lycabettus_on_11_March_2019.jpg"
+  },
+  "athens:Changing of the Guard (Syntagma)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Change_of_guards_by_the_Evzones_in_Syntagma%2C_Athens.jpg/1280px-Change_of_guards_by_the_Evzones_in_Syntagma%2C_Athens.jpg",
+    "author": "MegAlexandrou",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Change_of_guards_by_the_Evzones_in_Syntagma,_Athens.jpg"
+  },
+  "hero:athens": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg/1280px-Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg",
+    "author": "A.Savin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg"
+  },
+  "tbilisi:Narikala Fortress & Cable Car": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Narikala_fortress%2C_Tbilisi%2C_Georgia.jpg/1280px-Narikala_fortress%2C_Tbilisi%2C_Georgia.jpg",
+    "author": "George Melashvili",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Narikala_fortress,_Tbilisi,_Georgia.jpg"
+  },
+  "tbilisi:Abanotubani Sulfur Baths": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/2014_Tbilisi%2C_%C5%81a%C5%BAnie_siarkowe_w_Abanotubani_%2801%29.jpg/1280px-2014_Tbilisi%2C_%C5%81a%C5%BAnie_siarkowe_w_Abanotubani_%2801%29.jpg",
+    "author": "Marcin Konsek",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi,_%C5%81a%C5%BAnie_siarkowe_w_Abanotubani_(01).jpg"
+  },
+  "tbilisi:Holy Trinity Cathedral (Sameba)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sameba_Cathedral%2C_Courtyard%2C_Holy_Trinity_Cathedral%2C_Tbilisi%2C_Georgia.jpg/1280px-Sameba_Cathedral%2C_Courtyard%2C_Holy_Trinity_Cathedral%2C_Tbilisi%2C_Georgia.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sameba_Cathedral,_Courtyard,_Holy_Trinity_Cathedral,_Tbilisi,_Georgia.jpg"
+  },
+  "tbilisi:Old Town & Leaning Clock Tower": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tbilisi_Old_Town_Clock_-_panoramio.jpg/1280px-Tbilisi_Old_Town_Clock_-_panoramio.jpg",
+    "author": "DJMX",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tbilisi_Old_Town_Clock_-_panoramio.jpg"
+  },
+  "tbilisi:Mtatsminda Park & Funicular": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Tbilisi%2C_Tbilisi_Funicular_Railway%2C_Georgia.jpg/1280px-Tbilisi%2C_Tbilisi_Funicular_Railway%2C_Georgia.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Tbilisi_Funicular_Railway,_Georgia.jpg"
+  },
+  "tbilisi:Bridge of Peace": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Tbilisi_Peace_Bridge_and_Kura_River_by_Falco.jpg/1280px-Tbilisi_Peace_Bridge_and_Kura_River_by_Falco.jpg",
+    "author": "falco",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tbilisi_Peace_Bridge_and_Kura_River_by_Falco.jpg"
+  },
+  "hero:tbilisi": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Parts_of_Old_Tbilisi%2C_historical_center_of_Tbilisi%2C_Georgia._View_from_the_Metekhi_church._July_2023.jpg/1280px-Parts_of_Old_Tbilisi%2C_historical_center_of_Tbilisi%2C_Georgia._View_from_the_Metekhi_church._July_2023.jpg",
+    "author": "Kober",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parts_of_Old_Tbilisi,_historical_center_of_Tbilisi,_Georgia._View_from_the_Metekhi_church._July_2023.jpg"
   }
 };
