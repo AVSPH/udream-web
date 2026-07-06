@@ -14,7 +14,7 @@ export function LiveEventBanner() {
     setEnded(eventHasEnded());
   }, []);
 
-  if (ended) return null;
+  if (!liveEvent.published || ended) return null;
 
   return (
     <section className="relative z-10 px-6 -mt-4 mb-8">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { LiveEventLanding } from "@/components/events/LiveEventLanding";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { liveEvent } from "@/data/live-event";
@@ -46,6 +47,8 @@ function EventSchema() {
 }
 
 export default function EventsPage() {
+    if (!liveEvent.published) notFound();
+
     return (
         <>
             <BreadcrumbSchema items={[

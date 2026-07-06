@@ -3,23 +3,27 @@
 // calendar link, and SEO schema all read from this object.
 
 export const liveEvent = {
+  // Set to true to make the event public again: the /events page,
+  // homepage banner, navbar link, and sitemap entry all key off this.
+  published: false,
+
   name: "UDream Live: Travel & Nomad Q&A",
   tagline:
     "A free live hangout with the UDream community — real travel stories, honest budget talk, and your questions answered live.",
   description:
     "Join us for a free 90-minute live session. We'll share what's new at UDream, walk through our favorite destinations and real cost breakdowns, then open the floor for a live Q&A on destinations, budgets, visas, and starting the digital-nomad life.",
 
-  // Saturday, July 11, 2026 · 7:00 PM Philippine Time (GMT+8)
-  startsAt: "2026-07-11T19:00:00+08:00",
-  endsAt: "2026-07-11T20:30:00+08:00",
-  dateLabel: "Saturday, July 11, 2026",
+  // Friday, September 4, 2026 · 7:00 PM Philippine Time (GMT+8)
+  startsAt: "2026-09-04T19:00:00+08:00",
+  endsAt: "2026-09-04T20:30:00+08:00",
+  dateLabel: "Friday, September 4, 2026",
   timeLabel: "7:00 PM PHT (GMT+8)",
   locationLabel: "Online · stream link sent to your email",
   priceLabel: "100% Free",
 
   // Tag attached to registrations so they're distinguishable
   // from newsletter subscribers in the leads backend.
-  registrationTag: "Live Event - Jul 11 2026",
+  registrationTag: "Live Event - Sep 4 2026",
 
   agenda: [
     { time: "7:00 PM", title: "Welcome & what's new at UDream" },

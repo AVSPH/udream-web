@@ -128,7 +128,7 @@ function RegistrationForm() {
             </div>
             <p className="font-bold text-xl mb-1">Your seat is saved! 🎉</p>
             <p className="text-muted-foreground text-sm mb-6">
-              We&apos;ll email you the stream link before the event. See you Saturday!
+              We&apos;ll email you the stream link before the event. See you there!
             </p>
             <a
               href={googleCalendarUrl()}
