@@ -18,70 +18,54 @@ export async function POST(request: NextRequest) {
     } = body;
 
     const nameParts = (name || "").trim().split(/\s+/);
-    const firstName = nameParts[0] || "";
-    const lastName = nameParts.slice(1).join(" ") || "";
+    const firstName = nameParts[0] || "Curator";
+    const lastName = nameParts.slice(1).join(" ") || undefined;
 
-    const contactData = {
+    const notesParts = [
+      country && `Country: ${country}`,
+      currentloc && `Current location: ${currentloc}`,
+      travel_exp && `Travel experience: ${travel_exp}`,
+      work && `Remote work: ${work}`,
+      budget && `Daily budget: ${budget}`,
+      duration && `Duration: ${duration}`,
+      vibefocus && `Travel vibe: ${vibefocus}`,
+      accomodation && `Accommodation: ${accomodation}`,
+    ].filter(Boolean);
+
+    const leadData = {
+      businessId: process.env.NEXT_PUBLIC_BUSINESS_ID,
       firstName,
       lastName,
-      name: (name || "").trim(),
       email,
       phone: phone || undefined,
-      country: country || undefined,
-      locationId: "BmnsTjlo762L3qF4LbMW",
-      source: "Udream Curator Quiz",
-      tags: ["Curator Lead"],
-      customFields: [
-        { id: "travel_exp", value: travel_exp },
-        { id: "budget", value: budget },
-        { id: "vibefocus", value: vibefocus },
-        { id: "duration", value: duration },
-        { id: "accomodation", value: accomodation },
-        { id: "work", value: work },
-        { id: "currentloc", value: currentloc },
-      ].filter(field => field.value !== undefined && field.value !== null),
+      source: "other",
+      notes: notesParts.length ? notesParts.join(" | ") : undefined,
     };
 
-    const ghlResponse = await fetch(`${process.env.GHL_BASE_URL}contacts/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        Version: "2021-07-28",
-        Authorization: `Bearer ${process.env.GHL_TOKEN}`,
+    const backendResponse = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/leads`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(leadData),
       },
-      body: JSON.stringify(contactData),
-    });
+    );
 
-    const responseData = await ghlResponse.json();
+    const responseData = await backendResponse.json();
 
-    if (!ghlResponse.ok) {
-      console.error("GHL API Error:", responseData);
-
-      // Check if it's a duplicate contact error
-      if (
-        responseData.statusCode === 400 &&
-        responseData.message?.includes("duplicated contacts")
-      ) {
-        return NextResponse.json(
-          {
-            error: "duplicate",
-            message: "You have already submitted a curator request. We will be in touch soon!",
-            contactId: responseData.meta?.contactId,
-          },
-          { status: 400 },
-        );
-      }
-
+    if (!backendResponse.ok) {
+      console.error("Lead API error:", responseData);
       return NextResponse.json(
-        { error: "Failed to create contact", details: responseData },
-        { status: ghlResponse.status },
+        { error: "Failed to submit request", details: responseData },
+        { status: backendResponse.status },
       );
     }
 
     return NextResponse.json({ success: true, data: responseData });
   } catch (error) {
-    console.error("Error creating curator contact:", error);
+    console.error("Error creating curator lead:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 },
