@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 import { travelGuides } from "@/data/guides";
 import { staticBlogs } from "@/data/visited-blogs";
 import { citySpotPricing } from "@/data/attraction-prices";
+import { liveEvent } from "@/data/live-event";
 
 const baseUrl = "https://www.udreamtravels.com";
 
@@ -22,6 +23,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    ...(liveEvent.published
+      ? [
+          {
+            url: `${baseUrl}/events`,
+            lastModified: now,
+            changeFrequency: "weekly" as const,
+            priority: 0.8,
+          },
+        ]
+      : []),
     {
       url: `${baseUrl}/map`,
       lastModified: now,

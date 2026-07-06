@@ -10,6 +10,7 @@ import {
     Home, Backpack, ChevronDown, FileText, CheckSquare, Plane, ClipboardCheck,
     Calendar, Sparkles, Ticket
 } from "lucide-react";
+import { liveEvent } from "@/data/live-event";
 
 type NavItem = {
     name: string;
@@ -27,6 +28,9 @@ const navItems: NavItem[] = [
   { name: "Home", href: "/", icon: <Home size={18} /> },
   { name: "Our Story", href: "/our-story", icon: <User size={18} /> },
   { name: "Blog", href: "/blog", icon: <BookOpen size={18} /> },
+  ...(liveEvent.published
+    ? [{ name: "Events", href: "/events", icon: <Calendar size={18} /> }]
+    : []),
   { name: "Map", href: "/map", icon: <MapIcon size={18} /> },
   {
     name: "Resources",
