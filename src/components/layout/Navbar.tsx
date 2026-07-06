@@ -27,6 +27,7 @@ const navItems: NavItem[] = [
   { name: "Home", href: "/", icon: <Home size={18} /> },
   { name: "Our Story", href: "/our-story", icon: <User size={18} /> },
   { name: "Blog", href: "/blog", icon: <BookOpen size={18} /> },
+  { name: "Events", href: "/events", icon: <Calendar size={18} /> },
   { name: "Map", href: "/map", icon: <MapIcon size={18} /> },
   {
     name: "Resources",

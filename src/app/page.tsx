@@ -1,5 +1,6 @@
 import AnimatedHeroDemo from "@/components/hero-section";
 import { BannerStrip } from "@/components/home/banner-strip";
+import { LiveEventBanner } from "@/components/home/live-event-banner";
 import { FeaturedDestinations } from "@/components/home/featured-destinations";
 import { AffiliatesSection } from "@/components/home/affiliates-section";
 import { LatestAdventures } from "@/components/home/latest-adventures";
@@ -18,6 +19,7 @@ export default function Home() {
       />
       <StickerLayer />
       <AnimatedHeroDemo />
+      <LiveEventBanner />
       <SocialWall />
       <BannerStrip />
       <FeaturedDestinations />
