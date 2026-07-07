@@ -1,29 +1,35 @@
-import { ExternalLink } from "lucide-react";
+import { Heart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { visitedPlaces } from "@/data/visited-places";
 
 const FOOTER_LINKS = [
     {
         title: "Explore",
         links: [
-            { name: "Destinations", href: "/#destinations" },
             { name: "Travel Map", href: "/map" },
-            { name: "Vlogs", href: "/#gallery" },
             { name: "Adventure Logs", href: "/blog" },
-        ],
-    },
-    {
-        title: "Company",
-        links: [
+            { name: "Destinations", href: "/#destinations" },
             { name: "Our Story", href: "/our-story" },
-            { name: "Contact", href: "/#contact" },
         ],
     },
     {
-        title: "Legal",
+        title: "Resources",
         links: [
-            { name: "Privacy Policy", href: "/privacy-policy" },
-            { name: "Terms of Service", href: "/terms-of-service" },
+            { name: "Attraction Prices", href: "/resources/attraction-prices" },
+            { name: "Destination Costs", href: "/resources/destination-costs" },
+            { name: "Visa Guide", href: "/resources/visa-guide" },
+            { name: "Travel Guides", href: "/resources/guide" },
+            { name: "Itinerary Planner", href: "/resources/itinerary-planner" },
+        ],
+    },
+    {
+        title: "Work with us",
+        links: [
+            { name: "Travel Consultation", href: "/booking" },
+            { name: "Travel Curator", href: "/curator" },
+            { name: "Free Nomad Guide", href: "/nomad" },
+            { name: "Contact", href: "/#contact" },
         ],
     },
 ];
@@ -67,14 +73,33 @@ const SOCIAL_LINKS = [
   },
 ];
 
+const FOOTER_STATS = [
+    { value: `${new Set(visitedPlaces.map((p) => p.country)).size}+`, label: "Countries" },
+    { value: `${visitedPlaces.length}+`, label: "Destinations" },
+    { value: `${new Set(visitedPlaces.map((p) => p.continent)).size}`, label: "Continents" },
+];
+
 export function Footer() {
     return (
-        <footer className="bg-foreground text-background">
-            <div className="max-w-7xl mx-auto px-6 pt-24 pb-5">
+        <footer className="relative bg-foreground text-background overflow-hidden">
+            {/* Gradient hairline */}
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-primary to-transparent" />
+
+            {/* Decorative glow + watermark */}
+            <div aria-hidden className="absolute -top-32 right-[10%] w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+            <div
+                aria-hidden
+                style={{ fontFamily: "var(--font-script)" }}
+                className="absolute -bottom-10 right-4 text-[7rem] md:text-[11rem] leading-none text-background/[0.04] select-none pointer-events-none whitespace-nowrap"
+            >
+                keep exploring
+            </div>
+
+            <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-6">
                 {/* Main Footer Links */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
                     <div className="lg:col-span-2">
-                        <Link href="/" className="inline-block mb-6 transition-transform hover:scale-105">
+                        <Link href="/" className="inline-block mb-5 transition-transform hover:scale-105">
                             <div className="relative w-32 h-16 overflow-hidden">
                                 <Image
                                     src="/assets/logo.png"
@@ -84,9 +109,20 @@ export function Footer() {
                                 />
                             </div>
                         </Link>
-                        <p className="text-background/60 text-base leading-relaxed max-w-xs mb-8">
+                        <p className="text-background/60 text-base leading-relaxed max-w-xs mb-7">
                             Documenting the raw beauty of our planet, one journey at a time. Join us in exploring the world&apos;s most extraordinary places.
                         </p>
+
+                        {/* Travel stats */}
+                        <div className="flex items-center gap-6 mb-8">
+                            {FOOTER_STATS.map((stat) => (
+                                <div key={stat.label}>
+                                    <p className="font-display text-2xl font-bold text-white leading-none">{stat.value}</p>
+                                    <p className="text-[10px] uppercase tracking-[0.18em] text-background/40 mt-1.5">{stat.label}</p>
+                                </div>
+                            ))}
+                        </div>
+
                         <div className="flex gap-4">
                             {SOCIAL_LINKS.map((social) => (
                                 <a
@@ -106,12 +142,12 @@ export function Footer() {
                     {FOOTER_LINKS.map((group) => (
                         <div key={group.title}>
                             <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">{group.title}</h3>
-                            <ul className="space-y-4">
+                            <ul className="space-y-3.5">
                                 {group.links.map((link) => (
                                     <li key={link.name}>
                                         <Link
                                             href={link.href}
-                                            className="group inline-flex items-center gap-1 text-background/60 hover:text-white transition-colors text-base"
+                                            className="group inline-flex items-center gap-1 text-background/60 hover:text-white transition-colors text-[15px]"
                                         >
                                             <span className="w-0 group-hover:w-3 h-px bg-primary transition-all duration-300" />
                                             {link.name}
@@ -123,11 +159,24 @@ export function Footer() {
                     ))}
                 </div>
 
-                {/* Bottom Copyright */}
-                <div className="mt-10 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                {/* Bottom bar */}
+                <div className="mt-14 pt-6 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-background/40 text-sm">
                         © {new Date().getFullYear()} Udream Travels. All rights reserved.
                     </p>
+                    <p className="text-background/40 text-sm flex items-center gap-1.5">
+                        Made with
+                        <Heart className="w-3.5 h-3.5 text-primary fill-primary" />
+                        somewhere on the road
+                    </p>
+                    <div className="flex items-center gap-5 text-sm">
+                        <Link href="/privacy-policy" className="text-background/40 hover:text-white transition-colors">
+                            Privacy
+                        </Link>
+                        <Link href="/terms-of-service" className="text-background/40 hover:text-white transition-colors">
+                            Terms
+                        </Link>
+                    </div>
                 </div>
             </div>
         </footer>
