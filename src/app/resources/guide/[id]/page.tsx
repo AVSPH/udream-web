@@ -10,6 +10,8 @@ import {
 } from 'lucide-react';
 import { travelGuides } from '@/data/guides';
 import { BreadcrumbSchema } from '@/components/seo/breadcrumb-schema';
+import { FAQSection } from '@/components/blog/faq-section';
+import { getGuideFaqs } from '@/data/guide-faqs';
 
 export async function generateStaticParams() {
     return travelGuides.map((guide) => ({
@@ -370,6 +372,15 @@ export default async function TravelGuidePage({ params }: { params: Promise<{ id
                     </div>
                 </div>
             </div>
+
+            {/* ❓ FAQs (feeds FAQPage structured data) */}
+            {getGuideFaqs(guide.id).length > 0 && (
+                <FAQSection
+                    faqs={getGuideFaqs(guide.id)}
+                    title={`${guide.destinationName} FAQ`}
+                    description={`Quick answers to the questions travelers ask most about ${guide.destinationName}.`}
+                />
+            )}
         </div>
     );
 }
