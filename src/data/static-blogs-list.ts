@@ -1,3 +1,5 @@
+import { spotImages } from "./attraction-images";
+
 export interface StaticBlogCard {
   id: string;
   title: string;
@@ -9,6 +11,51 @@ export interface StaticBlogCard {
 }
 
 export const customStaticBlogs: StaticBlogCard[] = [
+  {
+    id: "famous-landmarks-entrance-fees",
+    title: "What the World's Famous Landmarks Actually Cost to Visit in 2026",
+    excerpt: "Entrance fees for 180+ landmarks across the 30 cities we've visited ~ the icons, the rip-offs, and the world-class sights that cost nothing.",
+    thumbnail: spotImages["rome:Colosseum"].src,
+    href: "/blog/famous-landmarks-entrance-fees",
+    date: "2026-07-04",
+    category: "Travel Budget",
+  },
+  {
+    id: "istanbul-travel-cost",
+    title: "Is Istanbul Expensive? What It Really Costs in 2026",
+    excerpt: "The big sights now charge in euros (Hagia Sophia €25, Topkapi €55), but food, ferries and hotels are still great value. Full budget breakdown.",
+    thumbnail: spotImages["hero:istanbul"].src,
+    href: "/blog/istanbul-travel-cost",
+    date: "2026-07-03",
+    category: "Travel Budget",
+  },
+  {
+    id: "taipei-budget-travel",
+    title: "Taipei on a Budget: Why It's East Asia's Best-Value City",
+    excerpt: "Tokyo-level food, transit, and safety at half the price: $35-55/day, $10 night-market feasts, and only two tickets worth buying.",
+    thumbnail: spotImages["hero:taipei"].src,
+    href: "/blog/taipei-budget-travel",
+    date: "2026-07-02",
+    category: "Travel Budget",
+  },
+  {
+    id: "balkans-itinerary",
+    title: "The Balkans Itinerary We'd Repeat: Sarajevo, Belgrade & Tirana in 2 Weeks",
+    excerpt: "Three capitals, $40-60 a day, and the friendliest people in Europe ~ the two-week overland route with real costs and bus logistics.",
+    thumbnail: spotImages["hero:sarajevo"].src,
+    href: "/blog/balkans-itinerary",
+    date: "2026-07-01",
+    category: "Itinerary",
+  },
+  {
+    id: "brunei-itinerary",
+    title: "Brunei in 48 Hours: The Itinerary, the Costs, and Whether It's Worth It",
+    excerpt: "Golden mosques (free), the world's largest water village, and a Sultan's treasury ~ our honest 2-day Brunei itinerary with 2026 costs.",
+    thumbnail: spotImages["hero:bandar-seri-begawan"].src,
+    href: "/blog/brunei-itinerary",
+    date: "2026-06-30",
+    category: "Itinerary",
+  },
   {
     id: "things-to-do-in-almaty",
     title: "Things to Do in Almaty: Kazakhstan's Mountain City (Prices + 4-Day Itinerary)",

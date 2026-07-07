@@ -185,14 +185,32 @@ function SectionHeader({ icon: Icon, title, sub }: { icon: React.ElementType; ti
 export default function BlogPage() {
     const [apiBlogs, setApiBlogs] = useState<PublicBlog[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         getPublicBlogs({ limit: 12 })
             .then((res) => setApiBlogs(res.data))
-            .catch(() => setError("Could not load latest posts."))
+            .catch(() => {
+                /* static articles still render */
+            })
             .finally(() => setLoading(false));
     }, []);
+
+    // Merge CMS posts with static articles, newest first. The top 8 fill
+    // "Latest Posts"; remaining static articles fall to "Featured Guides".
+    type FeedEntry =
+        | { kind: "api"; date: string; blog: PublicBlog }
+        | { kind: "static"; date: string; blog: StaticBlogCard };
+
+    const merged: FeedEntry[] = [
+        ...apiBlogs.map((b): FeedEntry => ({ kind: "api", date: b.createdAt, blog: b })),
+        ...customStaticBlogs.map((b): FeedEntry => ({ kind: "static", date: b.date, blog: b })),
+    ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    const latestPosts = merged.slice(0, 8);
+    const latestStaticIds = new Set(
+        latestPosts.filter((e) => e.kind === "static").map((e) => (e.blog as StaticBlogCard).id),
+    );
+    const featuredGuides = customStaticBlogs.filter((b) => !latestStaticIds.has(b.id));
 
     const grouped = continentOrder
         .map((continent) => ({
@@ -227,7 +245,7 @@ export default function BlogPage() {
 
             <div className="max-w-7xl mx-auto px-4 space-y-20 pb-28">
 
-                {/* ── Latest Posts ── */}
+                {/* ── Latest Posts (CMS posts merged with newest static articles) ── */}
                 <section className="space-y-8">
                     <SectionHeader icon={BookOpen} title="Latest Posts" />
 
@@ -237,29 +255,25 @@ export default function BlogPage() {
                             <span>Loading posts…</span>
                         </div>
                     )}
-                    {error && (
-                        <p className="text-center text-sm text-muted-foreground py-10">{error}</p>
-                    )}
-                    {!loading && !error && apiBlogs.length === 0 && (
-                        <p className="text-center text-sm text-muted-foreground py-10">
-                            No posts yet — check back soon!
-                        </p>
-                    )}
-                    {!loading && !error && apiBlogs.length > 0 && (
+                    {!loading && (
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                            {apiBlogs.map((blog) => (
-                                <BlogCard key={blog._id} blog={blog} />
-                            ))}
+                            {latestPosts.map((item) =>
+                                item.kind === "api" ? (
+                                    <BlogCard key={item.blog._id} blog={item.blog} />
+                                ) : (
+                                    <CustomStaticBlogCard key={item.blog.id} blog={item.blog} />
+                                ),
+                            )}
                         </div>
                     )}
                 </section>
 
-                {/* ── Featured Guides (Static) ── */}
-                {customStaticBlogs.length > 0 && (
+                {/* ── Featured Guides (remaining static articles) ── */}
+                {featuredGuides.length > 0 && (
                     <section className="space-y-8">
                         <SectionHeader icon={BookOpen} title="Featured Guides" sub="Handcrafted travel guides and resources" />
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                            {customStaticBlogs.map((blog) => (
+                            {featuredGuides.map((blog) => (
                                 <CustomStaticBlogCard key={blog.id} blog={blog} />
                             ))}
                         </div>
