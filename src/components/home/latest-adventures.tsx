@@ -2,12 +2,37 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, BookOpen, Loader2 } from "lucide-react";
+import { ArrowRight, Calendar, BookOpen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { getPublicBlogs, type PublicBlog } from "@/hooks/useblogs";
+import { getPublicBlogs } from "@/hooks/useblogs";
+import { customStaticBlogs } from "@/data/static-blogs-list";
 
-const BlogCard = ({ blog, index }: { blog: PublicBlog; index: number }) => {
+// Unified card model: merges CMS posts with the static long-form articles.
+type FeedItem = {
+    id: string;
+    title: string;
+    image?: string;
+    category?: string;
+    date: string;
+    href: string;
+};
+
+const STATIC_ITEMS: FeedItem[] = customStaticBlogs.map((b) => ({
+    id: b.id,
+    title: b.title,
+    image: b.thumbnail,
+    category: b.category,
+    date: b.date,
+    href: b.href,
+}));
+
+const latestThree = (items: FeedItem[]) =>
+    [...items]
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+        .slice(0, 3);
+
+const BlogCard = ({ blog, index }: { blog: FeedItem; index: number }) => {
     return (
         <motion.article
             initial={{ opacity: 0, y: 30 }}
@@ -16,10 +41,10 @@ const BlogCard = ({ blog, index }: { blog: PublicBlog; index: number }) => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="group flex flex-col bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
         >
-            <Link href={`/blog/${blog.slug}`} className="relative aspect-[16/10] overflow-hidden">
-                {blog.featuredImage ? (
+            <Link href={blog.href} className="relative aspect-[16/10] overflow-hidden">
+                {blog.image ? (
                     <Image
-                        src={blog.featuredImage}
+                        src={blog.image}
                         alt={blog.title}
                         width={600}
                         height={400}
@@ -42,7 +67,7 @@ const BlogCard = ({ blog, index }: { blog: PublicBlog; index: number }) => {
                 <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                     <Calendar className="w-3.5 h-3.5" />
                     <span>
-                        {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                        {new Date(blog.date).toLocaleDateString("en-US", {
                             month: "short",
                             day: "numeric",
                             year: "numeric",
@@ -50,7 +75,7 @@ const BlogCard = ({ blog, index }: { blog: PublicBlog; index: number }) => {
                     </span>
                 </div>
 
-                <Link href={`/blog/${blog.slug}`}>
+                <Link href={blog.href}>
                     <h3 className="font-bold text-base leading-snug line-clamp-2 text-foreground group-hover:text-primary transition-colors">
                         {blog.title}
                     </h3>
@@ -58,7 +83,7 @@ const BlogCard = ({ blog, index }: { blog: PublicBlog; index: number }) => {
 
                 <div className="mt-auto flex items-center justify-between pt-3 border-t border-border/60">
                     <Link
-                        href={`/blog/${blog.slug}`}
+                        href={blog.href}
                         className="inline-flex items-center gap-1 text-xs text-primary font-semibold hover:text-primary/80 transition-colors"
                     >
                         Read article
@@ -70,33 +95,26 @@ const BlogCard = ({ blog, index }: { blog: PublicBlog; index: number }) => {
     );
 };
 
-// Skeleton card shown while loading
-const SkeletonCard = ({ index }: { index: number }) => (
-    <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: index * 0.1 }}
-        className="flex flex-col rounded-2xl overflow-hidden border border-background/10 bg-background/10"
-    >
-        <div className="aspect-[16/10] bg-background/20 animate-pulse" />
-        <div className="p-6 flex flex-col gap-3">
-            <div className="h-3 w-24 bg-background/20 rounded animate-pulse" />
-            <div className="h-5 w-full bg-background/20 rounded animate-pulse" />
-            <div className="h-5 w-3/4 bg-background/20 rounded animate-pulse" />
-        </div>
-    </motion.div>
-);
-
 export function LatestAdventures() {
-    const [blogs, setBlogs] = useState<PublicBlog[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
+    // Static articles render instantly; CMS posts merge in when they load.
+    const [blogs, setBlogs] = useState<FeedItem[]>(latestThree(STATIC_ITEMS));
 
     useEffect(() => {
-        getPublicBlogs({ limit: 3 })
-          .then((res) => setBlogs(res.data))
-          .catch(() => setError(true))
-          .finally(() => setLoading(false));
+        getPublicBlogs({ limit: 6 })
+            .then((res) => {
+                const apiItems: FeedItem[] = res.data.map((b) => ({
+                    id: b._id,
+                    title: b.title,
+                    image: b.featuredImage,
+                    category: b.category,
+                    date: b.createdAt,
+                    href: `/blog/${b.slug}`,
+                }));
+                setBlogs(latestThree([...STATIC_ITEMS, ...apiItems]));
+            })
+            .catch(() => {
+                /* keep static articles */
+            });
     }, []);
 
     return (
@@ -129,37 +147,12 @@ export function LatestAdventures() {
             </motion.p>
           </div>
 
-          {/* Loading skeletons */}
-          {loading && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[0, 1, 2].map((i) => (
-                <SkeletonCard key={i} index={i} />
-              ))}
-            </div>
-          )}
-
-          {/* Error state */}
-          {error && !loading && (
-            <p className="text-center text-foreground py-10">
-              Could not load latest posts. Check back soon!
-            </p>
-          )}
-
-          {/* Blog cards */}
-          {!loading && !error && blogs.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogs.map((blog, index) => (
-                <BlogCard key={blog._id} blog={blog} index={index} />
-              ))}
-            </div>
-          )}
-
-          {/* Empty state */}
-          {!loading && !error && blogs.length === 0 && (
-            <p className="text-center text-background/50 py-10">
-              No posts yet — stay tuned!
-            </p>
-          )}
+          {/* Blog cards ~ static articles render instantly, CMS posts merge in */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogs.map((blog, index) => (
+              <BlogCard key={blog.id} blog={blog} index={index} />
+            ))}
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
