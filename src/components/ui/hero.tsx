@@ -153,7 +153,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
             animate="show"
             variants={FADE_IN_ANIMATION_VARIANTS}
             transition={{ delay: 0.75 }}
-            className="mt-10 flex items-center justify-center gap-8 sm:gap-12"
+            className="mt-10 flex items-center justify-center gap-8 sm:gap-12 rounded-2xl border border-border/60 bg-background/75 backdrop-blur-md px-7 sm:px-10 py-4 shadow-lg shadow-black/5"
           >
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center">
@@ -161,7 +161,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
                 <dd className="font-display text-2xl sm:text-3xl font-bold text-foreground leading-none">
                   {stat.value}
                 </dd>
-                <span className="mt-1.5 text-[11px] sm:text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                <span className="mt-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-foreground/60">
                   {stat.label}
                 </span>
               </div>

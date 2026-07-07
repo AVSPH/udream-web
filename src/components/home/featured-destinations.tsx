@@ -50,9 +50,6 @@ className={`group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg 
 
         {/* Bottom content */}
         <div className="absolute bottom-0 left-0 right-0 p-5">
-          <p className="text-white/45 text-[11px] tracking-[0.2em] uppercase font-medium mb-1.5">
-            {place.dateVisited}
-          </p>
           <h3 className="text-xl font-bold text-white leading-snug mb-3">
             {place.name}
           </h3>

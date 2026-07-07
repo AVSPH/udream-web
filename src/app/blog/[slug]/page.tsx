@@ -83,7 +83,7 @@ function generateBlogContent(place: (typeof allPlaces)[0]) {
     `Every journey begins with a single step, and my adventure to ${place.name} was no exception. ${place.description} From the moment I arrived, it was clear this would be a place that would leave a lasting mark on me.`,
     `The local culture of ${place.country} is something that immediately draws you in. The people are warm, the food is extraordinary, and the history is layered in a way that takes days if not weeks to truly absorb. I spent my mornings wandering without a fixed itinerary, letting the streets lead me to unexpected encounters, hidden cafes, and moments of real human connection.`,
     `One of the highlights was simply being present, sitting quietly and watching daily life unfold. Markets buzzing with vendors, children playing in narrow alleyways, elders gathered in the shade of ancient buildings. These are the scenes that do not make it into guidebooks but define what travel is really about.`,
-    `I would recommend ${place.name} to any traveler who wants to step off the beaten path and experience something genuinely authentic. Visit during ${place.dateVisited} if you can, the timing makes all the difference. Pack light, stay curious, and never turn down an offer to share a meal with a local.`,
+    `I would recommend ${place.name} to any traveler who wants to step off the beaten path and experience something genuinely authentic. Pack light, stay curious, and never turn down an offer to share a meal with a local.`,
     `As I prepared to leave, I found myself already planning a return. ${place.name} has a way of staying with you long after you have gone, in the flavors you try to recreate at home, in the conversations you replay, and in the quiet moments where you close your eyes and are suddenly transported back.`,
   ];
 }
@@ -422,10 +422,6 @@ export default async function BlogPostPage({ params }: Props) {
                 <MapPin className="w-4 h-4" />
                 {place.country}
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Calendar className="w-4 h-4" />
-                {place.dateVisited}
-              </span>
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight">
@@ -601,10 +597,6 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
               <MapPin className="w-4 h-4" />
               {place.country}
-            </span>
-            <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-              <Calendar className="w-4 h-4" />
-              {place.dateVisited}
             </span>
           </div>
 

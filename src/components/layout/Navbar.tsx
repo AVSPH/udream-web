@@ -125,13 +125,17 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-[5000] transition-all duration-300 backdrop-blur-lg ${
-                scrolled || isOpen
-                    ? "bg-white/85 border-b border-border/60 shadow-[0_8px_30px_-12px_rgba(46,38,30,0.15)] py-1.5"
-                    : "bg-white/60 border-b border-transparent py-3"
+            className={`fixed top-0 left-0 right-0 z-[5000] px-3 sm:px-6 transition-all duration-300 ${
+                scrolled || isOpen ? "pt-2" : "pt-3 sm:pt-4"
             }`}
         >
-            <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div
+                className={`relative max-w-6xl mx-auto flex items-center justify-between rounded-full border backdrop-blur-xl px-4 sm:px-5 transition-all duration-300 ${
+                    scrolled || isOpen
+                        ? "bg-white/90 border-border/70 shadow-[0_12px_40px_-12px_rgba(46,38,30,0.25)] py-1.5"
+                        : "bg-white/70 border-white/50 shadow-[0_8px_30px_-15px_rgba(46,38,30,0.2)] py-2"
+                }`}
+            >
                 {/* Logo */}
                 <Link href="/" className="group flex items-center gap-2 relative z-10">
                     <div className="relative w-20 h-8 md:w-28 md:h-10 lg:h-10 overflow-hidden transition-transform duration-300 group-hover:scale-105">
@@ -258,7 +262,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="absolute top-full left-0 right-0 bg-white backdrop-blur-xl border-b border-border shadow-2xl lg:hidden overflow-hidden"
+                        className="absolute top-[calc(100%+10px)] left-3 right-3 sm:left-6 sm:right-6 rounded-3xl bg-white/95 backdrop-blur-xl border border-border shadow-2xl lg:hidden overflow-hidden"
                     >
                         <div className="flex flex-col p-6 max-h-[80vh] overflow-y-auto gap-2">
                             {navItems.map((item, idx) => {

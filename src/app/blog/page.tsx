@@ -139,10 +139,6 @@ function DestinationCard({ place }: { place: VisitedPlace }) {
                     {place.country}
                 </span>
 
-                {/* Date badge */}
-                <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white/80 text-[11px] border border-white/15">
-                    {place.dateVisited}
-                </span>
             </div>
 
             {/* Content */}

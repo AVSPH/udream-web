@@ -97,9 +97,9 @@ html {
   --chart-5: #A89B8D;
 
   /* Typography */
-  --font-display: var(--font-playfair), serif;
+  --font-display: var(--font-poppins), sans-serif;
   --font-script: var(--font-dancing), cursive;
-  --font-body: var(--font-lato), sans-serif;
+  --font-body: var(--font-manrope), sans-serif;
 
   --sidebar: #F4F1E8;
   --sidebar-foreground: #2E261E;

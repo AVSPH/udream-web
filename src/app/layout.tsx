@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato, Dancing_Script } from "next/font/google";
+import { Poppins, Manrope, Dancing_Script } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -11,17 +11,19 @@ import { LenisProvider } from "@/components/providers/LenisProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
+// Display face in the spirit of Trend Sans One ~ bold, geometric, confident.
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   style: ["normal", "italic"],
 });
 
-const lato = Lato({
-  variable: "--font-lato",
+// Body face in the spirit of Agrandir ~ modern geometric grotesque.
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const dancingScript = Dancing_Script({
@@ -83,7 +85,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${poppins.variable} ${manrope.variable} ${dancingScript.variable}`}
+    >
       <head>
         <meta
           name="google-site-verification"
@@ -106,9 +111,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body
-        className={`${playfairDisplay.variable} ${lato.variable} ${dancingScript.variable} antialiased`}
-      >
+      <body className="antialiased">
         <LenisProvider>
           <ScrollProgress />
           <Navbar />
