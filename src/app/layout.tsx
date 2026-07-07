@@ -30,7 +30,13 @@ const dancingScript = Dancing_Script({
   weight: ["400", "600", "700"],
 });
 
+// Google AdSense publisher ID, e.g. "ca-pub-1234567890123456".
+// Set NEXT_PUBLIC_ADSENSE_CLIENT in the deployment environment to enable
+// Auto Ads + ads.txt (see src/app/ads.txt/route.ts).
+const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://udreamtravels.com"),
   title: "Udream | Travel & Adventure",
   description: "A modern travel blog showcasing adventures around the world.",
   keywords: ["travel", "adventure", "blog", "exploring", "destinations"],
@@ -91,6 +97,14 @@ export default function RootLayout({
           strategy="beforeInteractive"
           async
         />
+        {ADSENSE_CLIENT && (
+          <Script
+            id="adsense"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
       </head>
       <body
         className={`${playfairDisplay.variable} ${lato.variable} ${dancingScript.variable} antialiased`}

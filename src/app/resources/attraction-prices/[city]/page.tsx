@@ -16,12 +16,28 @@ export async function generateMetadata({
   const { city } = await params;
   const data = getCitySpotPricing(city);
   if (!data) return { title: "Attraction Prices | Udream" };
+
+  const url = `https://udreamtravels.com/resources/attraction-prices/${data.slug}`;
+  const title = `${data.city} Attraction Prices ~ What the Famous Spots Cost | Udream`;
+  const description = `Entry fees for ${data.city}'s must-see tourist spots: ${data.spots
+    .slice(0, 4)
+    .map((s) => s.name)
+    .join(", ")} and more. Budget ${data.estTotal} for the classics.`;
+
   return {
-    title: `${data.city} Attraction Prices — What the Famous Spots Cost | Udream`,
-    description: `Entry fees for ${data.city}'s must-see tourist spots: ${data.spots
-      .slice(0, 4)
-      .map((s) => s.name)
-      .join(", ")} and more. Budget ${data.estTotal} for the classics.`,
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title,
+      description,
+      images: data.heroImage.src
+        ? [{ url: data.heroImage.src, alt: `${data.city}, ${data.country}` }]
+        : undefined,
+    },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

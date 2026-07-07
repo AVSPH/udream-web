@@ -5,7 +5,10 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 export const metadata: Metadata = {
   title: "Tourist Attraction Prices | Udream",
   description:
-    "Entry fees for the famous tourist spots in the cities we've visited — Almaty, Kuala Lumpur, Singapore, Bangkok, Tokyo and more. Know how much to bring before you go.",
+    "Entry fees for the famous tourist spots in 30 cities we've visited ~ Almaty, Kuala Lumpur, Singapore, Bangkok, Tokyo and more. Know how much to bring before you go.",
+  alternates: {
+    canonical: "https://udreamtravels.com/resources/attraction-prices",
+  },
 };
 
 export default function AttractionPricesPage() {

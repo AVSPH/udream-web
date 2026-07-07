@@ -4,8 +4,9 @@ import { travelGuides } from "@/data/guides";
 import { staticBlogs } from "@/data/visited-blogs";
 import { citySpotPricing } from "@/data/attraction-prices";
 import { customStaticBlogs } from "@/data/static-blogs-list";
+import { visaGuides } from "@/data/visa-guides";
 
-const baseUrl = "https://www.udreamtravels.com";
+const baseUrl = "https://udreamtravels.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -101,7 +102,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/booking`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/curator`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
   ];
+
+  const visaRoutes: MetadataRoute.Sitemap = visaGuides.map((v) => ({
+    url: `${baseUrl}/resources/visa-guide/${v.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.5,
+  }));
 
   const blogRoutes: MetadataRoute.Sitemap = staticBlogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,
@@ -140,5 +160,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guideRoutes,
     ...spotPriceRoutes,
     ...customBlogRoutes,
+    ...visaRoutes,
   ];
 }

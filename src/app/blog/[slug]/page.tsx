@@ -25,6 +25,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const canonical = `https://udreamtravels.com/blog/${slug}`;
 
   // Try API first
   try {
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       return {
         title: `${apiBlog.title} | Udream`,
         description: apiBlog.excerpt ?? apiBlog.title,
+        alternates: { canonical },
       };
     }
   } catch {
@@ -48,13 +50,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
       title: `${staticBlog.metaTitle} | Udream`,
-      description: place ? `${place.name}, ${place.country} — ${staticBlog.metaDescription} Real costs, tips, and first-hand advice from Meri & Man.` : staticBlog.metaDescription,
+      description: staticBlog.metaDescription,
       keywords: staticBlog.keywords,
+      alternates: { canonical },
       openGraph: {
         title: `${staticBlog.metaTitle} | Udream`,
         description: staticBlog.metaDescription,
         images: image,
         type: "article",
+        url: canonical,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: `${staticBlog.metaTitle} | Udream`,
+        description: staticBlog.metaDescription,
       },
     };
   }
@@ -63,7 +72,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!place) return { title: "Post Not Found | Udream" };
   return {
     title: `${place.name}, ${place.country} | Udream`,
-    description: `${place.name}, ${place.country} — ${place.description} Real costs, tips, and first-hand advice from Meri & Man.`,
+    description: `${place.name}, ${place.country} ~ ${place.description} Real costs, tips, and first-hand advice from Meri & Man.`,
+    alternates: { canonical },
   };
 }
 
