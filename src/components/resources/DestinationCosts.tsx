@@ -59,6 +59,17 @@ const CURRENCIES: {
   { code: "TWD", label: "New Taiwan Dollar", symbol: "NT$", rate: 31 },
   { code: "BHD", label: "Bahraini Dinar", symbol: "BHD", rate: 0.376 },
   { code: "KWD", label: "Kuwaiti Dinar", symbol: "KWD", rate: 0.307 },
+  { code: "BND", label: "Brunei Dollar", symbol: "B$", rate: 1.34 },
+  { code: "CHF", label: "Swiss Franc", symbol: "CHF", rate: 0.8 },
+  { code: "TRY", label: "Turkish Lira", symbol: "₺", rate: 41 },
+  { code: "KZT", label: "Kazakhstani Tenge", symbol: "₸", rate: 520 },
+  { code: "UZS", label: "Uzbekistani So'm", symbol: "so'm", rate: 12600 },
+  { code: "TJS", label: "Tajikistani Somoni", symbol: "SM", rate: 10.6 },
+  { code: "GEL", label: "Georgian Lari", symbol: "₾", rate: 2.7 },
+  { code: "AMD", label: "Armenian Dram", symbol: "֏", rate: 385 },
+  { code: "RSD", label: "Serbian Dinar", symbol: "din", rate: 108 },
+  { code: "BAM", label: "Bosnian Mark", symbol: "KM", rate: 1.8 },
+  { code: "ALL", label: "Albanian Lek", symbol: "L", rate: 92 },
 ];
 
 // ── Home cities ────────────────────────────────────────────────────────────────
@@ -77,6 +88,8 @@ const HOME_CITIES: {
     currency: "PHP",
     avgDailyUSD: 32,
   },
+  { city: "Cebu", country: "Philippines", currency: "PHP", avgDailyUSD: 28 },
+  { city: "Davao", country: "Philippines", currency: "PHP", avgDailyUSD: 25 },
   // Malaysia
   {
     city: "Kuala Lumpur",
@@ -91,6 +104,14 @@ const HOME_CITIES: {
     currency: "MYR",
     avgDailyUSD: 25,
   },
+  {
+    city: "Kota Kinabalu",
+    country: "Malaysia",
+    currency: "MYR",
+    avgDailyUSD: 25,
+  },
+  { city: "Kuching", country: "Malaysia", currency: "MYR", avgDailyUSD: 24 },
+  { city: "Ipoh", country: "Malaysia", currency: "MYR", avgDailyUSD: 22 },
   // Southeast Asia
   {
     city: "Singapore",
@@ -98,27 +119,64 @@ const HOME_CITIES: {
     currency: "SGD",
     avgDailyUSD: 120,
   },
+  {
+    city: "Bandar Seri Begawan",
+    country: "Brunei",
+    currency: "BND",
+    avgDailyUSD: 55,
+  },
   { city: "Jakarta", country: "Indonesia", currency: "IDR", avgDailyUSD: 30 },
+  { city: "Bali", country: "Indonesia", currency: "IDR", avgDailyUSD: 35 },
   { city: "Bangkok", country: "Thailand", currency: "THB", avgDailyUSD: 45 },
+  { city: "Phuket", country: "Thailand", currency: "THB", avgDailyUSD: 45 },
   {
     city: "Ho Chi Minh City",
     country: "Vietnam",
     currency: "VND",
     avgDailyUSD: 35,
   },
+  { city: "Hanoi", country: "Vietnam", currency: "VND", avgDailyUSD: 32 },
+  {
+    city: "Phnom Penh",
+    country: "Cambodia",
+    currency: "USD",
+    avgDailyUSD: 30,
+  },
   // East Asia
   { city: "Tokyo", country: "Japan", currency: "JPY", avgDailyUSD: 100 },
+  { city: "Osaka", country: "Japan", currency: "JPY", avgDailyUSD: 85 },
   { city: "Seoul", country: "South Korea", currency: "KRW", avgDailyUSD: 80 },
+  { city: "Busan", country: "South Korea", currency: "KRW", avgDailyUSD: 65 },
   { city: "Taipei", country: "Taiwan", currency: "TWD", avgDailyUSD: 60 },
+  { city: "Taichung", country: "Taiwan", currency: "TWD", avgDailyUSD: 50 },
   {
     city: "Hong Kong",
     country: "Hong Kong",
     currency: "HKD",
     avgDailyUSD: 110,
   },
+  { city: "Macau", country: "Macau", currency: "HKD", avgDailyUSD: 90 },
   { city: "Beijing", country: "China", currency: "CNY", avgDailyUSD: 60 },
+  { city: "Shanghai", country: "China", currency: "CNY", avgDailyUSD: 65 },
+  // Central Asia & the Caucasus
+  { city: "Almaty", country: "Kazakhstan", currency: "KZT", avgDailyUSD: 40 },
+  {
+    city: "Tashkent",
+    country: "Uzbekistan",
+    currency: "UZS",
+    avgDailyUSD: 30,
+  },
+  {
+    city: "Dushanbe",
+    country: "Tajikistan",
+    currency: "TJS",
+    avgDailyUSD: 28,
+  },
+  { city: "Tbilisi", country: "Georgia", currency: "GEL", avgDailyUSD: 35 },
+  { city: "Yerevan", country: "Armenia", currency: "AMD", avgDailyUSD: 32 },
   // South Asia
   { city: "Mumbai", country: "India", currency: "INR", avgDailyUSD: 30 },
+  { city: "Delhi", country: "India", currency: "INR", avgDailyUSD: 28 },
   // Middle East (popular OFW destinations)
   { city: "Dubai", country: "UAE", currency: "AED", avgDailyUSD: 100 },
   { city: "Abu Dhabi", country: "UAE", currency: "AED", avgDailyUSD: 95 },
@@ -129,13 +187,54 @@ const HOME_CITIES: {
   { city: "Manama", country: "Bahrain", currency: "BHD", avgDailyUSD: 70 },
   // Oceania
   { city: "Sydney", country: "Australia", currency: "AUD", avgDailyUSD: 120 },
+  {
+    city: "Melbourne",
+    country: "Australia",
+    currency: "AUD",
+    avgDailyUSD: 110,
+  },
   // Europe
   { city: "London", country: "UK", currency: "GBP", avgDailyUSD: 130 },
   { city: "Paris", country: "France", currency: "EUR", avgDailyUSD: 120 },
+  { city: "Istanbul", country: "Turkey", currency: "TRY", avgDailyUSD: 60 },
+  { city: "Athens", country: "Greece", currency: "EUR", avgDailyUSD: 80 },
+  { city: "Rome", country: "Italy", currency: "EUR", avgDailyUSD: 100 },
+  { city: "Barcelona", country: "Spain", currency: "EUR", avgDailyUSD: 100 },
+  { city: "Madrid", country: "Spain", currency: "EUR", avgDailyUSD: 95 },
+  { city: "Vienna", country: "Austria", currency: "EUR", avgDailyUSD: 105 },
+  { city: "Brussels", country: "Belgium", currency: "EUR", avgDailyUSD: 105 },
+  { city: "Berlin", country: "Germany", currency: "EUR", avgDailyUSD: 100 },
+  {
+    city: "Amsterdam",
+    country: "Netherlands",
+    currency: "EUR",
+    avgDailyUSD: 120,
+  },
+  {
+    city: "Zurich",
+    country: "Switzerland",
+    currency: "CHF",
+    avgDailyUSD: 150,
+  },
+  { city: "Belgrade", country: "Serbia", currency: "RSD", avgDailyUSD: 40 },
+  {
+    city: "Sarajevo",
+    country: "Bosnia and Herzegovina",
+    currency: "BAM",
+    avgDailyUSD: 35,
+  },
+  { city: "Tirana", country: "Albania", currency: "ALL", avgDailyUSD: 32 },
   // Americas
   { city: "New York", country: "USA", currency: "USD", avgDailyUSD: 150 },
   { city: "Los Angeles", country: "USA", currency: "USD", avgDailyUSD: 130 },
+  { city: "Chicago", country: "USA", currency: "USD", avgDailyUSD: 115 },
   { city: "Toronto", country: "Canada", currency: "CAD", avgDailyUSD: 100 },
+  {
+    city: "Vancouver",
+    country: "Canada",
+    currency: "CAD",
+    avgDailyUSD: 105,
+  },
 ];
 
 // ── Budget Planner ─────────────────────────────────────────────────────────────
@@ -856,6 +955,18 @@ export function DestinationCostsSection() {
               food. Mid = comfortable hotel + restaurant meals. Visa info is for{" "}
               <strong>Malaysian passport</strong> holders.
             </p>
+
+            {/* Disclaimer */}
+            <div className="mt-6 max-w-2xl flex items-start gap-3 rounded-2xl border border-amber-300/60 bg-amber-50 px-4 py-3.5">
+              <Info className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
+              <p className="text-sm text-amber-900 leading-relaxed">
+                <strong>Heads up:</strong> these figures are estimates from our
+                own trips and ongoing research ~ actual costs change with
+                seasons, exchange rates, and travel style. Treat them as
+                planning guides, not exact quotes, and double-check big-ticket
+                items (flights, tours, visas) before booking.
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>
