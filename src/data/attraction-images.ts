@@ -1243,5 +1243,250 @@ export const spotImages: Record<string, SpotImage> =    {
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tirana_panorama_(7246584338).jpg"
+  },
+  "kota-kinabalu:Tunku Abdul Rahman Marine Park": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Manukan%2C_Mamutik_%26_Sulug_-_Happy_Islands.jpg/1280px-Manukan%2C_Mamutik_%26_Sulug_-_Happy_Islands.jpg",
+    "author": "Thien Zie Yung",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manukan,_Mamutik_%26_Sulug_-_Happy_Islands.jpg"
+  },
+  "kota-kinabalu:Mount Kinabalu & Kinabalu Park": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Kinabalu_Sabah_Borneo_Kampong_Kundasang_7.jpg/1280px-Kinabalu_Sabah_Borneo_Kampong_Kundasang_7.jpg",
+    "author": "kallerna",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kinabalu_Sabah_Borneo_Kampong_Kundasang_7.jpg"
+  },
+  "kota-kinabalu:Kota Kinabalu City Mosque": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/KotaKinabalu_Sabah_CityMosque-07.jpg/1280px-KotaKinabalu_Sabah_CityMosque-07.jpg",
+    "author": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:KotaKinabalu_Sabah_CityMosque-07.jpg"
+  },
+  "kota-kinabalu:Gaya Street Sunday Market": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/KotaKinabalu_Sabah_Gaya-Street-Sunday-Market-12.jpg/1280px-KotaKinabalu_Sabah_Gaya-Street-Sunday-Market-12.jpg",
+    "author": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:KotaKinabalu_Sabah_Gaya-Street-Sunday-Market-12.jpg"
+  },
+  "kota-kinabalu:Signal Hill Observatory": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Signal_Hill_Observatory.jpg/1280px-Signal_Hill_Observatory.jpg",
+    "author": "WorldTravleerAndPhotoTaker",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Signal_Hill_Observatory.jpg"
+  },
+  "kota-kinabalu:Tanjung Aru Beach": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Tanjung_Aru_beach_sunset_view.jpg/1280px-Tanjung_Aru_beach_sunset_view.jpg",
+    "author": "Cerevisae",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tanjung_Aru_beach_sunset_view.jpg"
+  },
+  "hero:kota-kinabalu": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Kota_Kinabalu_waterfront%2C_2024_%2803%29.jpg/1280px-Kota_Kinabalu_waterfront%2C_2024_%2803%29.jpg",
+    "author": "Bahnfrend",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kota_Kinabalu_waterfront,_2024_(03).jpg"
+  },
+  "taichung:Rainbow Village": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Taichung_Rainbow_Village_45.jpg/1280px-Taichung_Rainbow_Village_45.jpg",
+    "author": "Zairon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taichung_Rainbow_Village_45.jpg"
+  },
+  "taichung:Gaomei Wetlands": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Windmills_in_Gaomei-ID555594017.jpg/1280px-Windmills_in_Gaomei-ID555594017.jpg",
+    "author": "Xavier Berlioux",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Windmills_in_Gaomei-ID555594017.jpg"
+  },
+  "taichung:National Taichung Theater": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/National_Taichung_Theater_2019.jpg/1280px-National_Taichung_Theater_2019.jpg",
+    "author": "Nico Kaiser",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:National_Taichung_Theater_2019.jpg"
+  },
+  "taichung:Miyahara": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Miyahara%2C_Taichung%2C_Aug_2024.jpg/1280px-Miyahara%2C_Taichung%2C_Aug_2024.jpg",
+    "author": "Ralff Nestor Nacor",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miyahara,_Taichung,_Aug_2024.jpg"
+  },
+  "taichung:Fengjia Night Market": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/1_fengjia_night_market_2019.jpg/1280px-1_fengjia_night_market_2019.jpg",
+    "author": "Chensiyuan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_fengjia_night_market_2019.jpg"
+  },
+  "taichung:Taichung Park & Chun Shui Tang": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Taichung_Park_Lake_Pavilion_20070925.jpg/1280px-Taichung_Park_Lake_Pavilion_20070925.jpg",
+    "author": "Yoxem",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taichung_Park_Lake_Pavilion_20070925.jpg"
+  },
+  "hero:taichung": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Taichung_Skyline.jpg/1280px-Taichung_Skyline.jpg",
+    "author": "michael spadoni",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taichung_Skyline.jpg"
+  },
+  "dushanbe:Rudaki Park & Somoni Monument": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Ismoili_Somoni_monument_Dushanbe_2026.jpg/1280px-Ismoili_Somoni_monument_Dushanbe_2026.jpg",
+    "author": "Зинҳор Насрӣ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ismoili_Somoni_monument_Dushanbe_2026.jpg"
+  },
+  "dushanbe:National Museum of Tajikistan": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/National_Museum_of_Tajikistan_with_lake_and_statues.jpg/1280px-National_Museum_of_Tajikistan_with_lake_and_statues.jpg",
+    "author": "Adam Harangozó",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Tajikistan_with_lake_and_statues.jpg"
+  },
+  "dushanbe:Dushanbe Flagpole": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Dushanbe_Flagpole.jpg/1280px-Dushanbe_Flagpole.jpg",
+    "author": "Adam Harangozó",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dushanbe_Flagpole.jpg"
+  },
+  "dushanbe:Mehrgon Market": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Dushanbe%2C_Mehrgon_Market_%2843690026572%29.jpg/1280px-Dushanbe%2C_Mehrgon_Market_%2843690026572%29.jpg",
+    "author": "Ninara",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dushanbe,_Mehrgon_Market_(43690026572).jpg"
+  },
+  "dushanbe:Navruz Palace (Kohi Navruz)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Kohi_Navruz_%28Navruz_Palace%29_in_Dushanbe%2C_Tajikistan_%28G_gpJOZc7q4%29.jpg",
+    "author": "Sorbon689",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kohi_Navruz_(Navruz_Palace)_in_Dushanbe,_Tajikistan_(G_gpJOZc7q4).jpg"
+  },
+  "dushanbe:Hisor Fortress": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Hissar_Fortress%2C_Dushanbe%2C_Tajikistan_%2843054291584%29.jpg/1280px-Hissar_Fortress%2C_Dushanbe%2C_Tajikistan_%2843054291584%29.jpg",
+    "author": "Ninara",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hissar_Fortress,_Dushanbe,_Tajikistan_(43054291584).jpg"
+  },
+  "hero:dushanbe": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Panorama_of_Dushanbe.jpg/1280px-Panorama_of_Dushanbe.jpg",
+    "author": "Adam Harangozó",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_Dushanbe.jpg"
+  },
+  "bandar-seri-begawan:Sultan Omar Ali Saifuddien Mosque": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sultan_Omar_Ali_Saifuddien_Mosque_%288619948927%29.jpg/1280px-Sultan_Omar_Ali_Saifuddien_Mosque_%288619948927%29.jpg",
+    "author": "Bernard Spragg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sultan_Omar_Ali_Saifuddien_Mosque_(8619948927).jpg"
+  },
+  "bandar-seri-begawan:Jame' Asr Hassanil Bolkiah Mosque": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Jame_Asr_Hassanil_Bolkiah_Mosque.jpg/1280px-Jame_Asr_Hassanil_Bolkiah_Mosque.jpg",
+    "author": "Ravi Dwivedi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jame_Asr_Hassanil_Bolkiah_Mosque.jpg"
+  },
+  "bandar-seri-begawan:Kampong Ayer Water Village": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kampong_Ayer%2C_Brunei_in_January_2026_%28DSCF1416%29.jpg/1280px-Kampong_Ayer%2C_Brunei_in_January_2026_%28DSCF1416%29.jpg",
+    "author": "Yu Chu Chin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer,_Brunei_in_January_2026_(DSCF1416).jpg"
+  },
+  "bandar-seri-begawan:Royal Regalia Museum": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Royal_Regalia_Building%2C_Brunei%3B_2009.jpg/1280px-Royal_Regalia_Building%2C_Brunei%3B_2009.jpg",
+    "author": "Bernard Spragg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Regalia_Building,_Brunei;_2009.jpg"
+  },
+  "bandar-seri-begawan:Ulu Temburong National Park": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Ulu_Temburong_Canopy_Walk_2013_25.jpg/1280px-Ulu_Temburong_Canopy_Walk_2013_25.jpg",
+    "author": "Pangalau",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ulu_Temburong_Canopy_Walk_2013_25.jpg"
+  },
+  "bandar-seri-begawan:Tamu Kianggeh Market": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Local_produce._Tamu_Kianggeh_Brunei._%2811194506414%29.jpg/1280px-Local_produce._Tamu_Kianggeh_Brunei._%2811194506414%29.jpg",
+    "author": "Bernard Spragg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Local_produce._Tamu_Kianggeh_Brunei._(11194506414).jpg"
+  },
+  "hero:bandar-seri-begawan": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/View_from_the_Waterfront_Bandar_Seri_Begawan%2C_Brunei_01.jpg/1280px-View_from_the_Waterfront_Bandar_Seri_Begawan%2C_Brunei_01.jpg",
+    "author": "Yu Chu Chin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_the_Waterfront_Bandar_Seri_Begawan,_Brunei_01.jpg"
+  },
+  "ha-long-bay:Ha Long Bay Cruise": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Vietnam_08_-_58_-_Halong_Bay_%283171046046%29.jpg/1280px-Vietnam_08_-_58_-_Halong_Bay_%283171046046%29.jpg",
+    "author": "McKay Savage",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vietnam_08_-_58_-_Halong_Bay_(3171046046).jpg"
+  },
+  "ha-long-bay:Sung Sot Cave (Surprise Cave)": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sung_Sot_Cave%2C_Ha_Long_Bay%2C_Vietnam%2C_20240128_1608_3886.jpg/1280px-Sung_Sot_Cave%2C_Ha_Long_Bay%2C_Vietnam%2C_20240128_1608_3886.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sung_Sot_Cave,_Ha_Long_Bay,_Vietnam,_20240128_1608_3886.jpg"
+  },
+  "ha-long-bay:Ti Top Island": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/View_of_sea_from_Titov_Island%2C_Ha_Long_Bay%2C_Vietnam%2C_20240128_1337_3732.jpg/1280px-View_of_sea_from_Titov_Island%2C_Ha_Long_Bay%2C_Vietnam%2C_20240128_1337_3732.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_sea_from_Titov_Island,_Ha_Long_Bay,_Vietnam,_20240128_1337_3732.jpg"
+  },
+  "ha-long-bay:Kayaking the Karsts": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Kayaking_in_Ha_Long_Bay_1.jpg/1280px-Kayaking_in_Ha_Long_Bay_1.jpg",
+    "author": "Christophe95",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kayaking_in_Ha_Long_Bay_1.jpg"
+  },
+  "ha-long-bay:Cat Ba Island & Lan Ha Bay": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Lan_Ha_Bay-Cat_Ba_Vietnam-Andres_Larin.jpg/1280px-Lan_Ha_Bay-Cat_Ba_Vietnam-Andres_Larin.jpg",
+    "author": "Saaremees (Andres Larin)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lan_Ha_Bay-Cat_Ba_Vietnam-Andres_Larin.jpg"
+  },
+  "ha-long-bay:Sun World Ha Long Cable Car": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Newone_-_Quang_Ninh_Queen_cable_car.jpg/1280px-Newone_-_Quang_Ninh_Queen_cable_car.jpg",
+    "author": "Newone",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Newone_-_Quang_Ninh_Queen_cable_car.jpg"
+  },
+  "hero:ha-long-bay": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/The_lovely_colours_of_sunset_over_Halong_Bay_%2831520161931%29.jpg/1280px-The_lovely_colours_of_sunset_over_Halong_Bay_%2831520161931%29.jpg",
+    "author": "shankar s.",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_lovely_colours_of_sunset_over_Halong_Bay_(31520161931).jpg"
   }
 };

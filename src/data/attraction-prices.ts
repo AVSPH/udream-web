@@ -2422,7 +2422,7 @@ export const citySpotPricing: CitySpotPricing[] = [
       "Two thousand limestone towers rising from jade water ~ Vietnam's UNESCO masterpiece is really one big ticket: the cruise. Sightseeing fees, caves, and islands are bundled into whichever boat you choose.",
     estTotal: "$55–130",
     estTotalNote:
-      "a good day cruise with lunch, cave, and kayaking ~ overnight boats run $100–250+ per person",
+      "covers a good day cruise with lunch, cave, and kayaking ~ overnight boats run $100–250+ per person",
     gateway: {
       airport: "Noi Bai International Airport (Hanoi)",
       code: "HAN",
