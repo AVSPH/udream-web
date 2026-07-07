@@ -162,11 +162,11 @@ export function SpotPricesIndex() {
           </div>
           <div>
             <p className="font-semibold text-foreground mb-1">
-              More cities on the way
+              That&apos;s every city so far
             </p>
             <p className="text-sm text-muted-foreground">
-              We&apos;re adding price guides for every city we&apos;ve visited
-              ~ Kota Kinabalu, Taichung, Dushanbe, and the last few coming soon.
+              Price guides for all 30 places we&apos;ve visited are live ~ new
+              guides land here as soon as we land somewhere new.
             </p>
           </div>
         </div>
