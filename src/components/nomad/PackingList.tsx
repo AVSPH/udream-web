@@ -27,7 +27,7 @@ export default function PackingList({ categories, packedItems, onToggle }: Packi
         </span>
       </div>
       <p className="text-xs text-muted-foreground mb-4">
-        Aim for a 40L backpack maximum — if it doesn&apos;t fit, you don&apos;t need it.
+        Aim for a 40L backpack maximum ~ if it doesn&apos;t fit, you don&apos;t need it.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

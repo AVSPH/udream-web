@@ -84,7 +84,7 @@ export default function PhaseSidebar({
                 <p className="text-sm text-foreground leading-relaxed italic">
                   &ldquo;{quotes[quoteIndex].text}&rdquo;
                 </p>
-                <p className="text-xs text-muted-foreground mt-2">— {quotes[quoteIndex].author}</p>
+                <p className="text-xs text-muted-foreground mt-2">~ {quotes[quoteIndex].author}</p>
               </motion.div>
             )}
           </AnimatePresence>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Compass, ArrowRight, Lock, Check, User, Mail, Sparkles, ListChecks, Calculator, Backpack, Wallet } from 'lucide-react';
+import { TOTAL_TASK_COUNT, TOOL_COUNT } from './data';
 
 interface PlaybookGateProps {
   onUnlock: (name: string, email: string) => void;
@@ -87,8 +88,8 @@ export default function PlaybookGate({ onUnlock }: PlaybookGateProps) {
             <div className="flex items-center gap-6 mb-8">
               {[
                 { value: '6', label: 'Phases' },
-                { value: '96', label: 'Tasks' },
-                { value: '5', label: 'Tools' },
+                { value: TOTAL_TASK_COUNT.toString(), label: 'Tasks' },
+                { value: TOOL_COUNT.toString(), label: 'Tools' },
                 { value: '$0', label: 'Forever' },
               ].map((s) => (
                 <div key={s.label} className="text-center md:text-left">
@@ -101,7 +102,7 @@ export default function PlaybookGate({ onUnlock }: PlaybookGateProps) {
             {/* What you unlock */}
             <ul className="space-y-3 text-left">
               {[
-                { icon: ListChecks, text: 'A 96-task roadmap ~ mindset to touchdown to scaling' },
+                { icon: ListChecks, text: `A ${TOTAL_TASK_COUNT}-task roadmap ~ mindset to touchdown to scaling` },
                 { icon: Calculator, text: 'Financial runway calculator + expense tracker' },
                 { icon: Backpack, text: 'Destination ranker, packing list & visa checklists' },
                 { icon: Wallet, text: 'Built for weak passports and real budgets' },

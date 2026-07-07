@@ -106,7 +106,7 @@ export default function PhasePanel({
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">{phase.description}</p>
 
-          {/* Section pills — quick jump */}
+          {/* Section pills ~ quick jump */}
           <div className="flex flex-wrap gap-1.5 mt-4">
             {phase.sections.map((s) => (
               <a
@@ -162,7 +162,7 @@ export default function PhasePanel({
               ))}
             </div>
 
-            {/* Worksheet download — rendered for any section that has a config */}
+            {/* Worksheet download ~ rendered for any section that has a config */}
             {WORKSHEET_CONFIGS[section.id] && (
               <div className="mt-4 flex justify-end">
                 <WorksheetDownload config={WORKSHEET_CONFIGS[section.id]} />

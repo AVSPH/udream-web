@@ -19,6 +19,7 @@ import {
   INSPIRATION_QUOTES,
   TOTAL_TASK_COUNT,
   TOTAL_PACKING_COUNT,
+  TOOL_COUNT,
 } from './data';
 import type { ExpenseEntry } from './types';
 import PlaybookGate from './PlaybookGate';
@@ -83,13 +84,14 @@ export default function NomadPlaybook() {
   if (!unlocked) return <PlaybookGate onUnlock={handleUnlock} />;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <AIChatbot />
       <NomadHero
         phases={PHASES}
         checkedCount={checkedTasks.size}
         totalTasks={TOTAL_TASK_COUNT}
         packingTotal={TOTAL_PACKING_COUNT}
+        toolCount={TOOL_COUNT}
         activePhase={activePhase}
         onSwitchPhase={handleSwitchPhase}
       />

@@ -36,7 +36,7 @@ type DataTableExtra = {
   summaryRows?: number[]; // 0-based indices rendered bold + shaded
 };
 
-// Journal prompts — each prompt gets its own block of writing lines
+// Journal prompts ~ each prompt gets its own block of writing lines
 type JournalPromptsExtra = {
   type: 'journal-prompts';
   label: string;
