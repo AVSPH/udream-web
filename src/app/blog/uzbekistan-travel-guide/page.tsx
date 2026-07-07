@@ -22,8 +22,8 @@ export default function UzbekistanTravelGuidePage() {
       name: "Meri & Man",
       url: "https://udreamtravels.com/our-story",
     },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
+    datePublished: "2026-06-16",
+    dateModified: "2026-06-16",
     image: "https://udreamtravels.com/assets/blog/uzbekistan/DJI_20251110162301_0044_D.JPG",
     publisher: {
       "@type": "Organization",

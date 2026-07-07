@@ -22,8 +22,8 @@ export default function SoutheastAsiaWorthItPage() {
       name: "Meri & Man",
       url: "https://udreamtravels.com/our-story",
     },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
+    datePublished: "2026-06-16",
+    dateModified: "2026-06-16",
     image: "https://udreamtravels.com/assets/blog/southeast-asia-2026/DJI_20251107145916_0060_D.JPG",
     publisher: {
       "@type": "Organization",

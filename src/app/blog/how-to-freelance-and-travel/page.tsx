@@ -22,8 +22,8 @@ export default function HowToFreelanceAndTravelPage() {
       name: "Meri & Man",
       url: "https://udreamtravels.com/our-story",
     },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
+    datePublished: "2026-06-16",
+    dateModified: "2026-06-16",
     image: "https://udreamtravels.com/assets/blog/travel-and-freelance/DJI_20251226185748_0589_D.JPG",
     publisher: {
       "@type": "Organization",

@@ -21,8 +21,8 @@ export default function TokyoIn5DaysPage() {
       name: "Meri & Man",
       url: "https://udreamtravels.com/our-story",
     },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
+    datePublished: "2026-06-16",
+    dateModified: "2026-06-16",
     image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1200&q=80",
     publisher: {
       "@type": "Organization",

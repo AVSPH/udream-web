@@ -21,8 +21,8 @@ export default function HowToBecomeDigitalNomadPage() {
       name: "Meri & Man",
       url: "https://udreamtravels.com/our-story",
     },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
+    datePublished: "2026-06-15",
+    dateModified: "2026-06-15",
     image: "https://udreamtravels.com/assets/blog/how-to-become-digital-nomad/DJI_20260117115313_0852_D.JPG",
     publisher: {
       "@type": "Organization",

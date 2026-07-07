@@ -182,6 +182,50 @@ html {
   }
 }
 
+/* Long-form article typography (used by every /blog article) */
+@layer components {
+  .blog-content h2 {
+    @apply text-2xl md:text-3xl font-bold text-foreground mt-12 mb-4 leading-snug;
+  }
+
+  .blog-content h3 {
+    @apply text-xl md:text-2xl font-semibold text-foreground mt-8 mb-3 leading-snug;
+  }
+
+  .blog-content p {
+    @apply text-base md:text-[17px] leading-relaxed text-foreground/80 mb-5;
+  }
+
+  .blog-content ul,
+  .blog-content ol {
+    @apply mb-5 pl-6 space-y-2 text-foreground/80;
+  }
+
+  .blog-content ul {
+    @apply list-disc;
+  }
+
+  .blog-content ol {
+    @apply list-decimal;
+  }
+
+  .blog-content a {
+    @apply text-primary font-medium underline underline-offset-2 hover:text-primary/80 transition-colors;
+  }
+
+  .blog-content strong {
+    @apply font-semibold text-foreground;
+  }
+
+  .blog-content blockquote {
+    @apply border-l-4 border-primary pl-5 italic text-muted-foreground my-6;
+  }
+
+  .blog-content table {
+    @apply text-foreground/85;
+  }
+}
+
 /* Slim, brand-tinted scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

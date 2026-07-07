@@ -21,8 +21,8 @@ export default function BaliDigitalNomadPage() {
       name: "Meri & Man",
       url: "https://udreamtravels.com/our-story",
     },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
+    datePublished: "2026-06-15",
+    dateModified: "2026-06-15",
     image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
     publisher: {
       "@type": "Organization",

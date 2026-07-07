@@ -22,8 +22,8 @@ export default function DigitalNomadVisaPHPage() {
       name: "Meri & Man",
       url: "https://udreamtravels.com/our-story",
     },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
+    datePublished: "2026-06-15",
+    dateModified: "2026-06-15",
     image: "https://udreamtravels.com/assets/blog/digital-ph/DJI_20251022104846_0030_D.jpg",
     publisher: {
       "@type": "Organization",

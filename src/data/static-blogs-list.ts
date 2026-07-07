@@ -10,6 +10,33 @@ export interface StaticBlogCard {
 
 export const customStaticBlogs: StaticBlogCard[] = [
   {
+    id: "things-to-do-in-almaty",
+    title: "Things to Do in Almaty: Kazakhstan's Mountain City (Prices + 4-Day Itinerary)",
+    excerpt: "The 10 best things to do in Almaty with 2026 entry prices and a 4-day itinerary ~ Medeu, Shymbulak, Big Almaty Lake, and Charyn Canyon.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg/1280px-Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg",
+    href: "/blog/things-to-do-in-almaty",
+    date: "2026-07-04",
+    category: "Travel Guide",
+  },
+  {
+    id: "ha-long-bay-cruise-price",
+    title: "Ha Long Bay Cruise Prices in 2026: Day vs Overnight, and How Not to Overpay",
+    excerpt: "Day cruises from $55, overnight from $100, the real entrance fees, hidden extras, and the Lan Ha Bay trick that saves you 40%.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/The_lovely_colours_of_sunset_over_Halong_Bay_%2831520161931%29.jpg/1280px-The_lovely_colours_of_sunset_over_Halong_Bay_%2831520161931%29.jpg",
+    href: "/blog/ha-long-bay-cruise-price",
+    date: "2026-07-04",
+    category: "Travel Budget",
+  },
+  {
+    id: "tbilisi-travel-cost",
+    title: "Is Tbilisi Cheap? What Georgia Actually Costs in 2026",
+    excerpt: "Real daily budgets for one of Europe's cheapest capitals: $30-45/day mid-range, 40-cent metro rides, $6 feasts, and the one splurge worth making.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Parts_of_Old_Tbilisi%2C_historical_center_of_Tbilisi%2C_Georgia._View_from_the_Metekhi_church._July_2023.jpg/1280px-Parts_of_Old_Tbilisi%2C_historical_center_of_Tbilisi%2C_Georgia._View_from_the_Metekhi_church._July_2023.jpg",
+    href: "/blog/tbilisi-travel-cost",
+    date: "2026-07-04",
+    category: "Travel Budget",
+  },
+  {
     id: "bali-digital-nomads",
     title: "Bali for Digital Nomads: Where to Stay, Work, and Live on a Budget",
     excerpt: "Bali digital nomad guide 2026. Real costs, tips, and first-hand advice from Meri & Man on living and working in Bali.",

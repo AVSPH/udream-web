@@ -22,8 +22,8 @@ export default function JapanTravelBudgetPage() {
       name: "Meri & Man",
       url: "https://udreamtravels.com/our-story",
     },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
+    datePublished: "2026-06-16",
+    dateModified: "2026-06-16",
     image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80",
     publisher: {
       "@type": "Organization",

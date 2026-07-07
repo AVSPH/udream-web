@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 import { travelGuides } from "@/data/guides";
 import { staticBlogs } from "@/data/visited-blogs";
 import { citySpotPricing } from "@/data/attraction-prices";
+import { customStaticBlogs } from "@/data/static-blogs-list";
 
 const baseUrl = "https://www.udreamtravels.com";
 
@@ -123,5 +124,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...guideRoutes, ...spotPriceRoutes];
+  // Custom long-form articles (previously missing from the sitemap)
+  const customBlogRoutes: MetadataRoute.Sitemap = customStaticBlogs.map(
+    (b) => ({
+      url: `${baseUrl}${b.href}`,
+      lastModified: new Date(b.date),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }),
+  );
+
+  return [
+    ...staticRoutes,
+    ...blogRoutes,
+    ...guideRoutes,
+    ...spotPriceRoutes,
+    ...customBlogRoutes,
+  ];
 }
