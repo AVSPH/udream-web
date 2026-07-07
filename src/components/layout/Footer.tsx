@@ -90,15 +90,15 @@ export function Footer() {
             <div
                 aria-hidden
                 style={{ fontFamily: "var(--font-script)" }}
-                className="absolute -bottom-10 right-4 text-[7rem] md:text-[11rem] leading-none text-background/[0.04] select-none pointer-events-none whitespace-nowrap"
+                className="hidden md:block absolute bottom-24 right-8 text-[8rem] lg:text-[10rem] leading-none text-background/[0.03] select-none pointer-events-none whitespace-nowrap"
             >
                 keep exploring
             </div>
 
             <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-6">
                 {/* Main Footer Links */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
-                    <div className="lg:col-span-2">
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-12 lg:gap-8">
+                    <div className="col-span-2 lg:col-span-2">
                         <Link href="/" className="inline-block mb-5 transition-transform hover:scale-105">
                             <div className="relative w-32 h-16 overflow-hidden">
                                 <Image
@@ -159,8 +159,9 @@ export function Footer() {
                     ))}
                 </div>
 
-                {/* Bottom bar */}
-                <div className="mt-14 pt-6 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                {/* Bottom bar ~ extra bottom/right space so the floating
+                    back-to-top button never covers the links */}
+                <div className="mt-14 pt-6 pb-14 md:pb-0 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4 md:pr-20">
                     <p className="text-background/40 text-sm">
                         © {new Date().getFullYear()} Udream Travels. All rights reserved.
                     </p>
