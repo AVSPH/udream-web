@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   Star, MapPin, Wifi, Car, Users, BedDouble, Bath, Home,
   Check, ExternalLink, Sparkles, Monitor, ArrowLeft, Quote, ShieldCheck,
+  HeartHandshake,
 } from "lucide-react";
 import { AccommodationGallery } from "./AccommodationGallery";
 import { SmartImage } from "./SmartImage";
@@ -116,6 +117,21 @@ export function AccommodationDetail({ listing }: { listing: AccommodationListing
                 </li>
               ))}
             </ul>
+          </section>
+
+          {/* A small ask */}
+          <section className="mb-8 rounded-3xl border border-secondary/40 bg-secondary/10 p-6 md:p-7">
+            <div className="flex items-start gap-4">
+              <span className="p-2.5 rounded-2xl bg-secondary/25 text-foreground shrink-0">
+                <HeartHandshake className="w-5 h-5" />
+              </span>
+              <div>
+                <h2 className="text-xl font-display font-bold mb-2">A small ask</h2>
+                <p className="text-foreground/80 leading-relaxed">
+                  When you book, please send our regards to {listing.host.name} and let {listing.host.name} know you found this place through <strong className="font-semibold text-foreground">Udream</strong>. It costs you nothing, it makes a lovely host&apos;s day, and it helps us keep recommending gems like this one. Thank you ~ it means a lot to us.
+                </p>
+              </div>
+            </div>
           </section>
 
           {/* Amenities */}
