@@ -20,3 +20,12 @@ Tips:
 - Use `.jpg` (or update the `src` values in `src/data/accommodations.ts`).
 - To add MORE photos later, save them here and add an entry to this listing's
   `images` array in `src/data/accommodations.ts`.
+
+## Optional: "Getting around" route maps
+
+Add these to show a route-map row in the Location section (optional):
+
+| Filename             | What it should show                          |
+| -------------------- | -------------------------------------------- |
+| `route-center.jpg`   | Map: transit/route into central Belgrade     |
+| `location-map.jpg`   | Map marking the apartment in Zvezdara        |
