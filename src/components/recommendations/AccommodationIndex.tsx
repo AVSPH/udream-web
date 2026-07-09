@@ -66,7 +66,7 @@ export function AccommodationIndex() {
 
               <div className="flex items-center flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground mb-4">
                 <span className="inline-flex items-center gap-1.5"><Users className="w-3.5 h-3.5" /> {a.capacity.guests} guests</span>
-                <span className="inline-flex items-center gap-1.5"><BedDouble className="w-3.5 h-3.5" /> {a.capacity.beds} beds</span>
+                <span className="inline-flex items-center gap-1.5"><BedDouble className="w-3.5 h-3.5" /> {a.capacity.beds} {a.capacity.beds === 1 ? "bed" : "beds"}</span>
                 {a.wifiMbps && <span className="inline-flex items-center gap-1.5"><Wifi className="w-3.5 h-3.5" /> ~{a.wifiMbps} Mbps</span>}
                 <span className="inline-flex items-center gap-1.5"><Car className="w-3.5 h-3.5" /> Free parking</span>
               </div>

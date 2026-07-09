@@ -54,33 +54,56 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function buildFaqs(listing: ReturnType<typeof getAccommodation>): FAQ[] {
   if (!listing) return [];
-  const nearestSight = listing.location.nearby.find((n) => /old bridge|stari most/i.test(n.place));
-  return [
-    {
+
+  const wifiLine = listing.wifiMbps
+    ? ` and fast Wi-Fi measured at around ${listing.wifiMbps} Mbps`
+    : " and high-speed Wi-Fi";
+  const hasParking = listing.amenities.some((a) => /parking/i.test(a));
+  const sleeping = listing.sleeping.join(" and ").toLowerCase();
+  const checkInRule = listing.houseRules.find((r) => /after/i.test(r));
+  const checkOutRule = listing.houseRules.find((r) => /before/i.test(r));
+  const priceLine =
+    listing.priceApprox
+      ? `The headline price is ${listing.priceDisplay} (${listing.priceApprox}), set by the host and varying by season. Check the live dates and total price on the Airbnb listing before you book.`
+      : `The host prices this stay by date ~ add your check-in and checkout on the Airbnb listing to see the exact total. It varies by season.`;
+
+  const faqs: FAQ[] = [];
+
+  if (listing.goodForRemoteWork) {
+    faqs.push({
       question: `Is this ${listing.city} apartment good for remote work?`,
-      answer: `Yes. It has a dedicated workstation with a full-size desk and an external monitor, plus fast Wi-Fi measured at around ${listing.wifiMbps} Mbps. Several guests specifically booked it for longer remote-work stays and rated the workspace as a highlight.`,
-    },
-    {
-      question: `How far is the apartment from the Old Bridge and the old town?`,
-      answer: `It is about ${nearestSight ? nearestSight.time : "a 15 minute walk"} from the Old Bridge (Stari Most). All the major sights in Mostar are within a 15-minute walk, and you are 2 minutes from the main bus lines and the city park.`,
-    },
-    {
+      answer: `Yes. It has a dedicated workspace${wifiLine}. Several guests booked it for longer remote-work stays and rated the workspace as a highlight.`,
+    });
+  }
+
+  faqs.push({
+    question: `Where is the apartment and how is the location?`,
+    answer: listing.location.summary,
+  });
+
+  if (hasParking) {
+    faqs.push({
       question: `Is there parking at the apartment?`,
-      answer: `Yes, there is free parking on the premises, which is genuinely rare this close to the centre of Mostar. That makes it a strong choice if you are road-tripping around Bosnia and the Balkans.`,
-    },
-    {
-      question: `How many people can stay, and what are the beds?`,
-      answer: `It sleeps up to ${listing.capacity.guests} guests: a bedroom with 1 king bed and a living room with 1 sofa bed. There is ${listing.capacity.baths} bathroom with a bathtub, and two AC units for the summer heat.`,
-    },
-    {
-      question: `How do I check in, and what are the check-in times?`,
-      answer: `Check-in is self check-in with a lockbox, so you can arrive on your own schedule after 2:00 PM. Checkout is before 11:00 AM. The host, ${listing.host.name}, is a Superhost with a 100% response rate if you need anything.`,
-    },
-    {
-      question: `How much does it cost to stay here?`,
-      answer: `The headline price is ${listing.priceDisplay} (${listing.priceApprox}), set by the host and varying by season. Check the live dates and total price on the Airbnb listing before you book.`,
-    },
-  ];
+      answer: `Yes, there is free parking on the premises${/mostar/i.test(listing.city) ? ", which is genuinely rare this close to the centre" : ""}.`,
+    });
+  }
+
+  faqs.push({
+    question: `How many people can stay, and what are the beds?`,
+    answer: `It sleeps up to ${listing.capacity.guests} guests: ${sleeping}. There ${listing.capacity.baths === 1 ? "is" : "are"} ${listing.capacity.baths} bathroom${listing.capacity.baths === 1 ? "" : "s"}.`,
+  });
+
+  faqs.push({
+    question: `How do I check in?`,
+    answer: `Check-in is self check-in${checkInRule ? `, ${checkInRule.toLowerCase()}` : ""}${checkOutRule ? `, and ${checkOutRule.toLowerCase()}` : ""}. The host, ${listing.host.name}, is a Superhost with a 100% response rate if you need anything.`,
+  });
+
+  faqs.push({
+    question: `How much does it cost to stay here?`,
+    answer: priceLine,
+  });
+
+  return faqs;
 }
 
 export default async function AccommodationListingPage({ params }: Props) {
