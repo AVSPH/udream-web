@@ -79,15 +79,15 @@ export const accommodations: AccommodationListing[] = [
     capacity: { guests: 4, bedrooms: 1, beds: 2, baths: 1 },
     sleeping: ["Bedroom with 1 king bed", "Living room with 1 sofa bed"],
     highlights: [
-      "Self check-in with a lockbox",
-      "Free parking on premises (genuinely rare in this area)",
-      "Superhost with a 4.94 rating",
-      "Dedicated workstation with an external monitor",
+      "Let yourself in anytime with the lockbox",
+      "Your own free parking spot, almost unheard of this central",
+      "A Superhost who actually replies (4.94 across 48 stays)",
+      "A real desk and external monitor, not a laptop on the table",
     ],
     description: [
-      "Located in the heart of Mostar, this apartment is an ideal base for exploring the city. All the major sights are within a 15-minute walk, so you can drop your bags and start wandering straight away.",
-      "It offers a spacious terrace, a king-size bed, two AC units, a comfy lounge, a proper workstation and fast Wi-Fi ~ a rare combination that makes it work equally well for a weekend of sightseeing or a longer remote-work stay.",
-      "You are 2 minutes from the main bus lines and the city park, 7 minutes from Mepas Mall, 12 minutes from the gym and city pool, and about 15 minutes on foot from the iconic Old Bridge.",
+      "Mostar rewards staying central, and this apartment drops you right in the thick of it. Leave your bags, step out the door, and you are wandering the old stone streets within about a quarter of an hour ~ no taxis, no logistics, just go.",
+      "What makes it stand out is that it handles two very different trips at once. There is a proper desk with a real monitor for anyone logging on, genuinely quick Wi-Fi, and two AC units for the summer heat ~ but also a king bed, a soft lounge and a wide terrace that quietly becomes your favourite room the moment the sun drops.",
+      "Day to day, everything sits close: a couple of minutes to the main bus lines and the city park, seven to Mepas Mall, a dozen to the gym and city pool, and roughly fifteen on foot to the Old Bridge itself.",
     ],
     whyWeLove: [
       "The workstation is the real deal ~ a full-size desk and a large external monitor, not a laptop perched on a dining table. If you work remotely, this is the difference between a stay you tolerate and one you extend.",
@@ -201,14 +201,14 @@ export const accommodations: AccommodationListing[] = [
     capacity: { guests: 2, bedrooms: 1, beds: 1, baths: 1 },
     sleeping: ["Bedroom with 1 double bed"],
     highlights: [
-      "Guest favourite ~ one of the most loved homes on Airbnb",
-      "Ranked in the top 5% of eligible listings",
-      "Exceptional 5-star check-in experience",
-      "Free parking on premises",
+      "A perfect 5.0 across 14 stays so far",
+      "Sits in the top 5% of homes for reliability",
+      "Guests keep singling out how smooth the arrival is",
+      "Free parking right at the building",
     ],
     description: [
-      "A stylish and modern open-space apartment featuring a kitchen with a bar, a dining area, a cosy living room and a spacious balcony. It is fully equipped and thoughtfully decorated, with high-speed Wi-Fi, a large flat-screen TV and a comfy spot for pets.",
-      "It is ideal for couples, solo travellers or business guests looking for comfort and functionality in a quiet, well-connected neighbourhood. Zvezdara is an easy, walkable residential area with a bus stop right in front of the building and one direct bus into the city centre.",
+      "This is an apartment that feels designed rather than just furnished. A bar-height island anchors the kitchen, the living room flows straight off it, and a generous balcony runs along the front ~ the kind of open-plan space where you unpack once and actually settle in.",
+      "Zvezdara is Belgrade's quiet secret: leafy, residential and properly local, yet a single bus from the stop right outside the door carries you into the centre. It suits couples, solo travellers and anyone working a few days from the road, and there is a comfy corner for a pet ~ ours would approve.",
     ],
     whyWeLove: [
       "The open-plan design is genuinely stylish ~ a bar-height island, statement art and a warm, put-together feel that photos barely capture.",
