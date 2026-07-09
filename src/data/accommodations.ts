@@ -49,6 +49,7 @@ export interface AccommodationListing {
     summary: string;
     nearby: NearbyPlace[];
     mapQuery: string; // Google Maps query for the embed + link
+    gettingAround?: string; // how to move around from here
     routeImages?: AccommodationImage[]; // walking-route map screenshots
   };
   houseRules: string[];
@@ -121,6 +122,8 @@ export const accommodations: AccommodationListing[] = [
         { place: "West Bus Station (Mostar Zapad)", time: "17 min walk" },
       ],
       mapQuery: "Kneza Domagoja, Mostar, Bosnia and Herzegovina",
+      gettingAround:
+        "Mostar is compact and flat, so you can reach almost everything on foot. The Old Bridge and the old town are about 15 minutes away, and both the main and west bus stations are a 14~17 minute walk (see the route maps below). Taxis are cheap for day trips out to Blagaj, Počitelj or the Kravice waterfalls.",
       routeImages: [
         { src: "/accommodations/mostar-workspace/route-old-bridge.jpg", alt: "Walking route from the apartment to the Old Bridge, about 15 minutes", caption: "Walk to the Old Bridge ~ about 15 min" },
         { src: "/accommodations/mostar-workspace/route-main-bus-station.jpg", alt: "Walking route from the apartment to Mostar's Main Bus Station, about 14 minutes", caption: "Walk to the Main Bus Station ~ about 14 min" },
@@ -239,10 +242,8 @@ export const accommodations: AccommodationListing[] = [
         { place: "Belgrade city centre", time: "~1 direct bus" },
       ],
       mapQuery: "Zvezdara, Belgrade, Serbia",
-      routeImages: [
-        { src: "/accommodations/belgrade-lela/route-center.jpg", alt: "Transit route from the apartment into central Belgrade", caption: "One direct bus into the centre" },
-        { src: "/accommodations/belgrade-lela/location-map.jpg", alt: "Map marking the apartment's location in Zvezdara", caption: "The apartment in Zvezdara" },
-      ],
+      gettingAround:
+        "Getting around from Zvezdara is simple. A bus stop sits right outside the building with a direct line into the centre in roughly 20~30 minutes, and rides are inexpensive. Bolt and taxis are cheap and everywhere, and the nearest shops and bakeries are about a 2-minute walk.",
     },
     houseRules: ["2 guests maximum", "Self check-in", "Pet-friendly"],
     reviews: [
@@ -361,6 +362,8 @@ export const accommodations: AccommodationListing[] = [
         { place: "Jahorina / Bjelašnica ski slopes", time: "Day trip" },
       ],
       mapQuery: "Lukavica, Istočno Sarajevo, Bosnia and Herzegovina",
+      gettingAround:
+        "You are only minutes from Sarajevo Airport, and the East Sarajevo bus station is within walking distance ~ handy for onward buses to Belgrade, Mostar and the coast. Local buses and trams link Lukavica to Baščaršija and the centre in around 30 minutes, and there is free parking at the door if you are driving. In winter, shuttles run to the Jahorina and Bjelašnica ski slopes.",
     },
     houseRules: ["Check-in 2:00 PM to 8:00 PM", "Checkout before 10:00 AM", "3 guests maximum"],
     reviews: [

@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   Star, MapPin, Wifi, Car, Users, BedDouble, Bath, Home,
   Check, ExternalLink, Sparkles, Monitor, ArrowLeft, Quote, ShieldCheck,
-  HeartHandshake,
+  HeartHandshake, Navigation,
 } from "lucide-react";
 import { AccommodationGallery } from "./AccommodationGallery";
 import { SmartImage } from "./SmartImage";
@@ -50,9 +50,17 @@ export function AccommodationDetail({ listing }: { listing: AccommodationListing
             </span>
           )}
         </div>
-        <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-3">
-          {listing.name}
-        </h1>
+        <div className="flex items-start gap-3 mb-3">
+          <h1 className="flex-1 font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+            {listing.name}
+          </h1>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/sticker/sticker-10.png"
+            alt="Meri & Man arriving with luggage"
+            className="hidden sm:block w-20 lg:w-24 shrink-0 -mt-1 -rotate-6 drop-shadow-sm select-none pointer-events-none"
+          />
+        </div>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-sm text-muted-foreground">
           <span className="inline-flex items-center gap-1.5 font-semibold text-foreground">
             <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
@@ -185,9 +193,19 @@ export function AccommodationDetail({ listing }: { listing: AccommodationListing
               Open in Google Maps <ExternalLink className="w-3.5 h-3.5" />
             </a>
 
-            {listing.location.routeImages && listing.location.routeImages.length > 0 && (
+            {(listing.location.gettingAround || (listing.location.routeImages && listing.location.routeImages.length > 0)) && (
               <div className="mt-8">
-                <h3 className="text-lg font-display font-bold mb-3">Getting around on foot</h3>
+                <h3 className="text-lg font-display font-bold mb-3 flex items-center gap-2">
+                  <Navigation className="w-4 h-4 text-primary" /> Getting around
+                </h3>
+                {listing.location.gettingAround && (
+                  <p className="text-muted-foreground leading-relaxed mb-4">{listing.location.gettingAround}</p>
+                )}
+              </div>
+            )}
+
+            {listing.location.routeImages && listing.location.routeImages.length > 0 && (
+              <div className="mt-2">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                   {listing.location.routeImages.map((img) => (
                     <figure key={img.src} className="rounded-2xl overflow-hidden border border-border bg-card">
