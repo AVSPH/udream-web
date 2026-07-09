@@ -249,6 +249,11 @@ export function AccommodationDetail({ listing }: { listing: AccommodationListing
                 </figure>
               ))}
             </div>
+            <p className="text-xs text-muted-foreground/80 mt-4 leading-relaxed">
+              Reviews, ratings and listing details shown here are sourced from the host&apos;s Airbnb listing and belong to their respective guests. Figures such as ratings, review counts and prices can change over time ~ please check the live {" "}
+              <a href={listing.airbnbUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Airbnb listing</a> {" "}
+              for the most current information.
+            </p>
           </section>
         </div>
 
