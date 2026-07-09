@@ -1,11 +1,8 @@
 # Destination thumbnails
 
-Photos for map/blog destination cards that aren't hosted on Cloudinary.
+Local photos for map/blog destination cards that aren't hosted elsewhere.
 
-| Filename           | Destination            |
-| ------------------ | ---------------------- |
-| `netherlands.jpg`  | Amsterdam, Netherlands |
-
-Drop your own photo here with the matching filename (landscape ~16:10 crop
-looks best). It appears automatically on the map, the blog destination
-grid, and the /blog/netherlands page. Until then a placeholder shows.
+Amsterdam currently uses a free-to-use CC0 canal photo from Wikimedia
+Commons (referenced by URL in src/data/visited-places.ts), so no local
+file is needed. To use your own photo instead, drop it here and point the
+`thumbnail` for Amsterdam at `/destinations/netherlands.jpg`.

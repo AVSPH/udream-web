@@ -32,6 +32,7 @@ import albania from "./albania";
 import montenegro from "./montenegro";
 import bosnia from "./bosnia";
 import serbia from "./serbia";
+import netherlands from "./netherlands";
 
 export const staticBlogs: StaticBlog[] = [
   malaysia,
@@ -66,6 +67,7 @@ export const staticBlogs: StaticBlog[] = [
   montenegro,
   bosnia,
   serbia,
+  netherlands,
 ];
 
 export const staticBlogsBySlug = staticBlogs.reduce<Record<string, StaticBlog>>(
