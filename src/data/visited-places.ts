@@ -404,6 +404,17 @@ export const visitedPlaces: VisitedPlace[] = [
     blogLink: "/blog/serbia",
     description: "The confluence of the Sava and Danube rivers.",
   },
+  {
+    id: 33,
+    name: "Amsterdam",
+    country: "Netherlands",
+    continent: "Europe",
+    dateVisited: "2024",
+    coordinates: [52.3676, 4.9041],
+    thumbnail: "/destinations/netherlands.jpg",
+    blogLink: "/blog/netherlands",
+    description: "Canal-laced streets, gabled houses and world-class museums.",
+  },
 ];
 
 export const getStats = () => {
