@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
     Menu, X, Globe, Map as MapIcon, BookOpen, User,
     Home, Backpack, ChevronDown, FileText, CheckSquare, Plane, ClipboardCheck,
-    Calendar, Sparkles, Ticket
+    Calendar, Sparkles, Ticket, ThumbsUp, BedDouble
 } from "lucide-react";
 
 type NavItem = {
@@ -74,6 +74,19 @@ const navItems: NavItem[] = [
         href: "/resources/travel-assessment",
         icon: <ClipboardCheck size={18} />,
         description: "Are you ready to travel?",
+      },
+    ],
+  },
+  {
+    name: "Recommendations",
+    href: "/recommendations",
+    icon: <ThumbsUp size={18} />,
+    dropdown: [
+      {
+        name: "Accommodation",
+        href: "/recommendations/accommodation",
+        icon: <BedDouble size={18} />,
+        description: "Stays we would book again",
       },
     ],
   },
@@ -177,8 +190,8 @@ export default function Navbar() {
 
                                  {/* Desktop Dropdown Menu */}
                                  {hasDropdown && (
-                                     <div className="absolute top-[120%] left-1/2 -translate-x-1/2 w-[460px] md:w-[480px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-full transition-all duration-300 pt-4">
-                                         <div className="bg-white backdrop-blur-xl border border-border overflow-hidden rounded-2xl shadow-xl p-4 grid grid-cols-2 gap-2">
+                                     <div className={`absolute top-[120%] left-1/2 -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-full transition-all duration-300 pt-4 ${item.dropdown!.length === 1 ? "w-[300px]" : "w-[460px] md:w-[480px]"}`}>
+                                         <div className={`bg-white backdrop-blur-xl border border-border overflow-hidden rounded-2xl shadow-xl p-4 grid gap-2 ${item.dropdown!.length === 1 ? "grid-cols-1" : "grid-cols-2"}`}>
                                             {item.dropdown!.map((sub) => (
                                                 <Link
                                                     key={sub.name}
