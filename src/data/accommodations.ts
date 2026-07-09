@@ -49,6 +49,7 @@ export interface AccommodationListing {
     summary: string;
     nearby: NearbyPlace[];
     mapQuery: string; // Google Maps query for the embed + link
+    routeImages?: AccommodationImage[]; // walking-route map screenshots
   };
   houseRules: string[];
   reviews: AccommodationReview[];
@@ -120,6 +121,12 @@ export const accommodations: AccommodationListing[] = [
         { place: "West Bus Station (Mostar Zapad)", time: "17 min walk" },
       ],
       mapQuery: "Kneza Domagoja, Mostar, Bosnia and Herzegovina",
+      routeImages: [
+        { src: "/accommodations/mostar-workspace/route-old-bridge.jpg", alt: "Walking route from the apartment to the Old Bridge, about 15 minutes", caption: "Walk to the Old Bridge ~ about 15 min" },
+        { src: "/accommodations/mostar-workspace/route-main-bus-station.jpg", alt: "Walking route from the apartment to Mostar's Main Bus Station, about 14 minutes", caption: "Walk to the Main Bus Station ~ about 14 min" },
+        { src: "/accommodations/mostar-workspace/route-west-bus-station.jpg", alt: "Walking route from the apartment to the West Bus Station (Mostar Zapad), about 17 minutes", caption: "Walk to the West Bus Station ~ about 17 min" },
+        { src: "/accommodations/mostar-workspace/location-satellite.jpg", alt: "Satellite view marking the apartment location on Kneza Domagoja", caption: "The apartment location on Kneza Domagoja" },
+      ],
     },
     houseRules: ["Check-in after 2:00 PM", "Checkout before 11:00 AM", "4 guests maximum"],
     reviews: [

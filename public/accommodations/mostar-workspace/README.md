@@ -15,6 +15,15 @@ is present, the site shows a tidy placeholder in its place.
 | `bathroom.jpg`    | The bathroom with the tub + washer                   |
 | `entrance.jpg`    | The entry hallway / WELCOME sign                     |
 
+Walking-route maps (shown in the "Getting around on foot" row):
+
+| Filename                       | What it should show                          |
+| ------------------------------ | -------------------------------------------- |
+| `route-old-bridge.jpg`         | Map: walking route to the Old Bridge         |
+| `route-main-bus-station.jpg`   | Map: walking route to the Main Bus Station   |
+| `route-west-bus-station.jpg`   | Map: walking route to the West Bus Station   |
+| `location-satellite.jpg`       | Satellite view with the apartment marked     |
+
 Tips:
 - Use `.jpg` (or update the `src` values in `src/data/accommodations.ts`).
 - Landscape 4:3 or 16:10 crops look best; ~1600px wide is plenty.

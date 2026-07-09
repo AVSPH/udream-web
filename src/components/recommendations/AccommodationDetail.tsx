@@ -4,6 +4,7 @@ import {
   Check, ExternalLink, Sparkles, Monitor, ArrowLeft, Quote, ShieldCheck,
 } from "lucide-react";
 import { AccommodationGallery } from "./AccommodationGallery";
+import { SmartImage } from "./SmartImage";
 import type { AccommodationListing } from "@/data/accommodations";
 
 function Stars({ rating }: { rating: number }) {
@@ -167,6 +168,27 @@ export function AccommodationDetail({ listing }: { listing: AccommodationListing
             >
               Open in Google Maps <ExternalLink className="w-3.5 h-3.5" />
             </a>
+
+            {listing.location.routeImages && listing.location.routeImages.length > 0 && (
+              <div className="mt-8">
+                <h3 className="text-lg font-display font-bold mb-3">Getting around on foot</h3>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                  {listing.location.routeImages.map((img) => (
+                    <figure key={img.src} className="rounded-2xl overflow-hidden border border-border bg-card">
+                      <SmartImage
+                        src={img.src}
+                        alt={img.alt}
+                        caption={img.caption}
+                        className="w-full aspect-[4/3] object-cover"
+                      />
+                      {img.caption && (
+                        <figcaption className="text-xs text-muted-foreground px-3 py-2 leading-snug">{img.caption}</figcaption>
+                      )}
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            )}
           </section>
 
           {/* Reviews */}
