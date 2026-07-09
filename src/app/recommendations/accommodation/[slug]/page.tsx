@@ -70,9 +70,12 @@ function buildFaqs(listing: ReturnType<typeof getAccommodation>): FAQ[] {
   const faqs: FAQ[] = [];
 
   if (listing.goodForRemoteWork) {
+    const hasWorkspace = listing.amenities.some((a) => /workspace|desk/i.test(a));
     faqs.push({
       question: `Is this ${listing.city} apartment good for remote work?`,
-      answer: `Yes. It has a dedicated workspace${wifiLine}. Several guests booked it for longer remote-work stays and rated the workspace as a highlight.`,
+      answer: hasWorkspace
+        ? `Yes. It has a dedicated workspace${wifiLine}. Several guests booked it for longer remote-work stays and rated the workspace as a highlight.`
+        : `Yes. It has${wifiLine}, and guests have happily worked from here on longer stays.`,
     });
   }
 
