@@ -186,6 +186,9 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
                 alt={`Showcase image ${index + 1}`}
                 loading="lazy"
                 className="w-full h-full object-cover rounded-2xl shadow-md border border-border/50 transition-shadow duration-500 hover:shadow-2xl"
+                onError={(e) => {
+                  e.currentTarget.parentElement!.style.display = "none";
+                }}
               />
             </div>
           ))}

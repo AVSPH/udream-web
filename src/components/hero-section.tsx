@@ -1,26 +1,30 @@
 import { AnimatedMarqueeHero } from "@/components/ui/hero";
 import { visitedPlaces } from "@/data/visited-places";
 
-// A list of sample image URLs for the demo
-const DEMO_IMAGES = [
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772867618/DJI_20251126105729_0011_D_evagr6.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868611/IMG20241002175722_xilqqu.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868589/DJI_20260225174328_0280_D_apqgit.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868570/IMG20241003182151_pikxl0.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868550/IMG20241005131651_xbriq3.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868525/IMG20241004174133_slctcl.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868502/IMG20241004171430_hdmnes.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868481/DJI_20260225172008_0239_D_dvws8g.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868457/DJI_20260117142145_0933_D_deucgi.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868432/DJI_20260117111634_0844_D_ai5fkc.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868405/DJI_20260112130323_0796_D_nhsp1p.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868383/DJI_20251227162442_0655_D_p28fhd.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868352/DJI_20251220161336_0217_D_cztqk5.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868324/DJI_20251219095809_0157_D_zp27p8.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772868290/DJI_20251202155701_0033_D_mvgk3o.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772867715/DJI_20251127112323_0172_D_vppp4s.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772867663/DJI_20251126135705_0057_D_mzmdzk.jpg",
-  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1772867638/DJI_20251126110550_0033_D_s1biq7.jpg"
+// Hero marquee images — reuses the same Cloudinary photos already
+// rendered on the visited-places pages, since the old hardcoded set
+// pointed at asset IDs that no longer resolve.
+const HERO_IMAGES = [
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466190/DJI_20251105154859_0012_D_nvumg4.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466350/DJI_20251207134656_0148_D_dycf1a.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466648/DJI_20251217130735_0014_D_fgoulr.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466821/DJI_20260225172008_0239_D_cqajah.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466830/DJI_20251227151826_0619_D_eimjwd.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466834/DJI_20251229143150_0691_D_jhe4ct.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466913/DJI_20251220161134_0215_D_kl2uik.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467221/DJI_20251123162100_0054_D_eyeyhl.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467246/DJI_20251215093850_0830_D_kchavg.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467476/IMG20241002175756_dlr0xk.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467482/IMG20241005110952_dbcsui.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467512/DSCF2955_c7pd8a.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467666/DJI_20251216131631_0895_D_rmw9sc.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467672/DJI_20251216133307_0915_D_dsurxx.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467835/DSCF3052_q3xt3i.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773467962/DJI_20251224152553_0477_D_ayzbrq.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468091/DJI_20251222145209_0434_D_gkcxa3.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468288/DJI_20251119172020_0066_D_smnftk.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468350/DJI_20251211125617_0207_D_iu11yf.jpg",
+  "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773468419/DJI_20251115160517_0039_D_sslu2a.jpg",
 ];
 
 const AnimatedHeroDemo = () => {
@@ -50,7 +54,7 @@ const AnimatedHeroDemo = () => {
         { value: `${visitedPlaces.length}+`, label: "Destinations" },
         { value: `${continents}`, label: "Continents" },
       ]}
-      images={DEMO_IMAGES}
+      images={HERO_IMAGES}
     />
   );
 };
