@@ -50,7 +50,6 @@ const AnimatedHeroDemo = () => {
       secondaryCtaHref="/blog"
       stats={[
         { value: "31+", label: "Countries" },
-        { value: `${visitedPlaces.length}+`, label: "Destinations" },
         { value: `${continents}`, label: "Continents" },
       ]}
       images={HERO_IMAGES}
