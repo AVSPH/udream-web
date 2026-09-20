@@ -1,5 +1,4 @@
 import { AnimatedMarqueeHero } from "@/components/ui/hero";
-import { visitedPlaces } from "@/data/visited-places";
 
 // Hero marquee images — served from /public instead of the Cloudinary
 // account, since those asset IDs kept coming back broken regardless of
@@ -25,8 +24,6 @@ const HERO_IMAGES = [
 ];
 
 const AnimatedHeroDemo = () => {
-  const continents = new Set(visitedPlaces.map((p) => p.continent)).size;
-
   return (
     <AnimatedMarqueeHero
       tagline="Explore the Unexplored with Udream"
@@ -47,7 +44,7 @@ const AnimatedHeroDemo = () => {
       secondaryCtaHref="/blog"
       stats={[
         { value: "31+", label: "Countries" },
-        { value: `${continents}`, label: "Continents" },
+        { value: "3", label: "Continents" },
       ]}
       images={HERO_IMAGES}
     />
