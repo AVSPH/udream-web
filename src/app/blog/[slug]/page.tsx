@@ -26,24 +26,28 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const canonical = `https://udreamtravels.com/blog/${slug}`;
+  const place = allPlaces.find((p) => p.blogLink === `/blog/${slug}`);
 
-  // Try API first
-  try {
-    const apiBlog = await getBlogBySlug(slug);
-    if (apiBlog) {
-      return {
-        title: `${apiBlog.title} | Udream`,
-        description: apiBlog.excerpt ?? apiBlog.title,
-        alternates: { canonical },
-      };
+  // Only hit the CMS API for slugs with no local static content —
+  // every place-backed slug is statically generated at build time,
+  // when the API is unreachable, so calling it here just stalls the build.
+  if (!place) {
+    try {
+      const apiBlog = await getBlogBySlug(slug);
+      if (apiBlog) {
+        return {
+          title: `${apiBlog.title} | Udream`,
+          description: apiBlog.excerpt ?? apiBlog.title,
+          alternates: { canonical },
+        };
+      }
+    } catch {
+      // fall through to static
     }
-  } catch {
-    // fall through to static
   }
 
   const staticBlog = getStaticBlogBySlug(slug);
   if (staticBlog) {
-    const place = allPlaces.find((p) => p.blogLink === `/blog/${slug}`);
     const image = place?.thumbnail
       ? [{ url: place.thumbnail, alt: place.name }]
       : undefined;
@@ -68,7 +72,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const place = allPlaces.find((p) => p.blogLink === `/blog/${slug}`);
   if (!place) return { title: "Post Not Found | Udream" };
   return {
     title: `${place.name}, ${place.country} | Udream`,
@@ -90,6 +93,7 @@ function generateBlogContent(place: (typeof allPlaces)[0]) {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
+  const place = allPlaces.find((p) => p.blogLink === `/blog/${slug}`);
 
   // Try API blog first
   let apiBlog: {
@@ -105,11 +109,16 @@ export default async function BlogPostPage({ params }: Props) {
     quickFactsTable?: QuickFactsData;
   } | null = null;
 
-  try {
-    const result = await getBlogBySlug(slug);
-    if (result) apiBlog = result;
-  } catch {
-    // ignore and fall through to static
+  // Only hit the CMS API for slugs with no local static content —
+  // every place-backed slug is statically generated at build time,
+  // when the API is unreachable, so calling it here just stalls the build.
+  if (!place) {
+    try {
+      const result = await getBlogBySlug(slug);
+      if (result) apiBlog = result;
+    } catch {
+      // ignore and fall through to static
+    }
   }
 
   // If API blog found, render it
@@ -371,7 +380,6 @@ export default async function BlogPostPage({ params }: Props) {
     );
   }
 
-  const place = allPlaces.find((p) => p.blogLink === `/blog/${slug}`);
   if (!place) notFound();
 
   const staticBlog = getStaticBlogBySlug(slug);
