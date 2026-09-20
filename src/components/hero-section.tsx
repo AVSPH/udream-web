@@ -28,7 +28,6 @@ const HERO_IMAGES = [
 ];
 
 const AnimatedHeroDemo = () => {
-  const countries = new Set(visitedPlaces.map((p) => p.country)).size;
   const continents = new Set(visitedPlaces.map((p) => p.continent)).size;
 
   return (
@@ -50,7 +49,7 @@ const AnimatedHeroDemo = () => {
       secondaryCtaText="Read the Blog"
       secondaryCtaHref="/blog"
       stats={[
-        { value: `${countries}+`, label: "Countries" },
+        { value: "31+", label: "Countries" },
         { value: `${visitedPlaces.length}+`, label: "Destinations" },
         { value: `${continents}`, label: "Continents" },
       ]}
